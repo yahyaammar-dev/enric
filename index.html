@@ -7,7 +7,7 @@
 
   <!-- Link to Bootstrap CSS from CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Link to local stylesheet -->
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -15,20 +15,227 @@
 <body>
   <!-- Your HTML code goes here -->
 
+
+  <!-- Modal Goes Here -->
+  <div class="modal fade" id="multistep-modal" tabindex="-1" role="dialog" aria-labelledby="multistep-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src='imgs/Group.svg' class="logo" />
+          <img src="imgs/close.png" data-dismiss="modal" class="close" />
+        </div>
+        <div class="modal-body">
+          <div class="step-1 step">
+            <p class="heading">Product Explanation</p>
+            <p>
+              The amount of data stored differs from person to person.
+              We all create, use, and store different amounts of data depending on our needs.
+              By answering the following questions, we will get a personalized estimate of the cost to safely and
+              <b>securely store your data in the cloud.</b>
+            </p>
+          </div>
+          <div class="step-2 step">
+            <p class="heading">Where is your data stored?</p>
+            <div class="flex">
+              <div class="laptop active">
+                <img src="imgs/laptop1.svg" />
+                <p>Laptop</p>
+              </div>
+              <div class="laptop">
+                <img src="imgs/laptop2.svg" />
+                <p>PC</p>
+              </div>
+              <div class="laptop">
+                <img src="imgs/laptop3.svg" />
+                <p>External Devices</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-3 step">
+            <p class="heading">What are these devices for?</p>
+            <div class="flex">
+              <div class="laptop active">
+                <img src="imgs/person1.svg" />
+                <p>Personal</p>
+              </div>
+              <div class="laptop">
+                <img src="imgs/person2.svg" />
+                <p>Work Purpose</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-4 step">
+            <p class="heading">How many gigabytes can you store on this device?</p>
+            <div class="flex">
+              <div class="innerGroup">
+                <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                  <p class="text-white">-</p>
+                </button>
+                <p class="innerText">100 <span>GB</span> </p>
+                <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                  <p class="text-white">+</p>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="step-5 step">
+            <p class="heading">We’re preparing your personalized quote. Let us know your email address, and we’ll send
+              it shortly.</p>
+            <div class="flexs">
+              <div class="counters">
+                <div class="item">
+                  <span class="activeCounter">1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="emailContainer">
+                <p class='myheading'>Email</p>
+                <input type="email" name="email" placeholder="Enter your email address" class="email" />
+              </div>
+              <div class="emailContainer">
+                <p class='myheading'>Terms </p>
+                <p class="termtext">
+                  For the purposes of this contract, the following words shall have the meaning specified below: ANNEX
+                  TO THE CONTRACT, refers to the documentation attached to this contract, and which specifies certain
+                  aspects of it, having for all purposes the same force to bind the parties as this document. STORAGE,
+                  OR BACKUP SERVICE: Custody of the information sent by the client, in remote equipment available to
+                  Traffix Marketing online SCP -in order to ensure the maximum preservation of such information-. It
+                  includes not only the reception of the information and its custody but also the means to facilitate
+                  access by the client, to retrieve the information by computer
+                </p>
+              </div>
+              <div class="step-5links">
+                <a href="#">Terms and Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Policy</a>
+              </div>
+              <div class="step-5terms">
+                <input type="checkbox" />
+                <p>I read and agree to terms and conditions</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-6 step">
+            <p class="heading">Are you ready to get started? Just enter your payment details below, and we’ll take care
+              of the rest.</p>
+            <div class="flexs">
+              <div class="counters">
+                <div class="item">
+                  <span class="visitedCoutner">1</span>
+                  <span class="visitedCoutner">2</span>
+                  <span class="activeCounter">3</span>
+                </div>
+              </div>
+              <div class="emailContainer">
+                <p class='myheading'>Credit card information </p>
+                <div class="input-group">
+
+
+                  <div class="inputcc">
+                    <input class="cc" placeholder="1234 1234 1234 1234" />
+                    <span class="suffix"><img src='./imgs/visa.png' /></span>
+                    <span class="suffix"><img src='./imgs/credit-card.png' /></span>
+                  </div>
+
+                  <div class="fullwidth">
+                    <input type="text" placeholder="MM/YY" class="customInput" />
+                    <input type="text" placeholder="CVC" class="customInput" />
+                  </div>
+
+
+                </div>
+                <p class='myheading mt-2'>Card Holder Name</p>
+                <div class="input-group">
+                  <input type="text" class="inputCard" placeholder="Jhon Doe" />
+                </div>
+                <p class='myheading mt-2'>Country</p>
+                <div class="input-group">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Countries</option>
+                    <option value="">South Sudan</option>
+                    <option value="">Spain</option>
+                    <option value="">Sri Lanka</option>
+                    <option value="">Sudan</option>
+                    <option value="">Suriname</option>
+                    <option value="">Swaziland</option>
+                    <option value="">Sweden</option>
+                    <option value="">Switzerland</option>
+                    <option value="">Syria</option>
+                    <option value="">Taiwan</option>
+                    <option value="">Tajikistan</option>
+                    <option value="">Tanzania</option>
+                    <option value="">Thailand</option>
+                    <option value="">Togo</option>
+                    <option value="">Tonga</option>
+                    <option value="">Trinidad & Tobago</option>
+                    <option value="">Tunisia</option>
+                    <option value="">Turkey</option>
+                    <option value="">Turkmenistan</option>
+                    <option value="">Tuvalu</option>
+                    <option value="">Uganda</option>
+                    <option value="">Ukraine</option>
+                    <option value="">United Arab Emirates</option>
+                    <option value="">United Kingdom</option>
+                    <option value="">United States</option>
+                    <option value="">Uruguay</option>
+                    <option value="">Uzbekistan</option>
+                    <option value="">Vanuatu</option>
+                    <option value="">Vatican City</option>
+                    <option value="">Venezuela</option>
+                    <option value="">Vietnam</option>
+                    <option value="">Yemen</option>
+                    <option value="">Zambia</option>
+                    <option value="">Zimbabwe</option>
+                  </select>
+                </div>
+                <small class="form-text text-smaller-gb">*With our service, you only pay for the data you use. We don’t
+                  charge you for the maximum capacity of your device, which includes any unused space.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary step-2-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-3-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-4-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-5-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-6-prev back">Back</button>
+
+          <button type="button" class="btn btn-primary step-1-next next">Next</button>
+          <button type="button" class="btn btn-primary step-2-next next">Next</button>
+          <button type="button" class="btn btn-primary step-3-next next">Next</button>
+          <button type="button" class="btn btn-primary step-4-next next">Next</button>
+          <button type="button" class="btn btn-primary step-5-next next">Next</button>
+          <button type="button" class="btn btn-primary step-6-next next">Subscribe</button>
+
+          <button type="button" class="btn btn-primary step-2-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- First Section -->
   <div class="container-fluid bg-image hero">
     <div class="row">
-      <div class="col-md-6 firstCol">
+      <div class="colsm12 col-md-6 firstCol">
         <div>
           <!-- Logo, heading text, and button -->
-          <img src="imgs/Group.svg" alt="Logo">
+          <img src="imgs/Group.svg" alt="Logo" class="firstLogo">
           <h1 class="hero-heading">Data-Safe™ offers a safe refuge from complex backup operations.</h1>
           <p class="hero-para">Data-Safe™ is a solution for all your protection needs. It offers uncomplicated features
             and services, making it simple to protect your data and resources.</p>
-          <button class="btn btn-primary yellow-btn">Acquire <img src="./imgs/Group2.svg" /> </button>
+          <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">
+            <p>
+              ACQUIRE
+            </p>
+            <img src="./imgs/Group2.svg" />
+          </button>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="colsm12 col-md-6">
         <!-- Image -->
         <img src="imgs/browser.png" alt="Image" class="img-fluid">
       </div>
@@ -37,46 +244,50 @@
 
 
   <!--Second Section-->
-  <div class="container-fluid">
+  <div class="container-fluid secondSection">
     <div class="row second">
-      <div class="col-md-6">
+      <div class="colsm12 col-md-6">
         <!-- Heading text and button -->
         <div>
           <h1 class="second-heading">Why should you opt for Cloud Backup for your valuable data</h1>
           <p class="second-paragrph">Cloud services are Internet-based computing services that provide users with access
             to applications and data stored on remote servers. </p>
-          <button class="btn btn-primary yellow-btn">SUITABILITY TEST <img src="./imgs/Group2.svg" /></button>
+          <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">SUITABILITY TEST <img src="./imgs/Group2.svg" /></button>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="colsm12 col-md-6">
         <!-- Video -->
-        <img src="./imgs/video.png" />
+        <img class="myimage" src="./imgs/video.png" />
       </div>
     </div>
   </div>
 
   <!-- Third Section -->
-  <div class="container-fluid bg-image1">
+  <div class="container-fluid bg-image1 third">
     <div class="row">
-      <div class="col-md-6">
+      <div class="colsm12 col-md-6">
         <!-- Image -->
         <img src="./imgs/group13.png" alt="Image" class="img-fluid img1">
+        <div class="imageContainer">
+          <img src="./imgs/mbimg.svg" alt="Image" class="img-fluid img2">
+        </div>
+
       </div>
-      <div class="col-md-6">
+      <div class="colsm12 col-md-6 inner">
         <!-- heading text, and button -->
         <h1 class="hero-heading">Reliable and Errorless Data backup with the Data-Safe™ protection</h1>
         <p class="hero-para">Data-Safe's appliance-free direct-to-cloud backup for servers, workstations, and Microsoft
           365 data gives you recovery flexibility with the long-term retention that comes with the subscription plan.
         </p>
-        <button class="btn btn-primary yellow-btn">Order Now <img src="./imgs/Group2.svg" /></button>
+        <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">Order Now <img src="./imgs/Group2.svg" /></button>
       </div>
     </div>
   </div>
 
   <!--Fourth Section-->
-  <div class="container fourth">
+  <div class="container-fluid fourth">
     <div class="row firstrow">
-      <div class="col-md-6 firstCol">
+      <div class="col-md-6 firstCol colsm12">
         <div class="card bg-transparent">
           <img src="imgs/item1.png" class="card-img-top item" alt="Image 1">
           <div class="card-body">
@@ -86,7 +297,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 colsm12">
         <div class="card bg-transparent">
           <img src="imgs/item2.png" class="card-img-top item" alt="Image 2">
           <div class="card-body">
@@ -98,7 +309,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6 firstCol" >
+      <div class="col-md-6 firstCol colsm12">
         <div class="card bg-transparent">
           <img src="imgs/item3.png" class="card-img-top item" alt="Image 3">
           <div class="card-body">
@@ -108,7 +319,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 colsm12">
         <div class="card bg-transparent">
           <img src="imgs/item4.png" class="card-img-top item" alt="Image 4">
           <div class="card-body">
@@ -124,20 +335,24 @@
   <!--Fifth Section-->
   <div class="fifth">
     <div class="row">
-      <div class="col-md-6 innerbg flex">
+      <div class="col-md-6 innerbg flex colsm12">
         <div class="d-flex justify-content-center align-items-center innerhead">
           Get your estimated price
         </div>
       </div>
-      <div class="col-md-6 secondInner">
+      <div class="col-md-6 secondInner colsm12">
         <div class="row">
           <div class="col-md-12 mb-3">
             <p class="text-white storage">Storage capacity(in GB):</p>
             <div class="input-group">
               <div class="innerGroup">
-                <button class="btn btn-outline-secondary yellow-btn" type="button">-</button>
+                <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                  <p class="text-white">-</p>
+                </button>
                 <p class="innerText">100</p>
-                <button class="btn btn-outline-secondary yellow-btn" type="button">+</button>
+                <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                  <p class="text-white">+</p>
+                </button>
               </div>
             </div>
           </div>
@@ -146,40 +361,47 @@
             <div class="input-group">
               <p class="bigInnerText">127,8</p>
               <div class="input-group-append">
-                <span class="input-group-text flex-col"><img src="./imgs/euro.svg" /><p class="monthlyText">/ Monthly</p></span>
+                <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
+                  <p class="monthlyText">/ Monthly</p>
+                </span>
               </div>
             </div>
             <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to 0.16€</small>
           </div>
           <div class="col-md-12 mb-3 flex-center">
-            <button type="button" class="btn btn-primary yellow-btn">
+            <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">
               Purchase Now
-              <img src="./imgs/Group2.svg" /> 
+              <img src="./imgs/Group2.svg" />
             </button>
           </div>
         </div>
       </div>
     </div>
+    <p class="fifth-para">Data-safe will only charge for the capacity used and not for the maximum capacity</p>
   </div>
 
   <!--Footer-->
   <div class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
           <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
         </div>
         <div class="col-6 col-md-4">
-          <ul>
-            <li><a href="#" class="listItem bold">Pages</a></li>
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Pages</p>
+            </li>
             <li><a href="#" class="listItem">FAQs</a></li>
             <li><a href="#" class="listItem">Contact Us</a></li>
             <li><a href="#" class="listItem">Pricing</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4">
-          <ul>
-            <li><a href="#" class="listItem bold">Resources</a></li>
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Resources</p>
+            </li>
             <li><a href="#" class="listItem">Terms and Conditions</a></li>
             <li><a href="#" class="listItem">Cookie policy</a></li>
             <li><a href="#" class="listItem">Privacy Policy</a></li>
@@ -195,10 +417,272 @@
   </div>
 
 
+
+
+
   <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      // Hide the Previous button by default
+      $(".step-2-prev").hide();
+      $(".step-3-prev").hide();
+      $(".step-4-prev").hide();
+      $(".step-5-prev").hide();
+      $(".step-6-prev").hide();
+
+      $(".step-1").show();
+      $(".step-2").hide();
+      $(".step-3").hide();
+      $(".step-4").hide();
+      $(".step-5").hide();
+      $(".step-6").hide();
+
+      $(".step-1-next").show();
+      $(".step-2-next").hide();
+      $(".step-3-next").hide();
+      $(".step-4-next").hide();
+      $(".step-5-next").hide();
+      $(".step-6-next").hide();
+
+
+      $(".step-2-submit").hide()
+
+      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+      $(".step-1-next").click(function () {
+        $(".step-2-prev").show();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").show();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").hide();
+        $(".step-2-next").show();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-2-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").show();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").show();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").show();
+        $(".step-2-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-3-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").show();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").show();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").show();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-4-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").show();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").show();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").show();
+
+      });
+
+      $(".step-5-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").show();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").show();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").show();
+
+      });
+
+      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+      $(".step-2-prev").click(function () {
+        //first data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").show();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").show();
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+
+        $(".step-2-submit").hide()
+      });
+
+      $(".step-3-prev").click(function () {
+        //second data
+        $(".step-2-prev").show();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").show();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").hide();
+        $(".step-2-next").show();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-4-prev").click(function () {
+        //third data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").show();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").show();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").show();
+        $(".step-2-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-5-prev").click(function () {
+        //fourth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").show();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").show();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").show();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-6-prev").click(function () {
+        //fifth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").show();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").show();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").show();
+        $(".step-6-next").hide();
+
+      });
+
+      // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
+      $(".step-2-submit").click(function () {
+        // Do something here, like submit the form via AJAX
+        // Then close the modal
+        $("#multistep-modal").modal("hide");
+      });
+    });
+
+  </script>
+
+
+
 </body>
 
 </html>

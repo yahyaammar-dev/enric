@@ -3,6 +3,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+html {
+  overflow-x: hidden;
+}
+
+*{
+  font-family: 'Inter' !important;
+  font-style: normal !important;
+}
+
 .bg-image {
   background-image: url("imgs/image1.png");
   background-repeat: no-repeat;
@@ -42,6 +51,9 @@
 .yellow-btn {
   background-color: #FFAD00;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .yellow-btn img {
@@ -55,7 +67,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 48px;
+  font-size: 40px;
   line-height: 140%;
   color: white;
 }
@@ -64,7 +76,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 160%;
   color: white;
 }
@@ -83,7 +95,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 160%;
   color: #333333;
 }
@@ -151,10 +163,11 @@
 }
 
 .listItem {
-  font-size: 24px;
+  font-size: 16px;
   color: white;
   font-family: 'Inter';
   font-style: normal;
+  padding-bottom: 0.5rem;
 }
 
 .copywright {
@@ -192,6 +205,7 @@
   align-items: center;
   padding: 0.1rem 0.3rem;
   margin: 0;
+  gap: 0.5rem;
 }
 
 .innerGroup p {
@@ -245,7 +259,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 25px;
   color: #333333;
 }
 
@@ -253,7 +267,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 160%;
 }
 
@@ -261,7 +275,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   color: #333333;
 }
 
@@ -326,15 +340,534 @@
   color: #FFFFFF;
 }
 
-.footer{
+.footer {
   padding-top: 3rem;
 }
 
-.footerLogo{
+.footerLogo {
   width: 80%;
 }
 
-.fifth{
+.fifth {
   background-color: #F9F9F9;
   padding: 6rem 7rem;
+}
+
+.firstLogo {
+  width: 30%;
+  margin-bottom: 2rem;
+}
+
+
+.yellow-btn p {
+  margin-bottom: 0;
+}
+
+.yellow-btn {
+  border-radius: 2px !important;
+}
+
+
+.btn:active,
+.btn.active {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
+
+
+.btn:focus {
+  background-color: transparent !important;
+}
+
+
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0 transparent;
+}
+
+
+
+.blue-btn {
+  background-color: #05164D;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue-btn img {
+  margin-left: 1rem;
+  width: 15px;
+}
+
+
+
+.blue-btn:focus {
+  background: #05164D !important;
+}
+
+.blue-btn:hover {
+  background: #05164D !important;
+}
+
+.bg-image1 .row {
+  max-width: 100vw;
+}
+
+.third .inner {
+  padding-right: 4rem !important;
+}
+
+.hero-para {
+  padding-top: 2rem;
+}
+
+.third .yellow-btn {
+  margin-top: 2rem;
+}
+
+.sign {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.fifth-para {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 1rem;
+}
+
+.copywright {
+  font-size: 14px;
+}
+
+li {
+  padding-bottom: 0.5rem;
+}
+
+.listItem {
+  margin-bottom: 0;
+}
+
+.yellow-btn:focus {
+  background-color: #FFAD00 !important;
+}
+
+.yellow-btn:active {
+  background-color: #FFAD00 !important;
+}
+
+.modal-header {
+  background-color: #05164D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.modal-header .logo {
+  width: 30%;
+}
+
+
+.modal-header .close {
+  width: 12%;
+  cursor: pointer;
+}
+
+.modal-content {
+  border-radius: 0.5rem;
+}
+
+.step .heading {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  border-top: 0;
+}
+
+.modal-footer .step-1-next {
+  background-color: #05164D;
+  border-radius: 0;
+  padding: 0.3rem 1.5rem;
+}
+
+.modal-footer .next {
+  background-color: #05164D;
+  border-radius: 0;
+  padding: 0.3rem 1.5rem;
+}
+
+
+.modal-header {
+  background: url('imgs/modalheader.png');
+  padding: 1.5rem 2.5rem;
+}
+
+
+.modal-content {
+  position: relative;
+  background: url('imgs/modalbg.png');
+  background-size: cover;
+  border: none;
+}
+
+.laptop {
+  width: 150px;
+  height: 185px;
+  padding: 1rem;
+  border: 1px solid #D9D9D9;
+}
+
+.step .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step .flex .active {
+  background-color: #faae0e26;
+  opacity: 0.5;
+  border: 4px solid #FFAD00;
+}
+
+.laptop {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.laptop p {
+  text-align: center;
+}
+
+.laptop img {
+  width: 100px;
+  height: 100px;
+}
+
+
+.step-2-prev {
+  color: #7A7A7A;
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+}
+
+.step-4 .flex {
+  justify-content: center;
+}
+
+.innerText span {
+  color: #FFAD00;
+}
+
+.counters span {
+  background-color: #e7e7e7;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  padding: 5px 10px;
+}
+
+
+.counters .activeCounter {
+  background-color: #FFAD00;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: white;
+}
+
+.flexs {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.email {
+  padding: 0.5rem;
+}
+
+.emailContainer p {
+  margin-bottom: 0;
+}
+
+.emailContainer input {
+  width: 100%;
+}
+
+.counters {
+  display: flex;
+  justify-content: center;
+}
+
+.termtext {
+  background-color: #e7e7e7;
+  padding: 1rem;
+}
+
+.myheading {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.step-5terms {
+  display: flex;
+  align-items: center;
+}
+
+.visitedCoutner {
+  background-color: #05164D !important;
+  color: white !important;
+}
+
+.emailContainer .bigInnerText {
+  color: #333333;
+}
+
+.emailContainer .monthlyText {
+  color: #333333;
+}
+
+.emailContainer .text-smaller-gb {
+  color: #333333;
+  font-size: 12px;
+  ;
+}
+
+
+.inputcc {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5rem 0;
+  width:  100%;
+}
+
+.inputcc img {
+  width: 30px;
+}
+
+.cc {
+  all: unset;
+}
+
+.secondSection {
+  overflow: hidden;
+}
+
+.nolist{
+  list-style-type: none;
+}
+
+
+.step-3 .flex{
+  justify-content: center;
+  gap: 1rem;
+}
+
+.step-4 .innerGroup{
+  justify-content: center;
+  gap: 0;
+}
+
+.step-4 .innerGroup .innerText{
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.step-5terms{
+  display: flex;
+  align-items: center;
+}
+
+.step-5terms p {
+  padding:  0;
+  margin: 0;
+}
+
+.emailContainer .myheading{
+  font-weight: 500;
+}
+
+.fullwidth{
+  width: 100%;
+}
+
+.inputCard{
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.form-select{
+  width: 100%;
+  padding: 0.2rem;
+}
+
+.back{
+  background: transparent;
+  color: #7A7A7A;
+  font-weight: 700;
+  border: none;
+}
+
+@media screen and ( min-width: 700px ){
+  .imageContainer .img2{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .colsm12 {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .hero .row {
+    padding: 4rem;
+  }
+
+  .colsm12 .img-fluid {
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .myimage {
+    max-width: 70vw;
+  }
+
+  .img1 {
+    display: none;
+  }
+
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .third .inner {
+    padding: 0rem !important;
+  }
+
+
+  .fourth .firstCol {
+    border-right: 0px dashed gray;
+  }
+
+  .fourth .firstrow {
+    border-bottom: 0px dashed gray;
+  }
+
+  .footerLogoContainer{
+    display: flex;
+    justify-content: center;
+  }
+
+  .footerLogoContainer .footerLogo{
+    width: 60%;
+    margin-bottom: 2rem;;
+  }
+
+  .second{
+    margin: 2rem;
+  }
+
+  .third{
+    padding: 3rem;
+    margin: 0;
+  }
+
+  .fourth .firstrow{
+    padding: 0;
+    margin-top: 0;
+  }
+
+  .fourth .col-md-6{
+    padding: 0;
+  }
+
+  .fourth .card{
+    padding: 4rem;
+  }
+
+  .fifth .innerbg{
+    padding: 5rem;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .firstLogo{
+    width: 100%;
+  }
+  .innerhead{
+    font-size:24px;
+  }
+  .hero .row{
+    padding: 2rem;
+  }
+  .second-heading{
+    font-size: 25px;
+  }
+  .second-paragrph{
+    font-size: 16px;
+  }
+  .second{
+    margin: 2rem 0;
+  }
+  .myimage{
+    max-width: 79vw;
+  }
+  .hero-heading{
+    font-size: 25px;
+  }
+  .hero-para{
+    font-size: 16px;
+  }
+  .fourth .card{
+    padding: 2rem;
+  }
+  .fifth{
+    padding: 2rem 2rem;
+  }
+  .bigInnerText{
+    font-size: 40px;
+  }
+  .fifth .yellow-btn{
+    font-size: 12px;
+    padding: 0.5rem;
+  }
+  .storage{
+    font-size: 16px;
+  }
+  .input-group-append  .monthlyText{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .laptop{
+    width: 100%;
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  .flex{
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+.customInput{
+  border-radius: 0.4rem;
+  border: 1px solid #aaa;
 }
