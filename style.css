@@ -871,3 +871,21 @@ li {
   border-radius: 0.4rem;
   border: 1px solid #aaa;
 }
+
+
+.modal-open .modal {
+    padding-right: 0 !important;
+}
+
+.modal-open{
+  padding-right: 0 !important;
+}
+
+
+.innerText{
+  padding: 0 0.5rem !important;
+}
+
+.checkboxitem{
+  margin-right: 0.5rem;
+}

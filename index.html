@@ -37,7 +37,7 @@
           <div class="step-2 step">
             <p class="heading">Where is your data stored?</p>
             <div class="flex">
-              <div class="laptop active">
+              <div class="laptop">
                 <img src="imgs/laptop1.svg" />
                 <p>Laptop</p>
               </div>
@@ -69,11 +69,11 @@
             <div class="flex">
               <div class="innerGroup">
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
-                  <p class="text-white">-</p>
+                  <p class="text-white subtract">-</p>
                 </button>
-                <p class="innerText">100 <span>GB</span> </p>
+                <p class="innerText innerNumber">100 </p>
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
-                  <p class="text-white">+</p>
+                  <p class="text-white add">+</p>
                 </button>
               </div>
             </div>
@@ -106,12 +106,12 @@
                 </p>
               </div>
               <div class="step-5links">
-                <a href="#">Terms and Conditions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Cookie Policy</a>
+                <a href="#">Terms and Conditions,</a>
+                <a href="#">Privacy Policy,</a>
+                <a href="#">Cookie Policy.</a>
               </div>
               <div class="step-5terms">
-                <input type="checkbox" />
+                <input type="checkbox" class="checkboxitem" />
                 <p>I read and agree to terms and conditions</p>
               </div>
             </div>
@@ -252,7 +252,8 @@
           <h1 class="second-heading">Why should you opt for Cloud Backup for your valuable data</h1>
           <p class="second-paragrph">Cloud services are Internet-based computing services that provide users with access
             to applications and data stored on remote servers. </p>
-          <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">SUITABILITY TEST <img src="./imgs/Group2.svg" /></button>
+          <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">SUITABILITY TEST
+            <img src="./imgs/Group2.svg" /></button>
         </div>
       </div>
       <div class="colsm12 col-md-6">
@@ -279,7 +280,8 @@
         <p class="hero-para">Data-Safe's appliance-free direct-to-cloud backup for servers, workstations, and Microsoft
           365 data gives you recovery flexibility with the long-term retention that comes with the subscription plan.
         </p>
-        <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">Order Now <img src="./imgs/Group2.svg" /></button>
+        <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">Order Now <img
+            src="./imgs/Group2.svg" /></button>
       </div>
     </div>
   </div>
@@ -347,11 +349,11 @@
             <div class="input-group">
               <div class="innerGroup">
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
-                  <p class="text-white">-</p>
+                  <p class="text-white subtract2">-</p>
                 </button>
-                <p class="innerText">100</p>
+                <p class="innerText innerNumber2">100</p>
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
-                  <p class="text-white">+</p>
+                  <p class="text-white add2">+</p>
                 </button>
               </div>
             </div>
@@ -678,6 +680,76 @@
         $("#multistep-modal").modal("hide");
       });
     });
+
+
+
+    const items = document.querySelectorAll('.laptop');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove "active" class from all items
+        items.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Add "active" class to the clicked item
+        item.classList.add('active');
+      });
+    });
+
+
+    // Get the number and buttons elements
+    const number = document.querySelector('.innerNumber');
+    const addBtn = document.querySelector('.add');
+    const subtractBtn = document.querySelector('.subtract');
+
+    // Set the initial number value
+    let count = 100;
+
+    // Add event listener to the "Add" button
+    addBtn.addEventListener('click', () => {
+      // Increase the count by 1
+      count++;
+
+      // Update the number text in the div
+      number.textContent = count;
+    });
+
+    // Add event listener to the "Subtract" button
+    subtractBtn.addEventListener('click', () => {
+      // Decrease the count by 1
+      count--;
+
+      // Update the number text in the div
+      number.textContent = count;
+    });
+
+
+
+    const number2 = document.querySelector('.innerNumber2');
+    const addBtn2 = document.querySelector('.add2');
+    const subtractBtn2 = document.querySelector('.subtract2');
+
+    // Set the initial number value
+    let count2 = 100;
+
+    // Add event listener to the "Add" button
+    addBtn2.addEventListener('click', () => {
+      // Increase the count by 1
+      count2++;
+
+      // Update the number text in the div
+      number2.textContent = count2;
+    });
+
+    // Add event listener to the "Subtract" button
+    subtractBtn2.addEventListener('click', () => {
+      // Decrease the count by 1
+      count2--;
+
+      // Update the number text in the div
+      number2.textContent = count2;
+    });
+
 
   </script>
 
