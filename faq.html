@@ -2,111 +2,247 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>My Webpage</title>
+  <meta charset="UTF-8">
+  <title>My Webpage</title>
 
-    <!-- Link to Bootstrap CSS from CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Link to Bootstrap CSS from CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- Link to local stylesheet -->
-    <link rel="stylesheet" href="./style.css">
+  <!-- Link to local stylesheet -->
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <!-- Your HTML code goes here -->
+  <!-- Your HTML code goes here -->
 
-    <!--First Section-->
-    <div class="hero" style="background-image: url('path/to/background-image.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img src="path/to/logo.png" alt="Logo">
-                    <h1>Hello World!</h1>
-                </div>
-            </div>
-        </div>
-    </div>
+  <!--First Section-->
+  <div class="header priceheader">
+    <img class="logo" src="./imgs/Group.svg" />
+    <h2>Prices</h2>
+  </div>
 
 
-    <!--FAQs-->
-    <div class="container">
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion 1
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec turpis at nibh aliquet mollis. Sed nec justo a turpis molestie pulvinar vel vel ipsum. 
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion 2
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Nullam nec turpis at nibh aliquet mollis. Sed nec justo a turpis molestie pulvinar vel vel ipsum. 
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion 3
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Sed nec justo a turpis molestie pulvinar vel vel ipsum. 
-              </div>
-            </div>
-          </div>
+  <!--FAQs-->
+  <div class="container">
+    <h3 class="faqHead">Frequently Asked Questions</h3>
+
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq1" role="button" aria-expanded="false"
+          aria-controls="faq1" id="faqButton1">
+          <img src="./imgs/plus.svg" />
+          Does datasafe work in all devices?
+        </a>
+      </p>
+      <div class="collapse" id="faq1">
+        <div class="card card-body">
+          Datasafe is a secure cloud storage service that allows you to store, share, and access your files from
+          anywhere.
         </div>
       </div>
-      
-
-
-    <!--Footer-->
-    <div class="footer" style="background-image: url('path/to/background-image.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <img src="path/to/logo.png" alt="Logo">
-                </div>
-                <div class="col-6 col-md-4">
-                    <h3>Pages</h3>
-                    <ul>
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-4">
-                    <h3>More Pages</h3>
-                    <ul>
-                        <li><a href="#">Page 4</a></li>
-                        <li><a href="#">Page 5</a></li>
-                        <li><a href="#">Page 6</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                Copyrights All rights reserved
-            </div>
-        </div>
     </div>
 
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq2" role="button" aria-expanded="false"
+          aria-controls="faq2" id="faqButton2">
+          <img src="./imgs/plus.svg" />
+          What happens to my data if I unsubscribe from the service?
+        </a>
+      </p>
+      <div class="collapse" id="faq2">
+        <div class="card card-body">
+          Datasafe offers a variety of pricing plans to fit your needs. Please visit our pricing page for more
+          information.
+        </div>
+      </div>
+    </div>
 
-    <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq3" role="button" aria-expanded="false"
+          aria-controls="faq3" id="faqButton3">
+          <img src="./imgs/plus.svg" />
+          Can I do my backups locally?
+        </a>
+      </p>
+      <div class="collapse" id="faq3">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq4" role="button" aria-expanded="false"
+          aria-controls="faq4" id="faqButton4">
+          <img src="./imgs/plus.svg" />
+          Can I deactivate the Cloud backups?
+        </a>
+      </p>
+      <div class="collapse" id="faq4">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq5" role="button" aria-expanded="false"
+          aria-controls="faq5" id="faqButton5">
+          <img src="./imgs/plus.svg" />
+          For how long do you keep my backups?
+        </a>
+      </p>
+      <div class="collapse" id="faq5">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq6" role="button" aria-expanded="false"
+          aria-controls="faq6" id="faqButton6">
+          <img src="./imgs/plus.svg" />
+          Can I increase the time my backups are saved?
+        </a>
+      </p>
+      <div class="collapse" id="faq6">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq7" role="button" aria-expanded="false"
+          aria-controls="faq7" id="faqButton7">
+          <img src="./imgs/plus.svg" />
+          Can I put a GB limit so I do not spend extra?
+        </a>
+      </p>
+      <div class="collapse" id="faq7">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq8" role="button" aria-expanded="false"
+          aria-controls="faq8" id="faqButton8">
+          <img src="./imgs/plus.svg" />
+          Is the software available in english or other languages?
+        </a>
+      </p>
+      <div class="collapse" id="faq8">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq9" role="button" aria-expanded="false"
+          aria-controls="faq9" id="faqButton9">
+          <img src="./imgs/plus.svg" />
+          How often will I pay?
+        </a>
+      </p>
+      <div class="collapse" id="faq9">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+    <div class="faqItem">
+      <p>
+        <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq10" role="button" aria-expanded="false"
+          aria-controls="faq10" id="faqButton10">
+          <img src="./imgs/plus.svg" />
+          Can I get an invoice?
+        </a>
+      </p>
+      <div class="collapse" id="faq10">
+        <div class="card card-body">
+          Yes, Datasafe uses industry-standard encryption and security measures to protect your data.
+        </div>
+      </div>
+    </div>
+    <!-- Add more FAQ items as needed -->
+
+  </div>
+
+
+
+  <!--Footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+          <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+        </div>
+        <div class="col-6 col-md-4">
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Pages</p>
+            </li>
+            <li><a href="#" class="listItem">FAQs</a></li>
+            <li><a href="#" class="listItem">Contact Us</a></li>
+            <li><a href="#" class="listItem">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Resources</p>
+            </li>
+            <li><a href="#" class="listItem">Terms and Conditions</a></li>
+            <li><a href="#" class="listItem">Cookie policy</a></li>
+            <li><a href="#" class="listItem">Privacy Policy</a></li>
+            <li><a href="#" class="listItem">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid copywright">
+    © Copyrights 2022 DataSafe All rights reserved.
+  </div>
+
+
+  <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+
+  <script>
+    const faqButtons = document.querySelectorAll(".collapseii");
+    const plusImage = "./imgs/plus.svg";
+    const minusImage = "./imgs/minus.svg";
+
+    faqButtons.forEach((button) => {
+      button.addEventListener("click", function () {
+        const image = button.querySelector("img");
+        const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+        if (isExpanded) {
+          image.src = plusImage;
+        } else {
+          image.src = minusImage;
+        }
+      });
+    });
+  </script>
+
+
 </body>
 
 </html>

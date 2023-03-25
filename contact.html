@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Webpage</title>
+
+  <!-- Link to Bootstrap CSS from CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Link to local stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <!-- Your HTML code goes here -->
+  <!--Header-->
+  <div class="header priceheader">
+    <img class="logo" src="./imgs/Group.svg" />
+    <h2>Cookies</h2>
+  </div>
+
+  <div class="row contactrow">
+    <div class="col-md-6 colled">
+      <form>
+        <h3 class="contacthead">We'd love to hear from you</h3>
+        <label class="label contactlabeltitle">Name and surName</label>
+        <input type="text" class="contactlabel" placeholder="Enter Your Name" />
+        <label class="label contactlabeltitle">Company</label>
+        <input type="text" class="contactlabel" placeholder="Enter Your Company" />
+        <label class="label contactlabeltitle">Email</label>
+        <input type="text" class="contactlabel" placeholder="Enter Your Email" />
+        <label class="label contactlabeltitle">Phone</label>
+        <input type="text" class="contactlabel" placeholder="Enter Your Phone" />
+        <label class="label contactlabeltitle">Message</label>
+        <textarea row="10" cols="50" placeholder="Enter Your Message" class="contactlabel">
+        </textarea>
+        <div class="flexwrap">
+          <input type="checkbox" />
+          <p>I authorize the processing of my data in order to respond to the queries raised.</p>
+        </div>
+        <p>
+          Responsible for the file: Data-Safe . Purpose: sending information about products and services to the
+          subscriber. Legitimation: consent. Recipients: The data will not be communicated to third parties. Rights:
+          access, rectify and delete data, as well as other rights, as explained in the additional information. You can
+          consult additional and detailed information in our Policy
+        </p>
+        <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">
+          Send Message
+          <img src="./imgs/Group2.svg" />
+        </button>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <img src="./imgs/map.svg" class="contactimage" />
+    </div>
+  </div>
+
+
+
+  <!--Footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+          <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+        </div>
+        <div class="col-6 col-md-4">
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Pages</p>
+            </li>
+            <li><a href="#" class="listItem">FAQs</a></li>
+            <li><a href="#" class="listItem">Contact Us</a></li>
+            <li><a href="#" class="listItem">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Resources</p>
+            </li>
+            <li><a href="#" class="listItem">Terms and Conditions</a></li>
+            <li><a href="#" class="listItem">Cookie policy</a></li>
+            <li><a href="#" class="listItem">Privacy Policy</a></li>
+            <li><a href="#" class="listItem">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid copywright">
+    © Copyrights 2022 DataSafe All rights reserved.
+  </div>
+
+
+
+
+
+  <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      // Hide the Previous button by default
+      $(".step-2-prev").hide();
+      $(".step-3-prev").hide();
+      $(".step-4-prev").hide();
+      $(".step-5-prev").hide();
+      $(".step-6-prev").hide();
+
+      $(".step-1").show();
+      $(".step-2").hide();
+      $(".step-3").hide();
+      $(".step-4").hide();
+      $(".step-5").hide();
+      $(".step-6").hide();
+
+      $(".step-1-next").show();
+      $(".step-2-next").hide();
+      $(".step-3-next").hide();
+      $(".step-4-next").hide();
+      $(".step-5-next").hide();
+      $(".step-6-next").hide();
+
+
+      $(".step-2-submit").hide()
+
+      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+      $(".step-1-next").click(function () {
+        $(".step-2-prev").show();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").show();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").hide();
+        $(".step-2-next").show();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-2-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").show();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").show();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").show();
+        $(".step-2-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-3-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").show();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").show();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").show();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-4-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").show();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").show();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").show();
+
+      });
+
+      $(".step-5-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").show();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").show();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").show();
+
+      });
+
+      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+      $(".step-2-prev").click(function () {
+        //first data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").show();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").show();
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+
+        $(".step-2-submit").hide()
+      });
+
+      $(".step-3-prev").click(function () {
+        //second data
+        $(".step-2-prev").show();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").show();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").hide();
+        $(".step-2-next").show();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-4-prev").click(function () {
+        //third data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").show();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").show();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").show();
+        $(".step-2-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-5-prev").click(function () {
+        //fourth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").show();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").show();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").show();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-6-prev").click(function () {
+        //fifth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").show();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").show();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").show();
+        $(".step-6-next").hide();
+
+      });
+
+      // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
+      $(".step-2-submit").click(function () {
+        // Do something here, like submit the form via AJAX
+        // Then close the modal
+        $("#multistep-modal").modal("hide");
+      });
+    });
+
+
+
+    const items = document.querySelectorAll('.laptop');
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove "active" class from all items
+        items.forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Add "active" class to the clicked item
+        item.classList.add('active');
+      });
+    });
+
+
+    // Get the number and buttons elements
+    const number = document.querySelector('.innerNumber');
+    const addBtn = document.querySelector('.add');
+    const subtractBtn = document.querySelector('.subtract');
+
+    // Set the initial number value
+    let count = 100;
+
+    // Add event listener to the "Add" button
+    addBtn.addEventListener('click', () => {
+      // Increase the count by 1
+      count++;
+
+      // Update the number text in the div
+      number.textContent = count;
+    });
+
+    // Add event listener to the "Subtract" button
+    subtractBtn.addEventListener('click', () => {
+      // Decrease the count by 1
+      count--;
+
+      // Update the number text in the div
+      number.textContent = count;
+    });
+
+
+
+    const number2 = document.querySelector('.innerNumber2');
+    const addBtn2 = document.querySelector('.add2');
+    const subtractBtn2 = document.querySelector('.subtract2');
+
+    // Set the initial number value
+    let count2 = 100;
+
+    // Add event listener to the "Add" button
+    addBtn2.addEventListener('click', () => {
+      // Increase the count by 1
+      count2++;
+
+      // Update the number text in the div
+      number2.textContent = count2;
+    });
+
+    // Add event listener to the "Subtract" button
+    subtractBtn2.addEventListener('click', () => {
+      // Decrease the count by 1
+      count2--;
+
+      // Update the number text in the div
+      number2.textContent = count2;
+    });
+
+
+  </script>
+
+
+
+</body>
+
+</html>

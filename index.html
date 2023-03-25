@@ -54,16 +54,18 @@
           <div class="step-3 step">
             <p class="heading">What are these devices for?</p>
             <div class="flex">
-              <div class="laptop active">
+              <div class="laptop2">
                 <img src="imgs/person1.svg" />
                 <p>Personal</p>
               </div>
-              <div class="laptop">
+              <div class="laptop2">
                 <img src="imgs/person2.svg" />
                 <p>Work Purpose</p>
               </div>
             </div>
           </div>
+
+
           <div class="step-4 step">
             <p class="heading">How many gigabytes can you store on this device?</p>
             <div class="flex">
@@ -78,6 +80,11 @@
               </div>
             </div>
           </div>
+
+
+
+
+
           <div class="step-5 step">
             <p class="heading">We’re preparing your personalized quote. Let us know your email address, and we’ll send
               it shortly.</p>
@@ -116,7 +123,32 @@
               </div>
             </div>
           </div>
+
+
+
           <div class="step-6 step">
+            <div class="counters">
+              <div class="item">
+                <span>1</span>
+                <span class="activeCounter">2</span>
+                <span>3</span>
+              </div>
+            </div>
+            <p class="heading step6heading">Storage capacity: <span class="mycounter"></span> GB</p>
+            <div class="input-group">
+              <p class="bigInnerText">127,8</p>
+              <div class="input-group-append">
+                <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
+                  <p class="monthlyText">/ Monthly</p>
+                </span>
+              </div>
+            </div>
+            <p>*With our service, you <i>only pay for the data you use.</i> We don’t charge you for the maximum capacity
+              of your device, which includes any unused space.</p>
+          </div>
+
+
+          <div class="step-7 step">
             <p class="heading">Are you ready to get started? Just enter your payment details below, and we’ll take care
               of the rest.</p>
             <div class="flexs">
@@ -128,28 +160,25 @@
                 </div>
               </div>
               <div class="emailContainer">
-                <p class='myheading'>Credit card information </p>
+                <p class='myheading pt-2 mt-4'>Credit card information </p>
+
                 <div class="input-group">
-
-
                   <div class="inputcc">
                     <input class="cc" placeholder="1234 1234 1234 1234" />
                     <span class="suffix"><img src='./imgs/visa.png' /></span>
                     <span class="suffix"><img src='./imgs/credit-card.png' /></span>
                   </div>
-
                   <div class="fullwidth">
-                    <input type="text" placeholder="MM/YY" class="customInput" />
-                    <input type="text" placeholder="CVC" class="customInput" />
+                    <input type="text" placeholder="MM/YY" class="customInput noborder" />
+                    <input type="text" placeholder="CVC" class="customInput border-bottom" />
                   </div>
-
-
                 </div>
-                <p class='myheading mt-2'>Card Holder Name</p>
+
+                <p class='myheading mt-4'>Card Holder Name</p>
                 <div class="input-group">
                   <input type="text" class="inputCard" placeholder="Jhon Doe" />
                 </div>
-                <p class='myheading mt-2'>Country</p>
+                <p class='myheading mt-4'>Country</p>
                 <div class="input-group">
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Select Countries</option>
@@ -201,13 +230,16 @@
           <button type="button" class="btn btn-primary step-4-prev back">Back</button>
           <button type="button" class="btn btn-primary step-5-prev back">Back</button>
           <button type="button" class="btn btn-primary step-6-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-7-prev back">Back</button>
+
 
           <button type="button" class="btn btn-primary step-1-next next">Next</button>
           <button type="button" class="btn btn-primary step-2-next next">Next</button>
           <button type="button" class="btn btn-primary step-3-next next">Next</button>
           <button type="button" class="btn btn-primary step-4-next next">Next</button>
           <button type="button" class="btn btn-primary step-5-next next">Next</button>
-          <button type="button" class="btn btn-primary step-6-next next">Subscribe</button>
+          <button type="button" class="btn btn-primary step-6-next next">Next</button>
+          <button type="button" class="btn btn-primary step-7-next next" data-dismiss="modal">Subscribe</button>
 
           <button type="button" class="btn btn-primary step-2-submit">Submit</button>
         </div>
@@ -426,7 +458,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+  <script src="https://js.stripe.com/v3/"></script>
 
   <script>
     $(document).ready(function () {
@@ -436,6 +468,7 @@
       $(".step-4-prev").hide();
       $(".step-5-prev").hide();
       $(".step-6-prev").hide();
+      $(".step-7-prev").hide();
 
       $(".step-1").show();
       $(".step-2").hide();
@@ -443,6 +476,7 @@
       $(".step-4").hide();
       $(".step-5").hide();
       $(".step-6").hide();
+      $(".step-7").hide();
 
       $(".step-1-next").show();
       $(".step-2-next").hide();
@@ -450,6 +484,7 @@
       $(".step-4-next").hide();
       $(".step-5-next").hide();
       $(".step-6-next").hide();
+      $(".step-7-next").hide();
 
 
       $(".step-2-submit").hide()
@@ -557,6 +592,32 @@
         $(".step-4-next").hide();
         $(".step-5-next").hide();
         $(".step-6-next").show();
+
+      });
+
+      $(".step-6-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+        $(".step-7-prev").show();
+
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+        $(".step-7").show();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").hide();
+        $(".step-7-next").show();
 
       });
 
@@ -673,6 +734,34 @@
 
       });
 
+      $(".step-7-prev").click(function () {
+        //fifth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").show();
+        $(".step-7-prev").hide();
+
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").show();
+        $(".step-7").hide();
+
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").show();
+        $(".step-7-next").hide();
+
+      });
+
       // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
       $(".step-2-submit").click(function () {
         // Do something here, like submit the form via AJAX
@@ -693,6 +782,21 @@
 
         // Add "active" class to the clicked item
         item.classList.add('active');
+      });
+    });
+
+
+
+    const items2 = document.querySelectorAll('.laptop2');
+    items2.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove "active" class from all items
+        items2.forEach(item => {
+          item.classList.remove('active2');
+        });
+
+        // Add "active" class to the clicked item
+        item.classList.add('active2');
       });
     });
 
@@ -750,6 +854,67 @@
       number2.textContent = count2;
     });
 
+    // Set your publishable key
+    var stripe = Stripe('pk_live_51Mnf2GFgBZKMbNrcBpudayCEGrS7pjEryIoLfwOwJ3vDc2L0HiSVPRA1EJR04ZxoACZi5MwxkIbH9caR1qU8qcFD00RQ3jbikA');
+
+    // Create a card element and mount it to the DOM
+    var elements = stripe.elements();
+    var cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    // Handle real-time validation errors from the card element
+    cardElement.addEventListener('change', function (event) {
+      var displayError = document.getElementById('card-errors');
+      if (event.error) {
+        displayError.textContent = event.error.message;
+      } else {
+        displayError.textContent = '';
+      }
+    });
+
+    // Handle form submission
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      // Disable the submit button to prevent multiple submissions
+      document.getElementById('submit-payment').disabled = true;
+
+      // Collect the customer's name and email
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+
+      // Create a token with the customer's card information and name/email
+      stripe.createToken(cardElement, { name: name, email: email }).then(function (result) {
+        if (result.error) {
+          // Inform the user if there was an error creating the token
+        //  var errorElement = document.getElementById('card-errors');
+          //errorElement.textContent = result.error.message;
+
+          // Re-enable the submit button to allow for retry
+          document.getElementById('submit-payment').disabled = false;
+        } else {
+          // Send the token to your server to process the payment
+          var token = result.token.id;
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST', 'YOUR_PAYMENT_PROCESSOR_ENDPOINT');
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              // Payment successful
+              alert('Payment successful!');
+            } else {
+              // Payment failed
+              alert('Payment failed.');
+            }
+
+            // Re-enable the submit button
+            document.getElementById('submit-payment').disabled = false;
+          };
+          xhr.send('token=' + token);
+        }
+      });
+    });
 
   </script>
 

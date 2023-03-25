@@ -16,48 +16,84 @@
     <!-- Your HTML code goes here -->
 
     <!--First Section-->
-    <div class="hero" style="background-image: url('path/to/background-image.jpg');">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img src="path/to/logo.png" alt="Logo">
-                    <h1>Hello World!</h1>
-                </div>
-            </div>
-        </div>
+    <div class="header priceheader">
+        <img class="logo" src="./imgs/Group.svg" />
+        <h2>Prices</h2>
     </div>
 
-
     <!--Second Section-->
-    <div class="container">
+    <div class="container price">
         <div class="row">
-            <div class="col-md-6">
-                <!-- Heading text and button -->
-                <h1>Heading Text</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <button class="btn btn-primary">Learn More</button>
-            </div>
-            <div class="col-md-6">
-                <!-- Video -->
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                        allowfullscreen></iframe>
+            <p class="para">
+                Calculate the estimated prices for the data you are going to secure using Data-Safe:
+            </p>
+
+            <div class="fifth">
+                <div class="row fullcolsmeda">
+                    <div class="col-md-6 innerbg flex colsm12">
+                        <div class="d-flex justify-content-center align-items-center innerhead">
+                            Get your estimated price
+                        </div>
+                    </div>
+                    <div class="col-md-6 secondInner colsm12">
+                        <div class="row">
+                            <div class="col-md-12 mb-3">
+                                <p class="text-white storage">Storage capacity(in GB):</p>
+                                <div class="input-group">
+                                    <div class="innerGroup">
+                                        <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                                            <p class="text-white subtract2">-</p>
+                                        </button>
+                                        <p class="innerText innerNumber2">100</p>
+                                        <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                                            <p class="text-white add2">+</p>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 mb-3 prices">
+                                <div class="input-group">
+                                    <p class="bigInnerText">127,8</p>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
+                                            <p class="monthlyText">/ Monthly</p>
+                                        </span>
+                                    </div>
+                                </div>
+                                <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to
+                                    0.16€</small>
+                            </div>
+                            <div class="col-md-12 mb-3 flex-center">
+                                <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal"
+                                    data-target="#multistep-modal">
+                                    Purchase Now
+                                    <img src="./imgs/Group2.svg" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <p class="fifth-para">Data-safe will only charge for the capacity used and not for the maximum capacity
+                </p>
             </div>
+
+
+
+
         </div>
     </div>
 
     <!--Third Section-->
-    <div class="container">
+    <div class="container third">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <h2>Section Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper purus ac magna consectetur,
-                    vel hendrerit justo sagittis. Sed id vestibulum ante. Suspendisse finibus quam eget volutpat
-                    dapibus. Vestibulum non eros non mauris aliquam consequat sit amet ac enim.</p>
+            <div class="col-12 col-md-6 centerr">
+                <h2 class="thirdheading">Pricing</h2>
+                <p>Whether you’re a small company, freelancer or end user, DataSafe has got you covered. We have a wide
+                    range of pricing plans to make sure you get the best value for money. Here's a breakdown of our
+                    plans:</p>
             </div>
-            <div class="col-12 col-md-6">
-                <img src="path/to/image.jpg" alt="Image">
+            <div class="col-12 col-md-6 leftt">
+                <img src="./imgs/tag.svg" alt="Image">
             </div>
         </div>
     </div>
@@ -67,9 +103,8 @@
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="card">
-                    <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+                    <img src="./imgs/first.svg" class="card-img-top iii" alt="Image 1">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 1</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
                             purus ac magna consectetur, vel hendrerit justo sagittis.</p>
                     </div>
@@ -77,9 +112,8 @@
             </div>
             <div class="col-12 col-md-4">
                 <div class="card">
-                    <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./imgs/second.svg" class="card-img-top iii" alt="Image 2">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 2</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
                             purus ac magna consectetur, vel hendrerit justo sagittis.</p>
                     </div>
@@ -87,9 +121,8 @@
             </div>
             <div class="col-12 col-md-4">
                 <div class="card">
-                    <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
+                    <img src="./imgs/third.svg" class="card-img-top iii" alt="Image 3">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 3</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
                             purus ac magna consectetur, vel hendrerit justo sagittis.</p>
                     </div>
@@ -99,9 +132,8 @@
         <div class="row">
             <div class="col-12 col-md-4">
                 <div class="card">
-                    <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+                    <img src="./imgs/fourth.svg" class="card-img-top iii" alt="Image 1">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 1</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
                             purus ac magna consectetur, vel hendrerit justo sagittis.</p>
                     </div>
@@ -109,9 +141,8 @@
             </div>
             <div class="col-12 col-md-4">
                 <div class="card">
-                    <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./imgs/fifth.svg" class="card-img-top iii" alt="Image 2">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 2</h5>
                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
                             purus ac magna consectetur, vel hendrerit justo sagittis.</p>
                     </div>
@@ -125,14 +156,15 @@
     <section class="bg-image" style="background-image: url('path/to/background-image.jpg'); height: fit-content;">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <img src="path/to/image.jpg" alt="Image">
+                <div class="col-12 col-md-6 customimagecontainer">
+                    <img src="./imgs/rect.png" alt="Image" class="customimage">
                 </div>
-                <div class="col-12 col-md-6">
-                    <h2>Section Heading</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper purus ac magna
-                        consectetur, vel hendrerit justo sagittis. Sed id vestibulum ante. Suspendisse finibus quam eget
-                        volutpat dapibus. Vestibulum non eros non mauris aliquam consequat sit amet ac enim.</p>
+                <div class="col-12 col-md-6 eww">
+                    <h2 class="heading2">DataSafe Cloud backup</h2>
+                    <p class="paragra">We know how important it is to keep your data secure. That’s why DataSafe comes
+                        with
+                        top-of-the-line security measures. Here are some of the features that make us the best cloud
+                        backup solution:</p>
                 </div>
             </div>
         </div>
@@ -145,104 +177,29 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+                            <div class="card p-4">
+                                <img src="./imgs/i.svg" class="card-img-top iii" alt="Image 1">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card Title 1</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                                    <p class="card-text">We use the <b>highest standard of encryption, AES 256-bit,
+                                        </b>to protect your data both in transit and at rest.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+                            <div class="card p-4">
+                                <img src="./imgs/ii.svg" class="card-img-top iii" alt="Image 2">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card Title 2</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                                    <p class="card-text">You can generate <b> your own private key </b>or have one
+                                        generated during deployment.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
+                            <div class="card p-4">
+                                <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
                                 <div class="card-body">
-                                    <h5 class="card-title">Card Title 3</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card Title 1</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card Title 2</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card Title 3</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card Title 1</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card Title 2</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card">
-                                <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card Title 3</h5>
-                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                                        ullamcorper purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                                    <p class="card-text">Our ISO-certified data centers are worldwide, with additional
+                                        certifications specific to each area.</p>
                                 </div>
                             </div>
                         </div>
@@ -259,51 +216,55 @@
     </div>
 
     <!--Seventh Section-->
-    <div class="container">
+    <div class="container my-5">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <h2>Section Heading</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper purus ac magna consectetur,
-                    vel hendrerit justo sagittis. Sed id vestibulum ante. Suspendisse finibus quam eget volutpat
-                    dapibus. Vestibulum non eros non mauris aliquam consequat sit amet ac enim.</p>
+            <div class="col-12 col-md-6 sev">
+                <h2>Microsoft 365 data protection</h2>
+                <p>If you’re a Microsoft 365 user, you know how difficult it can be to keep track of all your data.
+                    That’s why DataSafe has got you covered with our Microsoft 365 data protection service. Here’s what
+                    you'll get: </p>
             </div>
-            <div class="col-12 col-md-6">
-                <img src="path/to/image.jpg" alt="Image">
+            <div class="col-12 col-md-6 leftt">
+                <img src="./imgs/hl.svg" alt="Image">
             </div>
         </div>
     </div>
 
 
     <!--Eighth Section-->
-    <div class="container">
+    <div class="container lass">
         <div class="row">
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <div class="card">
-                    <img src="path/to/image1.jpg" class="card-img-top" alt="Image 1">
+                    <img src="./imgs/pp.svg" class="card-img-top iii" alt="Image 1">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 1</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">We offer recovery of deleted items to help you keep control of your
+                            customers’ data in Microsoft 365.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3 lass">
                 <div class="card">
-                    <img src="path/to/image2.jpg" class="card-img-top" alt="Image 2">
+                    <img src="./imgs/ppp.svg" class="card-img-top iii" alt="Image 2">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 2</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">You’ll be able to manage your Microsoft 365 backups from the same dashboard
+                            as server and workstation backups.</p>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-3">
                 <div class="card">
-                    <img src="path/to/image3.jpg" class="card-img-top" alt="Image 3">
+                    <img src="./imgs/pppp.svg" class="card-img-top iii" alt="Image 3">
                     <div class="card-body">
-                        <h5 class="card-title">Card Title 3</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">Enjoy up to seven years of data retention, so you can meet your regulatory requirements.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="card">
+                    <img src="./imgs/ppppp.svg" class="card-img-top iii" alt="Image 3">
+                    <div class="card-body">
+                        <p class="card-text">All your storage needs are taken care of – we provide global private cloud storage.</p>
                     </div>
                 </div>
             </div>
@@ -312,33 +273,39 @@
 
 
     <!--Footer-->
-    <div class="footer" style="background-image: url('path/to/background-image.jpg');">
+    <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4">
-                    <img src="path/to/logo.png" alt="Logo">
+                <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+                    <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
                 </div>
                 <div class="col-6 col-md-4">
-                    <h3>Pages</h3>
-                    <ul>
-                        <li><a href="#">Page 1</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
+                    <ul class="nolist">
+                        <li>
+                            <p class="listItem bold">Pages</p>
+                        </li>
+                        <li><a href="#" class="listItem">FAQs</a></li>
+                        <li><a href="#" class="listItem">Contact Us</a></li>
+                        <li><a href="#" class="listItem">Pricing</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-4">
-                    <h3>More Pages</h3>
-                    <ul>
-                        <li><a href="#">Page 4</a></li>
-                        <li><a href="#">Page 5</a></li>
-                        <li><a href="#">Page 6</a></li>
+                    <ul class="nolist">
+                        <li>
+                            <p class="listItem bold">Resources</p>
+                        </li>
+                        <li><a href="#" class="listItem">Terms and Conditions</a></li>
+                        <li><a href="#" class="listItem">Cookie policy</a></li>
+                        <li><a href="#" class="listItem">Privacy Policy</a></li>
+                        <li><a href="#" class="listItem">Disclaimer</a></li>
                     </ul>
                 </div>
-            </div>
-            <div>
-                Copyrights All rights reserved
             </div>
         </div>
+    </div>
+
+    <div class="container-fluid copywright">
+        © Copyrights 2022 DataSafe All rights reserved.
     </div>
 
 
