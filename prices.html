@@ -7,16 +7,11 @@
 
   <!-- Link to Bootstrap CSS from CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <!-- Link to local stylesheet -->
+
 
   <link rel="stylesheet" href="./style.css">
 
 
-
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -415,48 +410,69 @@
 
   <!--Sixth Section-->
 
-  <div class="slider">
-    <div>
-      <div class="col-12 ">
-        <div class="card p-4">
-          <img src="./imgs/i.svg" class="card-img-top iii" alt="Image 1">
-          <div class="card-body">
-            <p class="card-text">We use the <b>highest standard of encryption, AES 256-bit,
-              </b>to protect your data both in transit and at rest.</p>
+
+
+
+
+  <ul class="slides">
+    <input type="radio" name="radio-btn" id="img-1" checked />
+    <li class="slide-container">
+      <div class="slide">
+        <div class="col-12 ">
+          <div class="card p-4">
+            <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
+            <div class="card-body">
+              <p class="card-text">Our ISO-certified data centers are worldwide, with additional
+                certifications specific to each area.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <div class="col-12 ">
-        <div class="card p-4">
-          <img src="./imgs/ii.svg" class="card-img-top iii" alt="Image 2">
-          <div class="card-body">
-            <p class="card-text">You can generate <b> your own private key </b>or have one
-              generated during deployment.</p>
+
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-2" />
+    <li class="slide-container">
+      <div class="slide">
+        <div>
+          <div class="col-12 ">
+            <div class="card p-4">
+              <img src="./imgs/ii.svg" class="card-img-top iii" alt="Image 2">
+              <div class="card-body">
+                <p class="card-text">You can generate <b> your own private key </b>or have one
+                  generated during deployment.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <div class="col-12 ">
-        <div class="card p-4">
-          <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
-          <div class="card-body">
-            <p class="card-text">Our ISO-certified data centers are worldwide, with additional
-              certifications specific to each area.</p>
+    </li>
+
+    <input type="radio" name="radio-btn" id="img-3" />
+    <li class="slide-container">
+      <div class="slide">
+        <div class="col-12 ">
+          <div class="card p-4">
+            <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
+            <div class="card-body">
+              <p class="card-text">Our ISO-certified data centers are worldwide, with additional
+                certifications specific to each area.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    
-  </div>
-  <div class="dots">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
+     
+    </li>
+
+   
+
+    <li class="nav-dots">
+      <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+      <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+      <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+    </li>
+  </ul>
+
 
 
   <!--Seventh Section-->
@@ -518,8 +534,13 @@
   </div>
 
 
+
+
+
+
+
   <!--Footer-->
-  <div class="footer">
+  <div class="footer mt-5">
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-4 colsm12 footerLogoContainer">
@@ -565,41 +586,8 @@
 
 
 
-  <!-- Slick slider JS -->
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 
-
-  <script>
-    $(document).ready(function () {
-      var slider = $('.slider');
-      var dots = $('.dots');
-      slider.slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        infinite: true,
-        prevArrow: false,
-        nextArrow: '.next',
-        appendDots: dots,
-        customPaging: function (slider, i) {
-          return '<span class="dot"></span>';
-        },
-        dotsClass: 'dots',
-      });
-      var dot = $('.dot');
-      var activeDot = $('.slick-active .dot');
-      activeDot.addClass('active');
-      slider.on('afterChange', function (event, slick, currentSlide) {
-        dot.removeClass('active');
-        var activeDot = $('.slick-active .dot');
-        activeDot.addClass('active');
-      });
-    });
-
-
-
-  </script>
 
 
   <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
@@ -608,181 +596,86 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <!-- Slick slider JS -->
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
 
   <script>
 
 
-    $(document).ready(function () {
-      // Hide the Previous button by default
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-      $(".step-7-prev").hide();
-
-      $(".step-1").show();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-      $(".step-7").hide();
-
-      $(".step-1-next").show();
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-      $(".step-6-next").hide();
-      $(".step-7-next").hide();
 
 
-      $(".step-2-submit").hide()
 
-      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
-      $(".step-1-next").click(function () {
-        $(".step-2-prev").show();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
+    const sliderTrack = document.querySelector('.slider-track');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const sliderDots = document.querySelectorAll('.slider-dot');
+    const dotContainer = document.querySelector('.slider-dots');
 
-        $(".step-1").hide();
-        $(".step-2").show();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").hide();
+    let itemIndex = 0;
+    let lastIndex = sliderItems.length - 1;
 
-        $(".step-1-next").hide();
-        $(".step-2-next").show();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
+    // Add event listeners to dots
+    sliderDots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        goToItem(index);
       });
+    });
 
-      $(".step-2-next").click(function () {
-        $(".step-2-prev").hide();
-        $(".step-3-prev").show();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
-
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").show();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").hide();
-
-        $(".step-2-next").hide();
-        $(".step-3-next").show();
-        $(".step-2-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
+    // Set active dot
+    function setActiveDot(index) {
+      sliderDots.forEach((dot) => {
+        dot.classList.remove('active');
       });
+      sliderDots[index].classList.add('active');
+    }
 
-      $(".step-3-next").click(function () {
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").show();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
+    // Go to item
+    function goToItem(index) {
+      sliderTrack.style.transform = `translateX(-${index * (100 / 3)}%)`;
+      setActiveDot(index);
+      itemIndex = index;
+    }
 
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").show();
-        $(".step-5").hide();
-        $(".step-6").hide();
+    // Previous item
+    function prevItem() {
+      if (itemIndex === 0) {
+        itemIndex = lastIndex - 2;
+      } else if (itemIndex === 1) {
+        itemIndex = lastIndex - 1;
+      } else {
+        itemIndex -= 3;
+      }
+      goToItem(itemIndex);
+    }
 
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").show();
-        $(".step-5-next").hide();
-      });
+    // Next item
+    function nextItem() {
+      if (itemIndex === lastIndex - 2) {
+        itemIndex = 0;
+      } else if (itemIndex === lastIndex - 1) {
+        itemIndex = 1;
+      } else {
+        itemIndex += 3;
+      }
+      goToItem(itemIndex);
+    }
 
-      $(".step-4-next").click(function () {
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").show();
-        $(".step-6-prev").hide();
+    // Infinite loop
+    setInterval(() => {
+      nextItem();
+    },
 
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").show();
-        $(".step-6").hide();
 
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").show();
 
-      });
 
-      $(".step-5-next").click(function () {
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").show();
 
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").show();
-
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
-        $(".step-6-next").show();
-
-      });
-
-      $(".step-6-next").click(function () {
+      $(document).ready(function () {
+        // Hide the Previous button by default
         $(".step-2-prev").hide();
         $(".step-3-prev").hide();
         $(".step-4-prev").hide();
         $(".step-5-prev").hide();
         $(".step-6-prev").hide();
-        $(".step-7-prev").show();
-
-
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").hide();
-        $(".step-7").show();
-
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
-        $(".step-6-next").hide();
-        $(".step-7-next").show();
-
-      });
-
-      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
-      $(".step-2-prev").click(function () {
-        //first data
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
+        $(".step-7-prev").hide();
 
         $(".step-1").show();
         $(".step-2").hide();
@@ -790,144 +683,299 @@
         $(".step-4").hide();
         $(".step-5").hide();
         $(".step-6").hide();
+        $(".step-7").hide();
 
         $(".step-1-next").show();
         $(".step-2-next").hide();
         $(".step-3-next").hide();
         $(".step-4-next").hide();
         $(".step-5-next").hide();
-
-        $(".step-2-submit").hide()
-      });
-
-      $(".step-3-prev").click(function () {
-        //second data
-        $(".step-2-prev").show();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
-
-        $(".step-1").hide();
-        $(".step-2").show();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").hide();
-
-        $(".step-1-next").hide();
-        $(".step-2-next").show();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
-      });
-
-      $(".step-4-prev").click(function () {
-        //third data
-        $(".step-2-prev").hide();
-        $(".step-3-prev").show();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
-
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").show();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").hide();
-
-        $(".step-2-next").hide();
-        $(".step-3-next").show();
-        $(".step-2-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
-      });
-
-      $(".step-5-prev").click(function () {
-        //fourth data
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").show();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").hide();
-
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").show();
-        $(".step-5").hide();
-        $(".step-6").hide();
-
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").show();
-        $(".step-5-next").hide();
-      });
-
-      $(".step-6-prev").click(function () {
-        //fifth data
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").show();
-        $(".step-6-prev").hide();
-
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").show();
-        $(".step-6").hide();
-
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").show();
         $(".step-6-next").hide();
-
-      });
-
-      $(".step-7-prev").click(function () {
-        //fifth data
-        $(".step-2-prev").hide();
-        $(".step-3-prev").hide();
-        $(".step-4-prev").hide();
-        $(".step-5-prev").hide();
-        $(".step-6-prev").show();
-        $(".step-7-prev").hide();
-
-
-        $(".step-1").hide();
-        $(".step-2").hide();
-        $(".step-3").hide();
-        $(".step-4").hide();
-        $(".step-5").hide();
-        $(".step-6").show();
-        $(".step-7").hide();
-
-
-        $(".step-2-next").hide();
-        $(".step-3-next").hide();
-        $(".step-4-next").hide();
-        $(".step-5-next").hide();
-        $(".step-6-next").show();
         $(".step-7-next").hide();
 
+
+        $(".step-2-submit").hide()
+
+        // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+        $(".step-1-next").click(function () {
+          $(".step-2-prev").show();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").show();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-1-next").hide();
+          $(".step-2-next").show();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-2-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").show();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").show();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").show();
+          $(".step-2-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-3-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").show();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").show();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").show();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-4-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").show();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").show();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").show();
+
+        });
+
+        $(".step-5-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").show();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").show();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+          $(".step-6-next").show();
+
+        });
+
+        $(".step-6-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+          $(".step-7-prev").show();
+
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+          $(".step-7").show();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+          $(".step-6-next").hide();
+          $(".step-7-next").show();
+
+        });
+
+        // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+        $(".step-2-prev").click(function () {
+          //first data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").show();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-1-next").show();
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+
+          $(".step-2-submit").hide()
+        });
+
+        $(".step-3-prev").click(function () {
+          //second data
+          $(".step-2-prev").show();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").show();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-1-next").hide();
+          $(".step-2-next").show();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-4-prev").click(function () {
+          //third data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").show();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").show();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").show();
+          $(".step-2-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-5-prev").click(function () {
+          //fourth data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").show();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").show();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").show();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-6-prev").click(function () {
+          //fifth data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").show();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").show();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").show();
+          $(".step-6-next").hide();
+
+        });
+
+        $(".step-7-prev").click(function () {
+          //fifth data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").show();
+          $(".step-7-prev").hide();
+
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").show();
+          $(".step-7").hide();
+
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+          $(".step-6-next").show();
+          $(".step-7-next").hide();
+
+        });
+
+        // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
+        $(".step-2-submit").click(function () {
+          // Do something here, like submit the form via AJAX
+          // Then close the modal
+          $("#multistep-modal").modal("hide");
+        });
       });
-
-      // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
-      $(".step-2-submit").click(function () {
-        // Do something here, like submit the form via AJAX
-        // Then close the modal
-        $("#multistep-modal").modal("hide");
-      });
-    });
-
-
-
-
-
 
     const number2 = document.querySelector('.countwalaspan2');
     const addBtn2 = document.querySelector('.add2');
@@ -937,12 +985,9 @@
     let count2 = 100;
     number2.value = count2
 
-
-
     number2.addEventListener('keyup', () => {
       let val = number2.value
       if (val > 100) {
-
         let temp = val - 100
         temp = 0.17 * temp
         temp = temp + 16
@@ -952,10 +997,7 @@
         bottomPrice.innerHTML = 16
       }
       // Update the number text in the div
-
     })
-
-
     // Add event listener to the "Add" button
     addBtn2.addEventListener('click', () => {
       // Increase the count by 1
@@ -965,29 +1007,28 @@
         temp = 0.17 * temp
         temp = temp + 16
         bottomPrice.innerHTML = temp
+      } else {
+        bottomPrice.innerHTML = 16
       }
       // Update the number text in the div
       number2.value = count2
     });
-
     // Add event listener to the "Subtract" button
     subtractBtn2.addEventListener('click', () => {
       // Decrease the count by 1
       count2 -= 10;
-
+      if (count2 > 100) {
+        let temp = count2 - 100
+        temp = 0.17 * temp
+        temp = temp + 16
+        bottomPrice.innerHTML = temp
+      } else {
+        bottomPrice.innerHTML = 16
+      }
       // Update the number text in the div
       number2.value = count2
     });
-
-
-
-
-
   </script>
-
-
-
-
 </body>
 
 </html>
