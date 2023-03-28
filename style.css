@@ -769,15 +769,15 @@ li {
     font-size: 23px;
   }
 
-  .prices img{
+  .prices img {
     width: 15%;
   }
 
-  .prices .monthlyText{
-    font-size: 15px; 
+  .prices .monthlyText {
+    font-size: 15px;
   }
 
-  .leftt{
+  .leftt {
     justify-content: center !important;
   }
 
@@ -1164,10 +1164,6 @@ ol.q {
 
 
 .prices .monthlyText {
-  width: 17%;
-}
-
-.prices .monthlyText {
   font-size: 25px !important;
 }
 
@@ -1344,36 +1340,57 @@ ol.q {
 }
 
 
-.customimage{
+.customimage {
   width: 100%;
   padding: 0;
 }
 
-.customimagecontainer{
+.customimagecontainer {
   padding: 0;
 }
 
-.contactlabel{
+.contactlabel {
   padding: 0.5rem;
   width: 100%;
 }
 
-.contactlabeltitle{
+.contactlabeltitle {
   margin-top: 1rem;
 }
 
 @media screen and (max-width: 800px) {
-  .colled{
+  .colled {
     padding: 2rem;
   }
-  .priceheader{
+
+  .priceheader {
     padding: 2rem 0;
   }
-  .priceheader .logo{
+
+  .priceheader .logo {
     width: 50%;
     margin-bottom: 2rem;
   }
-  .priceheader h2{
+
+  .priceheader h2 {
     padding: 0;
   }
 }
+
+.countwalaspan2 {
+  color: black !important;
+  width: 20%;
+  border: none;
+}
+
+.collapseii {
+  font-size: 18px !important;
+}
+
+.customflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+

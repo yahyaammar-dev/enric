@@ -377,13 +377,13 @@
       <div class="col-md-6 secondInner colsm12">
         <div class="row">
           <div class="col-md-12 mb-3">
-            <p class="text-white storage">Storage capacity(in GB):</p>
+            <p class="text-white storage">Storage capacity:</p>
             <div class="input-group">
               <div class="innerGroup">
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                   <p class="text-white subtract2">-</p>
                 </button>
-                <p class="innerText innerNumber2">100</p>
+                <p class="innerText innerNumber2"><input class="countwalaspan2" type="text" /><span class="yellowspangb"> GB</span></p>
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                   <p class="text-white add2">+</p>
                 </button>
@@ -393,7 +393,7 @@
           <div class="col-md-12 mb-3">
             <p>Subsection 2</p>
             <div class="input-group">
-              <p class="bigInnerText">127,8</p>
+              <p class="bigInnerText bottomprice">16</p>
               <div class="input-group-append">
                 <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
                   <p class="monthlyText">/ Monthly</p>
@@ -447,7 +447,7 @@
   </div>
 
   <div class="container-fluid copywright">
-    © Copyrights 2022 DataSafe All rights reserved.
+    © Copyrights 2023 DataSafe All rights reserved.
   </div>
 
 
@@ -802,17 +802,18 @@
 
 
     // Get the number and buttons elements
-    const number = document.querySelector('.innerNumber');
+    const number = document.querySelector('.countwalaspan');
     const addBtn = document.querySelector('.add');
     const subtractBtn = document.querySelector('.subtract');
 
     // Set the initial number value
     let count = 100;
 
+
     // Add event listener to the "Add" button
     addBtn.addEventListener('click', () => {
       // Increase the count by 1
-      count++;
+      count += 10;
 
       // Update the number text in the div
       number.textContent = count;
@@ -821,7 +822,7 @@
     // Add event listener to the "Subtract" button
     subtractBtn.addEventListener('click', () => {
       // Decrease the count by 1
-      count--;
+      count -= 10
 
       // Update the number text in the div
       number.textContent = count;
@@ -829,29 +830,54 @@
 
 
 
-    const number2 = document.querySelector('.innerNumber2');
+    const number2 = document.querySelector('.countwalaspan2');
     const addBtn2 = document.querySelector('.add2');
     const subtractBtn2 = document.querySelector('.subtract2');
-
+    const bottomPrice = document.querySelector('.bottomprice')
     // Set the initial number value
     let count2 = 100;
+    number2.value = count2
+
+
+
+    number2.addEventListener('keyup', ()=>{
+      let val = number2.value
+      if(val > 100){
+        
+        let temp = val - 100
+        temp = 0.17 * temp
+        temp = temp + 16
+        console.log('innerhtml', val)
+        bottomPrice.innerHTML = temp
+      }else{
+        bottomPrice.innerHTML = 16
+      }
+      // Update the number text in the div
+     
+    })
+
 
     // Add event listener to the "Add" button
     addBtn2.addEventListener('click', () => {
       // Increase the count by 1
-      count2++;
-
+      count2 += 10;
+      if(count2 > 100){
+        let temp = count2 - 100
+        temp = 0.17 * temp
+        temp = temp + 16
+        bottomPrice.innerHTML = temp
+      }
       // Update the number text in the div
-      number2.textContent = count2;
+      number2.value = count2
     });
 
     // Add event listener to the "Subtract" button
     subtractBtn2.addEventListener('click', () => {
       // Decrease the count by 1
-      count2--;
+      count2 -= 10;
 
       // Update the number text in the div
-      number2.textContent = count2;
+      number2.value = count2
     });
 
     // Set your publishable key

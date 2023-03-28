@@ -15,6 +15,238 @@
 <body>
     <!-- Your HTML code goes here -->
 
+ <!-- Modal Goes Here -->
+ <div class="modal fade" id="multistep-modal" tabindex="-1" role="dialog" aria-labelledby="multistep-modal-label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img src='imgs/Group.svg' class="logo" />
+          <img src="imgs/close.png" data-dismiss="modal" class="close" />
+        </div>
+        <div class="modal-body">
+          <div class="step-1 step">
+            <p class="heading">Product Explanation</p>
+            <p>
+              The amount of data stored differs from person to person.
+              We all create, use, and store different amounts of data depending on our needs.
+              By answering the following questions, we will get a personalized estimate of the cost to safely and
+              <b>securely store your data in the cloud.</b>
+            </p>
+          </div>
+          <div class="step-2 step">
+            <p class="heading">Where is your data stored?</p>
+            <div class="flex">
+              <div class="laptop">
+                <img src="imgs/laptop1.svg" />
+                <p>Laptop</p>
+              </div>
+              <div class="laptop">
+                <img src="imgs/laptop2.svg" />
+                <p>PC</p>
+              </div>
+              <div class="laptop">
+                <img src="imgs/laptop3.svg" />
+                <p>External Devices</p>
+              </div>
+            </div>
+          </div>
+          <div class="step-3 step">
+            <p class="heading">What are these devices for?</p>
+            <div class="flex">
+              <div class="laptop2">
+                <img src="imgs/person1.svg" />
+                <p>Personal</p>
+              </div>
+              <div class="laptop2">
+                <img src="imgs/person2.svg" />
+                <p>Work Purpose</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="step-4 step">
+            <p class="heading">How many gigabytes can you store on this device?</p>
+            <div class="flex">
+              <div class="innerGroup">
+                <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                  <p class="text-white subtract">-</p>
+                </button>
+                <p class="innerText innerNumber">100 </p>
+                <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                  <p class="text-white add">+</p>
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="step-5 step">
+            <p class="heading">We’re preparing your personalized quote. Let us know your email address, and we’ll send
+              it shortly.</p>
+            <div class="flexs">
+              <div class="counters">
+                <div class="item">
+                  <span class="activeCounter">1</span>
+                  <span>2</span>
+                  <span>3</span>
+                </div>
+              </div>
+              <div class="emailContainer">
+                <p class='myheading'>Email</p>
+                <input type="email" name="email" placeholder="Enter your email address" class="email" />
+              </div>
+              <div class="emailContainer">
+                <p class='myheading'>Terms </p>
+                <p class="termtext">
+                  For the purposes of this contract, the following words shall have the meaning specified below: ANNEX
+                  TO THE CONTRACT, refers to the documentation attached to this contract, and which specifies certain
+                  aspects of it, having for all purposes the same force to bind the parties as this document. STORAGE,
+                  OR BACKUP SERVICE: Custody of the information sent by the client, in remote equipment available to
+                  Traffix Marketing online SCP -in order to ensure the maximum preservation of such information-. It
+                  includes not only the reception of the information and its custody but also the means to facilitate
+                  access by the client, to retrieve the information by computer
+                </p>
+              </div>
+              <div class="step-5links">
+                <a href="#">Terms and Conditions,</a>
+                <a href="#">Privacy Policy,</a>
+                <a href="#">Cookie Policy.</a>
+              </div>
+              <div class="step-5terms">
+                <input type="checkbox" class="checkboxitem" />
+                <p>I read and agree to terms and conditions</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="step-6 step">
+            <div class="counters">
+              <div class="item">
+                <span>1</span>
+                <span class="activeCounter">2</span>
+                <span>3</span>
+              </div>
+            </div>
+            <p class="heading step6heading">Storage capacity: <span class="mycounter"></span> GB</p>
+            <div class="input-group">
+              <p class="bigInnerText">127,8</p>
+              <div class="input-group-append">
+                <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
+                  <p class="monthlyText">/ Monthly</p>
+                </span>
+              </div>
+            </div>
+            <p>*With our service, you <i>only pay for the data you use.</i> We don’t charge you for the maximum capacity
+              of your device, which includes any unused space.</p>
+          </div>
+
+
+          <div class="step-7 step">
+            <p class="heading">Are you ready to get started? Just enter your payment details below, and we’ll take care
+              of the rest.</p>
+            <div class="flexs">
+              <div class="counters">
+                <div class="item">
+                  <span class="visitedCoutner">1</span>
+                  <span class="visitedCoutner">2</span>
+                  <span class="activeCounter">3</span>
+                </div>
+              </div>
+              <div class="emailContainer">
+                <p class='myheading pt-2 mt-4'>Credit card information </p>
+
+                <div class="input-group">
+                  <div class="inputcc">
+                    <input class="cc" placeholder="1234 1234 1234 1234" />
+                    <span class="suffix"><img src='./imgs/visa.png' /></span>
+                    <span class="suffix"><img src='./imgs/credit-card.png' /></span>
+                  </div>
+                  <div class="fullwidth">
+                    <input type="text" placeholder="MM/YY" class="customInput noborder" />
+                    <input type="text" placeholder="CVC" class="customInput border-bottom" />
+                  </div>
+                </div>
+
+                <p class='myheading mt-4'>Card Holder Name</p>
+                <div class="input-group">
+                  <input type="text" class="inputCard" placeholder="Jhon Doe" />
+                </div>
+                <p class='myheading mt-4'>Country</p>
+                <div class="input-group">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Select Countries</option>
+                    <option value="">South Sudan</option>
+                    <option value="">Spain</option>
+                    <option value="">Sri Lanka</option>
+                    <option value="">Sudan</option>
+                    <option value="">Suriname</option>
+                    <option value="">Swaziland</option>
+                    <option value="">Sweden</option>
+                    <option value="">Switzerland</option>
+                    <option value="">Syria</option>
+                    <option value="">Taiwan</option>
+                    <option value="">Tajikistan</option>
+                    <option value="">Tanzania</option>
+                    <option value="">Thailand</option>
+                    <option value="">Togo</option>
+                    <option value="">Tonga</option>
+                    <option value="">Trinidad & Tobago</option>
+                    <option value="">Tunisia</option>
+                    <option value="">Turkey</option>
+                    <option value="">Turkmenistan</option>
+                    <option value="">Tuvalu</option>
+                    <option value="">Uganda</option>
+                    <option value="">Ukraine</option>
+                    <option value="">United Arab Emirates</option>
+                    <option value="">United Kingdom</option>
+                    <option value="">United States</option>
+                    <option value="">Uruguay</option>
+                    <option value="">Uzbekistan</option>
+                    <option value="">Vanuatu</option>
+                    <option value="">Vatican City</option>
+                    <option value="">Venezuela</option>
+                    <option value="">Vietnam</option>
+                    <option value="">Yemen</option>
+                    <option value="">Zambia</option>
+                    <option value="">Zimbabwe</option>
+                  </select>
+                </div>
+                <small class="form-text text-smaller-gb">*With our service, you only pay for the data you use. We don’t
+                  charge you for the maximum capacity of your device, which includes any unused space.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary step-2-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-3-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-4-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-5-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-6-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-7-prev back">Back</button>
+
+
+          <button type="button" class="btn btn-primary step-1-next next">Next</button>
+          <button type="button" class="btn btn-primary step-2-next next">Next</button>
+          <button type="button" class="btn btn-primary step-3-next next">Next</button>
+          <button type="button" class="btn btn-primary step-4-next next">Next</button>
+          <button type="button" class="btn btn-primary step-5-next next">Next</button>
+          <button type="button" class="btn btn-primary step-6-next next">Next</button>
+          <button type="button" class="btn btn-primary step-7-next next" data-dismiss="modal">Subscribe</button>
+
+          <button type="button" class="btn btn-primary step-2-submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
     <!--First Section-->
     <div class="header priceheader">
         <img class="logo" src="./imgs/Group.svg" />
@@ -38,13 +270,14 @@
                     <div class="col-md-6 secondInner colsm12">
                         <div class="row">
                             <div class="col-md-12 mb-3">
-                                <p class="text-white storage">Storage capacity(in GB):</p>
+                                <p class="text-white storage">Storage capacity:</p>
                                 <div class="input-group">
                                     <div class="innerGroup">
                                         <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                                             <p class="text-white subtract2">-</p>
                                         </button>
-                                        <p class="innerText innerNumber2">100</p>
+                                        <p class="innerText innerNumber2"><input class="countwalaspan2"
+                                                type="text" /><span class="yellowspangb"> GB</span></p>
                                         <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                                             <p class="text-white add2">+</p>
                                         </button>
@@ -52,13 +285,11 @@
                                 </div>
                             </div>
                             <div class="col-md-12 mb-3 prices">
-                                <div class="input-group">
-                                    <p class="bigInnerText">127,8</p>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
-                                            <p class="monthlyText">/ Monthly</p>
-                                        </span>
-                                    </div>
+                                <div class="input-group customflex">
+                                    <p class="bigInnerText bottomprice">16</p>
+                                    <p><img src="./imgs/euro.svg" /></p>
+                                    <p class="monthlyText">/ Monthly</p>
+
                                 </div>
                                 <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to
                                     0.16€</small>
@@ -105,8 +336,7 @@
                 <div class="card">
                     <img src="./imgs/first.svg" class="card-img-top iii" alt="Image 1">
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">We start at 100GB for just 15€ and every extra GB is only 0.16€. </p>
                     </div>
                 </div>
             </div>
@@ -114,8 +344,7 @@
                 <div class="card">
                     <img src="./imgs/second.svg" class="card-img-top iii" alt="Image 2">
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">Our prices include the servers so you won’t need to worry about overly complex integrations.</p>
                     </div>
                 </div>
             </div>
@@ -123,8 +352,7 @@
                 <div class="card">
                     <img src="./imgs/third.svg" class="card-img-top iii" alt="Image 3">
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">And the best part? It’s one of the easiest and most user friendly services in the market.</p>
                     </div>
                 </div>
             </div>
@@ -134,8 +362,7 @@
                 <div class="card">
                     <img src="./imgs/fourth.svg" class="card-img-top iii" alt="Image 1">
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">We have different GB limits – 100GB, 250GB, 500GB, 750GB, 1000GB and unlimited – so you won’t have to worry about overspending. </p>
                     </div>
                 </div>
             </div>
@@ -143,8 +370,7 @@
                 <div class="card">
                     <img src="./imgs/fifth.svg" class="card-img-top iii" alt="Image 2">
                     <div class="card-body">
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper
-                            purus ac magna consectetur, vel hendrerit justo sagittis.</p>
+                        <p class="card-text">For extra peace of mind, we also offer a fully integrated service to <b> protect your Microsoft 365 account,</b> for just €3.49.</p>
                     </div>
                 </div>
             </div>
@@ -256,7 +482,8 @@
                 <div class="card">
                     <img src="./imgs/pppp.svg" class="card-img-top iii" alt="Image 3">
                     <div class="card-body">
-                        <p class="card-text">Enjoy up to seven years of data retention, so you can meet your regulatory requirements.</p>
+                        <p class="card-text">Enjoy up to seven years of data retention, so you can meet your regulatory
+                            requirements.</p>
                     </div>
                 </div>
             </div>
@@ -264,7 +491,8 @@
                 <div class="card">
                     <img src="./imgs/ppppp.svg" class="card-img-top iii" alt="Image 3">
                     <div class="card-body">
-                        <p class="card-text">All your storage needs are taken care of – we provide global private cloud storage.</p>
+                        <p class="card-text">All your storage needs are taken care of – we provide global private cloud
+                            storage.</p>
                     </div>
                 </div>
             </div>
@@ -272,47 +500,432 @@
     </div>
 
 
-   <!--Footer-->
-   <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
-          <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+    <!--Footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+                    <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+                </div>
+                <div class="col-6 col-md-4">
+                    <ul class="nolist">
+                        <li>
+                            <p class="listItem bold">Pages</p>
+                        </li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a>
+                        </li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html"
+                                class="listItem">Contact Us</a></li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html"
+                                class="listItem">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <ul class="nolist">
+                        <li>
+                            <p class="listItem bold">Resources</p>
+                        </li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
+                                class="listItem">Terms and Conditions</a></li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html"
+                                class="listItem">Cookie policy</a></li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html"
+                                class="listItem">Privacy Policy</a></li>
+                        <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html"
+                                class="listItem">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-6 col-md-4">
-          <ul class="nolist">
-            <li>
-              <p class="listItem bold">Pages</p>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem">Contact Us</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4">
-          <ul class="nolist">
-            <li>
-              <p class="listItem bold">Resources</p>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html" class="listItem">Terms and Conditions</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem">Cookie policy</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem">Privacy Policy</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem">Disclaimer</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-  </div>
 
     <div class="container-fluid copywright">
-        © Copyrights 2022 DataSafe All rights reserved.
+        © Copyrights 2023 DataSafe All rights reserved.
     </div>
 
 
-    <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+       <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script>
+
+
+        $(document).ready(function () {
+            // Hide the Previous button by default
+            $(".step-2-prev").hide();
+            $(".step-3-prev").hide();
+            $(".step-4-prev").hide();
+            $(".step-5-prev").hide();
+            $(".step-6-prev").hide();
+            $(".step-7-prev").hide();
+      
+            $(".step-1").show();
+            $(".step-2").hide();
+            $(".step-3").hide();
+            $(".step-4").hide();
+            $(".step-5").hide();
+            $(".step-6").hide();
+            $(".step-7").hide();
+      
+            $(".step-1-next").show();
+            $(".step-2-next").hide();
+            $(".step-3-next").hide();
+            $(".step-4-next").hide();
+            $(".step-5-next").hide();
+            $(".step-6-next").hide();
+            $(".step-7-next").hide();
+      
+      
+            $(".step-2-submit").hide()
+      
+            // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+            $(".step-1-next").click(function () {
+              $(".step-2-prev").show();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").show();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-1-next").hide();
+              $(".step-2-next").show();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+            });
+      
+            $(".step-2-next").click(function () {
+              $(".step-2-prev").hide();
+              $(".step-3-prev").show();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").show();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").show();
+              $(".step-2-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+            });
+      
+            $(".step-3-next").click(function () {
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").show();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").show();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").show();
+              $(".step-5-next").hide();
+            });
+      
+            $(".step-4-next").click(function () {
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").show();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").show();
+              $(".step-6").hide();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").show();
+      
+            });
+      
+            $(".step-5-next").click(function () {
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").show();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").show();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+              $(".step-6-next").show();
+      
+            });
+      
+            $(".step-6-next").click(function () {
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+              $(".step-7-prev").show();
+      
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").hide();
+              $(".step-7").show();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+              $(".step-6-next").hide();
+              $(".step-7-next").show();
+      
+            });
+      
+            // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+            $(".step-2-prev").click(function () {
+              //first data
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").show();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-1-next").show();
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+      
+              $(".step-2-submit").hide()
+            });
+      
+            $(".step-3-prev").click(function () {
+              //second data
+              $(".step-2-prev").show();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").show();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-1-next").hide();
+              $(".step-2-next").show();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+            });
+      
+            $(".step-4-prev").click(function () {
+              //third data
+              $(".step-2-prev").hide();
+              $(".step-3-prev").show();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").show();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").show();
+              $(".step-2-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+            });
+      
+            $(".step-5-prev").click(function () {
+              //fourth data
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").show();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").show();
+              $(".step-5").hide();
+              $(".step-6").hide();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").show();
+              $(".step-5-next").hide();
+            });
+      
+            $(".step-6-prev").click(function () {
+              //fifth data
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").show();
+              $(".step-6-prev").hide();
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").show();
+              $(".step-6").hide();
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").show();
+              $(".step-6-next").hide();
+      
+            });
+      
+            $(".step-7-prev").click(function () {
+              //fifth data
+              $(".step-2-prev").hide();
+              $(".step-3-prev").hide();
+              $(".step-4-prev").hide();
+              $(".step-5-prev").hide();
+              $(".step-6-prev").show();
+              $(".step-7-prev").hide();
+      
+      
+              $(".step-1").hide();
+              $(".step-2").hide();
+              $(".step-3").hide();
+              $(".step-4").hide();
+              $(".step-5").hide();
+              $(".step-6").show();
+              $(".step-7").hide();
+      
+      
+              $(".step-2-next").hide();
+              $(".step-3-next").hide();
+              $(".step-4-next").hide();
+              $(".step-5-next").hide();
+              $(".step-6-next").show();
+              $(".step-7-next").hide();
+      
+            });
+      
+            // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
+            $(".step-2-submit").click(function () {
+              // Do something here, like submit the form via AJAX
+              // Then close the modal
+              $("#multistep-modal").modal("hide");
+            });
+          });
+      
+      
+
+
+
+
+        const number2 = document.querySelector('.countwalaspan2');
+        const addBtn2 = document.querySelector('.add2');
+        const subtractBtn2 = document.querySelector('.subtract2');
+        const bottomPrice = document.querySelector('.bottomprice')
+        // Set the initial number value
+        let count2 = 100;
+        number2.value = count2
+
+
+
+        number2.addEventListener('keyup', () => {
+            let val = number2.value
+            if (val > 100) {
+
+                let temp = val - 100
+                temp = 0.17 * temp
+                temp = temp + 16
+                console.log('innerhtml', val)
+                bottomPrice.innerHTML = temp
+            } else {
+                bottomPrice.innerHTML = 16
+            }
+            // Update the number text in the div
+
+        })
+
+
+        // Add event listener to the "Add" button
+        addBtn2.addEventListener('click', () => {
+            // Increase the count by 1
+            count2 += 10;
+            if (count2 > 100) {
+                let temp = count2 - 100
+                temp = 0.17 * temp
+                temp = temp + 16
+                bottomPrice.innerHTML = temp
+            }
+            // Update the number text in the div
+            number2.value = count2
+        });
+
+        // Add event listener to the "Subtract" button
+        subtractBtn2.addEventListener('click', () => {
+            // Decrease the count by 1
+            count2 -= 10;
+
+            // Update the number text in the div
+            number2.value = count2
+        });
+
+
+
+
+
+    </script>
+
+
+
+ 
 </body>
 
 </html>
