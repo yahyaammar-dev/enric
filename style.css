@@ -923,6 +923,7 @@ li {
     width: 100%;
     flex: 0 0 100%;
     min-width: 100%;
+    display: block;
   }
 
   .laptop2 {
@@ -972,7 +973,7 @@ li {
 }
 
 .header .logo {
-  width: 13%;
+  width: 100%;
 }
 
 .header h2 {
@@ -1368,7 +1369,7 @@ ol.q {
   }
 
   .priceheader .logo {
-    width: 50%;
+    width: 100%;
     margin-bottom: 2rem;
   }
 
@@ -1394,3 +1395,51 @@ ol.q {
   gap: 1rem;
 }
 
+
+
+@media screen and (max-width: 600px) {
+  .laptop {
+    display: block;
+    height: fit-content;
+    padding: 0.1rem;
+  }
+  .laptop p{
+    margin-bottom: 0;
+  }
+  .step .heading{
+    font-size:  18px;
+  }
+  .termtext{
+    overflow-y: scroll;
+    max-height: 8rem;
+  }
+}
+
+.dots {
+  width: 83% !important;
+  text-align: center;
+  margin-top: 10px;
+  margin: auto;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: black;
+}
+
+.slick-slide {
+  width: 33% !important; 
+}
+
+.slick-track{
+  width: 80% !important;
+}

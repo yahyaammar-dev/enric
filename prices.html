@@ -2,21 +2,32 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>My Webpage</title>
+  <meta charset="UTF-8">
+  <title>My Webpage</title>
 
-    <!-- Link to Bootstrap CSS from CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Link to Bootstrap CSS from CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+  <!-- Link to local stylesheet -->
 
-    <!-- Link to local stylesheet -->
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
+
+
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
-    <!-- Your HTML code goes here -->
+  <!-- Your HTML code goes here -->
 
- <!-- Modal Goes Here -->
- <div class="modal fade" id="multistep-modal" tabindex="-1" role="dialog" aria-labelledby="multistep-modal-label">
+  <!-- Modal Goes Here -->
+  <div class="modal fade" id="multistep-modal" tabindex="-1" role="dialog" aria-labelledby="multistep-modal-label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -247,685 +258,736 @@
   </div>
 
 
-    <!--First Section-->
-    <div class="header priceheader">
-        <img class="logo" src="./imgs/Group.svg" />
-        <h2>Prices</h2>
-    </div>
+  <!--First Section-->
+  <div class="header priceheader">
+    <a href="https://master--glittering-semolina-308b40.netlify.app/">
+      <img class="logo" src="./imgs/Group.svg" />
+    </a>
+    <h2>Prices</h2>
+  </div>
 
-    <!--Second Section-->
-    <div class="container price">
-        <div class="row">
-            <p class="para">
-                Calculate the estimated prices for the data you are going to secure using Data-Safe:
-            </p>
+  <!--Second Section-->
+  <div class="container price">
+    <div class="row">
+      <p class="para">
+        Calculate the estimated prices for the data you are going to secure using Data-Safe:
+      </p>
 
-            <div class="fifth">
-                <div class="row fullcolsmeda">
-                    <div class="col-md-6 innerbg flex colsm12">
-                        <div class="d-flex justify-content-center align-items-center innerhead">
-                            Get your estimated price
-                        </div>
-                    </div>
-                    <div class="col-md-6 secondInner colsm12">
-                        <div class="row">
-                            <div class="col-md-12 mb-3">
-                                <p class="text-white storage">Storage capacity:</p>
-                                <div class="input-group">
-                                    <div class="innerGroup">
-                                        <button class="btn btn-outline-secondary yellow-btn sign" type="button">
-                                            <p class="text-white subtract2">-</p>
-                                        </button>
-                                        <p class="innerText innerNumber2"><input class="countwalaspan2"
-                                                type="text" /><span class="yellowspangb"> GB</span></p>
-                                        <button class="btn btn-outline-secondary yellow-btn sign" type="button">
-                                            <p class="text-white add2">+</p>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-12 mb-3 prices">
-                                <div class="input-group customflex">
-                                    <p class="bigInnerText bottomprice">16</p>
-                                    <p><img src="./imgs/euro.svg" /></p>
-                                    <p class="monthlyText">/ Monthly</p>
-
-                                </div>
-                                <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to
-                                    0.16€</small>
-                            </div>
-                            <div class="col-md-12 mb-3 flex-center">
-                                <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal"
-                                    data-target="#multistep-modal">
-                                    Purchase Now
-                                    <img src="./imgs/Group2.svg" />
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+      <div class="fifth">
+        <div class="row fullcolsmeda">
+          <div class="col-md-6 innerbg flex colsm12">
+            <div class="d-flex justify-content-center align-items-center innerhead">
+              Get your estimated price
+            </div>
+          </div>
+          <div class="col-md-6 secondInner colsm12">
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                <p class="text-white storage">Storage capacity:</p>
+                <div class="input-group">
+                  <div class="innerGroup">
+                    <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                      <p class="text-white subtract2">-</p>
+                    </button>
+                    <p class="innerText innerNumber2"><input class="countwalaspan2" type="text" /><span
+                        class="yellowspangb"> GB</span></p>
+                    <button class="btn btn-outline-secondary yellow-btn sign" type="button">
+                      <p class="text-white add2">+</p>
+                    </button>
+                  </div>
                 </div>
-                <p class="fifth-para">Data-safe will only charge for the capacity used and not for the maximum capacity
-                </p>
+              </div>
+              <div class="col-md-12 mb-3 prices">
+                <div class="input-group customflex">
+                  <p class="bigInnerText bottomprice">16</p>
+                  <p><img src="./imgs/euro.svg" /></p>
+                  <p class="monthlyText">/ Monthly</p>
+
+                </div>
+                <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to
+                  0.16€</small>
+              </div>
+              <div class="col-md-12 mb-3 flex-center">
+                <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal"
+                  data-target="#multistep-modal">
+                  Purchase Now
+                  <img src="./imgs/Group2.svg" />
+                </button>
+              </div>
             </div>
-
-
-
-
+          </div>
         </div>
-    </div>
+        <p class="fifth-para">Data-safe will only charge for the capacity used and not for the maximum capacity
+        </p>
+      </div>
 
-    <!--Third Section-->
-    <div class="container third">
-        <div class="row">
-            <div class="col-12 col-md-6 centerr">
-                <h2 class="thirdheading">Pricing</h2>
-                <p>Whether you’re a small company, freelancer or end user, DataSafe has got you covered. We have a wide
-                    range of pricing plans to make sure you get the best value for money. Here's a breakdown of our
-                    plans:</p>
-            </div>
-            <div class="col-12 col-md-6 leftt">
-                <img src="./imgs/tag.svg" alt="Image">
-            </div>
+
+
+
+    </div>
+  </div>
+
+  <!--Third Section-->
+  <div class="container third">
+    <div class="row">
+      <div class="col-12 col-md-6 centerr">
+        <h2 class="thirdheading">Pricing</h2>
+        <p>Whether you’re a small company, freelancer or end user, DataSafe has got you covered. We have a wide
+          range of pricing plans to make sure you get the best value for money. Here's a breakdown of our
+          plans:</p>
+      </div>
+      <div class="col-12 col-md-6 leftt">
+        <img src="./imgs/tag.svg" alt="Image">
+      </div>
+    </div>
+  </div>
+
+  <!--Fourth Section-->
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <img src="./imgs/first.svg" class="card-img-top iii" alt="Image 1">
+          <div class="card-body">
+            <p class="card-text">We start at 100GB for just 15€ and every extra GB is only 0.16€. </p>
+          </div>
         </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <img src="./imgs/second.svg" class="card-img-top iii" alt="Image 2">
+          <div class="card-body">
+            <p class="card-text">Our prices include the servers so you won’t need to worry about overly complex
+              integrations.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <img src="./imgs/third.svg" class="card-img-top iii" alt="Image 3">
+          <div class="card-body">
+            <p class="card-text">And the best part? It’s one of the easiest and most user friendly services in the
+              market.</p>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <img src="./imgs/fourth.svg" class="card-img-top iii" alt="Image 1">
+          <div class="card-body">
+            <p class="card-text">We have different GB limits – 100GB, 250GB, 500GB, 750GB, 1000GB and unlimited – so you
+              won’t have to worry about overspending. </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="card">
+          <img src="./imgs/fifth.svg" class="card-img-top iii" alt="Image 2">
+          <div class="card-body">
+            <p class="card-text">For extra peace of mind, we also offer a fully integrated service to <b> protect your
+                Microsoft 365 account,</b> for just €3.49.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!--Fourth Section-->
+
+  <!--FIith section-->
+  <section class="bg-image" style="background-image: url('path/to/background-image.jpg'); height: fit-content;">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <div class="card">
-                    <img src="./imgs/first.svg" class="card-img-top iii" alt="Image 1">
-                    <div class="card-body">
-                        <p class="card-text">We start at 100GB for just 15€ and every extra GB is only 0.16€. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card">
-                    <img src="./imgs/second.svg" class="card-img-top iii" alt="Image 2">
-                    <div class="card-body">
-                        <p class="card-text">Our prices include the servers so you won’t need to worry about overly complex integrations.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card">
-                    <img src="./imgs/third.svg" class="card-img-top iii" alt="Image 3">
-                    <div class="card-body">
-                        <p class="card-text">And the best part? It’s one of the easiest and most user friendly services in the market.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-12 col-md-6 customimagecontainer">
+          <img src="./imgs/rect.png" alt="Image" class="customimage">
         </div>
-        <div class="row">
-            <div class="col-12 col-md-4">
-                <div class="card">
-                    <img src="./imgs/fourth.svg" class="card-img-top iii" alt="Image 1">
-                    <div class="card-body">
-                        <p class="card-text">We have different GB limits – 100GB, 250GB, 500GB, 750GB, 1000GB and unlimited – so you won’t have to worry about overspending. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div class="card">
-                    <img src="./imgs/fifth.svg" class="card-img-top iii" alt="Image 2">
-                    <div class="card-body">
-                        <p class="card-text">For extra peace of mind, we also offer a fully integrated service to <b> protect your Microsoft 365 account,</b> for just €3.49.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="col-12 col-md-6 eww">
+          <h2 class="heading2">DataSafe Cloud backup</h2>
+          <p class="paragra">We know how important it is to keep your data secure. That’s why DataSafe comes
+            with
+            top-of-the-line security measures. Here are some of the features that make us the best cloud
+            backup solution:</p>
         </div>
+      </div>
     </div>
+  </section>
 
+  <!--Sixth Section-->
 
-    <!--FIith section-->
-    <section class="bg-image" style="background-image: url('path/to/background-image.jpg'); height: fit-content;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-6 customimagecontainer">
-                    <img src="./imgs/rect.png" alt="Image" class="customimage">
-                </div>
-                <div class="col-12 col-md-6 eww">
-                    <h2 class="heading2">DataSafe Cloud backup</h2>
-                    <p class="paragra">We know how important it is to keep your data secure. That’s why DataSafe comes
-                        with
-                        top-of-the-line security measures. Here are some of the features that make us the best cloud
-                        backup solution:</p>
-                </div>
-            </div>
+  <div class="slider">
+    <div>
+      <div class="col-12 ">
+        <div class="card p-4">
+          <img src="./imgs/i.svg" class="card-img-top iii" alt="Image 1">
+          <div class="card-body">
+            <p class="card-text">We use the <b>highest standard of encryption, AES 256-bit,
+              </b>to protect your data both in transit and at rest.</p>
+          </div>
         </div>
-    </section>
-
-    <!--Sixth Section-->
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <div class="card p-4">
-                                <img src="./imgs/i.svg" class="card-img-top iii" alt="Image 1">
-                                <div class="card-body">
-                                    <p class="card-text">We use the <b>highest standard of encryption, AES 256-bit,
-                                        </b>to protect your data both in transit and at rest.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card p-4">
-                                <img src="./imgs/ii.svg" class="card-img-top iii" alt="Image 2">
-                                <div class="card-body">
-                                    <p class="card-text">You can generate <b> your own private key </b>or have one
-                                        generated during deployment.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <div class="card p-4">
-                                <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
-                                <div class="card-body">
-                                    <p class="card-text">Our ISO-certified data centers are worldwide, with additional
-                                        certifications specific to each area.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+      </div>
+    </div>
+    <div>
+      <div class="col-12 ">
+        <div class="card p-4">
+          <img src="./imgs/ii.svg" class="card-img-top iii" alt="Image 2">
+          <div class="card-body">
+            <p class="card-text">You can generate <b> your own private key </b>or have one
+              generated during deployment.</p>
+          </div>
         </div>
-        <ol class="carousel-indicators">
-            <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-        </ol>
+      </div>
     </div>
-
-    <!--Seventh Section-->
-    <div class="container my-5">
-        <div class="row">
-            <div class="col-12 col-md-6 sev">
-                <h2>Microsoft 365 data protection</h2>
-                <p>If you’re a Microsoft 365 user, you know how difficult it can be to keep track of all your data.
-                    That’s why DataSafe has got you covered with our Microsoft 365 data protection service. Here’s what
-                    you'll get: </p>
-            </div>
-            <div class="col-12 col-md-6 leftt">
-                <img src="./imgs/hl.svg" alt="Image">
-            </div>
+    <div>
+      <div class="col-12 ">
+        <div class="card p-4">
+          <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
+          <div class="card-body">
+            <p class="card-text">Our ISO-certified data centers are worldwide, with additional
+              certifications specific to each area.</p>
+          </div>
         </div>
+      </div>
     </div>
+    
+  </div>
+  <div class="dots">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
 
 
-    <!--Eighth Section-->
-    <div class="container lass">
-        <div class="row">
-            <div class="col-12 col-md-3">
-                <div class="card">
-                    <img src="./imgs/pp.svg" class="card-img-top iii" alt="Image 1">
-                    <div class="card-body">
-                        <p class="card-text">We offer recovery of deleted items to help you keep control of your
-                            customers’ data in Microsoft 365.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3 lass">
-                <div class="card">
-                    <img src="./imgs/ppp.svg" class="card-img-top iii" alt="Image 2">
-                    <div class="card-body">
-                        <p class="card-text">You’ll be able to manage your Microsoft 365 backups from the same dashboard
-                            as server and workstation backups.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3">
-                <div class="card">
-                    <img src="./imgs/pppp.svg" class="card-img-top iii" alt="Image 3">
-                    <div class="card-body">
-                        <p class="card-text">Enjoy up to seven years of data retention, so you can meet your regulatory
-                            requirements.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-3">
-                <div class="card">
-                    <img src="./imgs/ppppp.svg" class="card-img-top iii" alt="Image 3">
-                    <div class="card-body">
-                        <p class="card-text">All your storage needs are taken care of – we provide global private cloud
-                            storage.</p>
-                    </div>
-                </div>
-            </div>
+  <!--Seventh Section-->
+  <div class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-6 sev">
+        <h2>Microsoft 365 data protection</h2>
+        <p>If you’re a Microsoft 365 user, you know how difficult it can be to keep track of all your data.
+          That’s why DataSafe has got you covered with our Microsoft 365 data protection service. Here’s what
+          you'll get: </p>
+      </div>
+      <div class="col-12 col-md-6 leftt">
+        <img src="./imgs/hl.svg" alt="Image">
+      </div>
+    </div>
+  </div>
+
+
+  <!--Eighth Section-->
+  <div class="container lass">
+    <div class="row">
+      <div class="col-12 col-md-3">
+        <div class="card">
+          <img src="./imgs/pp.svg" class="card-img-top iii" alt="Image 1">
+          <div class="card-body">
+            <p class="card-text">We offer recovery of deleted items to help you keep control of your
+              customers’ data in Microsoft 365.</p>
+          </div>
         </div>
-    </div>
-
-
-    <!--Footer-->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4 colsm12 footerLogoContainer">
-                    <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
-                </div>
-                <div class="col-6 col-md-4">
-                    <ul class="nolist">
-                        <li>
-                            <p class="listItem bold">Pages</p>
-                        </li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a>
-                        </li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html"
-                                class="listItem">Contact Us</a></li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html"
-                                class="listItem">Pricing</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-4">
-                    <ul class="nolist">
-                        <li>
-                            <p class="listItem bold">Resources</p>
-                        </li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
-                                class="listItem">Terms and Conditions</a></li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html"
-                                class="listItem">Cookie policy</a></li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html"
-                                class="listItem">Privacy Policy</a></li>
-                        <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html"
-                                class="listItem">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
+      </div>
+      <div class="col-12 col-md-3 lass">
+        <div class="card">
+          <img src="./imgs/ppp.svg" class="card-img-top iii" alt="Image 2">
+          <div class="card-body">
+            <p class="card-text">You’ll be able to manage your Microsoft 365 backups from the same dashboard
+              as server and workstation backups.</p>
+          </div>
         </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card">
+          <img src="./imgs/pppp.svg" class="card-img-top iii" alt="Image 3">
+          <div class="card-body">
+            <p class="card-text">Enjoy up to seven years of data retention, so you can meet your regulatory
+              requirements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card">
+          <img src="./imgs/ppppp.svg" class="card-img-top iii" alt="Image 3">
+          <div class="card-body">
+            <p class="card-text">All your storage needs are taken care of – we provide global private cloud
+              storage.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="container-fluid copywright">
-        © Copyrights 2023 DataSafe All rights reserved.
+
+  <!--Footer-->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+          <a href="https://master--glittering-semolina-308b40.netlify.app/">
+            <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Pages</p>
+            </li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a>
+            </li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem">Contact Us</a>
+            </li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4">
+          <ul class="nolist">
+            <li>
+              <p class="listItem bold">Resources</p>
+            </li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
+                class="listItem">Terms and Conditions</a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem">Cookie policy</a>
+            </li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem">Privacy
+                Policy</a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem">Disclaimer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
-
-       <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
-       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-    <script>
-
-
-        $(document).ready(function () {
-            // Hide the Previous button by default
-            $(".step-2-prev").hide();
-            $(".step-3-prev").hide();
-            $(".step-4-prev").hide();
-            $(".step-5-prev").hide();
-            $(".step-6-prev").hide();
-            $(".step-7-prev").hide();
-      
-            $(".step-1").show();
-            $(".step-2").hide();
-            $(".step-3").hide();
-            $(".step-4").hide();
-            $(".step-5").hide();
-            $(".step-6").hide();
-            $(".step-7").hide();
-      
-            $(".step-1-next").show();
-            $(".step-2-next").hide();
-            $(".step-3-next").hide();
-            $(".step-4-next").hide();
-            $(".step-5-next").hide();
-            $(".step-6-next").hide();
-            $(".step-7-next").hide();
-      
-      
-            $(".step-2-submit").hide()
-      
-            // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
-            $(".step-1-next").click(function () {
-              $(".step-2-prev").show();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").show();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-1-next").hide();
-              $(".step-2-next").show();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-            });
-      
-            $(".step-2-next").click(function () {
-              $(".step-2-prev").hide();
-              $(".step-3-prev").show();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").show();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").show();
-              $(".step-2-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-            });
-      
-            $(".step-3-next").click(function () {
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").show();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").show();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").show();
-              $(".step-5-next").hide();
-            });
-      
-            $(".step-4-next").click(function () {
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").show();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").show();
-              $(".step-6").hide();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").show();
-      
-            });
-      
-            $(".step-5-next").click(function () {
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").show();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").show();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-              $(".step-6-next").show();
-      
-            });
-      
-            $(".step-6-next").click(function () {
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-              $(".step-7-prev").show();
-      
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").hide();
-              $(".step-7").show();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-              $(".step-6-next").hide();
-              $(".step-7-next").show();
-      
-            });
-      
-            // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
-            $(".step-2-prev").click(function () {
-              //first data
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").show();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-1-next").show();
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-      
-              $(".step-2-submit").hide()
-            });
-      
-            $(".step-3-prev").click(function () {
-              //second data
-              $(".step-2-prev").show();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").show();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-1-next").hide();
-              $(".step-2-next").show();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-            });
-      
-            $(".step-4-prev").click(function () {
-              //third data
-              $(".step-2-prev").hide();
-              $(".step-3-prev").show();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").show();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").show();
-              $(".step-2-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-            });
-      
-            $(".step-5-prev").click(function () {
-              //fourth data
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").show();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").show();
-              $(".step-5").hide();
-              $(".step-6").hide();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").show();
-              $(".step-5-next").hide();
-            });
-      
-            $(".step-6-prev").click(function () {
-              //fifth data
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").show();
-              $(".step-6-prev").hide();
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").show();
-              $(".step-6").hide();
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").show();
-              $(".step-6-next").hide();
-      
-            });
-      
-            $(".step-7-prev").click(function () {
-              //fifth data
-              $(".step-2-prev").hide();
-              $(".step-3-prev").hide();
-              $(".step-4-prev").hide();
-              $(".step-5-prev").hide();
-              $(".step-6-prev").show();
-              $(".step-7-prev").hide();
-      
-      
-              $(".step-1").hide();
-              $(".step-2").hide();
-              $(".step-3").hide();
-              $(".step-4").hide();
-              $(".step-5").hide();
-              $(".step-6").show();
-              $(".step-7").hide();
-      
-      
-              $(".step-2-next").hide();
-              $(".step-3-next").hide();
-              $(".step-4-next").hide();
-              $(".step-5-next").hide();
-              $(".step-6-next").show();
-              $(".step-7-next").hide();
-      
-            });
-      
-            // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
-            $(".step-2-submit").click(function () {
-              // Do something here, like submit the form via AJAX
-              // Then close the modal
-              $("#multistep-modal").modal("hide");
-            });
-          });
-      
-      
+  <div class="container-fluid copywright">
+    © Copyrights 2023 DataSafe All rights reserved.
+  </div>
 
 
 
 
-        const number2 = document.querySelector('.countwalaspan2');
-        const addBtn2 = document.querySelector('.add2');
-        const subtractBtn2 = document.querySelector('.subtract2');
-        const bottomPrice = document.querySelector('.bottomprice')
-        // Set the initial number value
-        let count2 = 100;
-        number2.value = count2
+  <!-- Slick slider JS -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 
 
-        number2.addEventListener('keyup', () => {
-            let val = number2.value
-            if (val > 100) {
+  <script>
+    $(document).ready(function () {
+      var slider = $('.slider');
+      var dots = $('.dots');
+      slider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        prevArrow: false,
+        nextArrow: '.next',
+        appendDots: dots,
+        customPaging: function (slider, i) {
+          return '<span class="dot"></span>';
+        },
+        dotsClass: 'dots',
+      });
+      var dot = $('.dot');
+      var activeDot = $('.slick-active .dot');
+      activeDot.addClass('active');
+      slider.on('afterChange', function (event, slick, currentSlide) {
+        dot.removeClass('active');
+        var activeDot = $('.slick-active .dot');
+        activeDot.addClass('active');
+      });
+    });
 
-                let temp = val - 100
-                temp = 0.17 * temp
-                temp = temp + 16
-                console.log('innerhtml', val)
-                bottomPrice.innerHTML = temp
-            } else {
-                bottomPrice.innerHTML = 16
-            }
-            // Update the number text in the div
-
-        })
 
 
-        // Add event listener to the "Add" button
-        addBtn2.addEventListener('click', () => {
-            // Increase the count by 1
-            count2 += 10;
-            if (count2 > 100) {
-                let temp = count2 - 100
-                temp = 0.17 * temp
-                temp = temp + 16
-                bottomPrice.innerHTML = temp
-            }
-            // Update the number text in the div
-            number2.value = count2
-        });
+  </script>
 
-        // Add event listener to the "Subtract" button
-        subtractBtn2.addEventListener('click', () => {
-            // Decrease the count by 1
-            count2 -= 10;
 
-            // Update the number text in the div
-            number2.value = count2
-        });
+  <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Slick slider JS -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script>
+
+
+    $(document).ready(function () {
+      // Hide the Previous button by default
+      $(".step-2-prev").hide();
+      $(".step-3-prev").hide();
+      $(".step-4-prev").hide();
+      $(".step-5-prev").hide();
+      $(".step-6-prev").hide();
+      $(".step-7-prev").hide();
+
+      $(".step-1").show();
+      $(".step-2").hide();
+      $(".step-3").hide();
+      $(".step-4").hide();
+      $(".step-5").hide();
+      $(".step-6").hide();
+      $(".step-7").hide();
+
+      $(".step-1-next").show();
+      $(".step-2-next").hide();
+      $(".step-3-next").hide();
+      $(".step-4-next").hide();
+      $(".step-5-next").hide();
+      $(".step-6-next").hide();
+      $(".step-7-next").hide();
+
+
+      $(".step-2-submit").hide()
+
+      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+      $(".step-1-next").click(function () {
+        $(".step-2-prev").show();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").show();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").hide();
+        $(".step-2-next").show();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-2-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").show();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").show();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").show();
+        $(".step-2-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-3-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").show();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").show();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").show();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-4-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").show();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").show();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").show();
+
+      });
+
+      $(".step-5-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").show();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").show();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").show();
+
+      });
+
+      $(".step-6-next").click(function () {
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+        $(".step-7-prev").show();
+
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+        $(".step-7").show();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").hide();
+        $(".step-7-next").show();
+
+      });
+
+      // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+      $(".step-2-prev").click(function () {
+        //first data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").show();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").show();
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+
+        $(".step-2-submit").hide()
+      });
+
+      $(".step-3-prev").click(function () {
+        //second data
+        $(".step-2-prev").show();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").show();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-1-next").hide();
+        $(".step-2-next").show();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-4-prev").click(function () {
+        //third data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").show();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").show();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").show();
+        $(".step-2-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-5-prev").click(function () {
+        //fourth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").show();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").show();
+        $(".step-5").hide();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").show();
+        $(".step-5-next").hide();
+      });
+
+      $(".step-6-prev").click(function () {
+        //fifth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").show();
+        $(".step-6-prev").hide();
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").show();
+        $(".step-6").hide();
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").show();
+        $(".step-6-next").hide();
+
+      });
+
+      $(".step-7-prev").click(function () {
+        //fifth data
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").show();
+        $(".step-7-prev").hide();
+
+
+        $(".step-1").hide();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").show();
+        $(".step-7").hide();
+
+
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").show();
+        $(".step-7-next").hide();
+
+      });
+
+      // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
+      $(".step-2-submit").click(function () {
+        // Do something here, like submit the form via AJAX
+        // Then close the modal
+        $("#multistep-modal").modal("hide");
+      });
+    });
 
 
 
 
 
-    </script>
+
+    const number2 = document.querySelector('.countwalaspan2');
+    const addBtn2 = document.querySelector('.add2');
+    const subtractBtn2 = document.querySelector('.subtract2');
+    const bottomPrice = document.querySelector('.bottomprice')
+    // Set the initial number value
+    let count2 = 100;
+    number2.value = count2
 
 
 
- 
+    number2.addEventListener('keyup', () => {
+      let val = number2.value
+      if (val > 100) {
+
+        let temp = val - 100
+        temp = 0.17 * temp
+        temp = temp + 16
+        console.log('innerhtml', val)
+        bottomPrice.innerHTML = temp
+      } else {
+        bottomPrice.innerHTML = 16
+      }
+      // Update the number text in the div
+
+    })
+
+
+    // Add event listener to the "Add" button
+    addBtn2.addEventListener('click', () => {
+      // Increase the count by 1
+      count2 += 10;
+      if (count2 > 100) {
+        let temp = count2 - 100
+        temp = 0.17 * temp
+        temp = temp + 16
+        bottomPrice.innerHTML = temp
+      }
+      // Update the number text in the div
+      number2.value = count2
+    });
+
+    // Add event listener to the "Subtract" button
+    subtractBtn2.addEventListener('click', () => {
+      // Decrease the count by 1
+      count2 -= 10;
+
+      // Update the number text in the div
+      number2.value = count2
+    });
+
+
+
+
+
+  </script>
+
+
+
+
 </body>
 
 </html>
