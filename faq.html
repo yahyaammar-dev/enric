@@ -12,7 +12,18 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<script src="translate.js"></script>
+<script>
+  function load() {
+    var translate = new Translate();
+    var currentLng = 'en';//'fr'
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+  }
+</script>
+
+<body onload="load()">
   <!-- Your HTML code goes here -->
 
   <!--First Section-->
@@ -26,7 +37,7 @@
 
   <!--FAQs-->
   <div class="container">
-    <h3 class="faqHead">Frequently Asked Questions</h3>
+    <h3 class="faqHead" data-tag="faq1"></h3>
 
     <div class="faqItem">
       <p>
@@ -37,8 +48,8 @@
         </a>
       </p>
       <div class="collapse" id="faq1">
-        <div class="card card-body">
-          Our Backup Manager is available for Windows, OSx and Linux devices
+        <div class="card card-body" data-tag="faq1">
+          
         </div>
       </div>
     </div>
@@ -48,12 +59,12 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq2" role="button" aria-expanded="false"
           aria-controls="faq2" id="faqButton2">
           <img src="./imgs/plus.svg" />
-          What happens to my data if I unsubscribe from the service?
+          <span data-tag="faq3">
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq2">
-        <div class="card card-body">
-          All of your data will be deleted at the end of your subscription.
+        <div class="card card-body" data-tag="faq4">
         </div>
       </div>
     </div>
@@ -63,12 +74,13 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq3" role="button" aria-expanded="false"
           aria-controls="faq3" id="faqButton3">
           <img src="./imgs/plus.svg" />
-          Can I do my backups locally?
+          <span data-tag="faq5">
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq3">
-        <div class="card card-body">
-          Yes, you can define a local path where you will keep an exact copy of what you have in the cloud.
+        <div class="card card-body" data-tag="faq6">
+          
         </div>
       </div>
     </div>
@@ -78,12 +90,14 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq4" role="button" aria-expanded="false"
           aria-controls="faq4" id="faqButton4">
           <img src="./imgs/plus.svg" />
-          Can I deactivate the Cloud backups?
+          <span data-tag="faq7">
+            
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq4">
-        <div class="card card-body">
-          No, the cloud backup is the main backup.
+        <div class="card card-body" data-tag="faq8">
+          
         </div>
       </div>
     </div>
@@ -93,12 +107,12 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq5" role="button" aria-expanded="false"
           aria-controls="faq5" id="faqButton5">
           <img src="./imgs/plus.svg" />
-          For how long do you keep my backups?
+          <span data-tag="faq9">
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq5">
-        <div class="card card-body">
-          Initially you data will be kept for 5 years. If you need more time for legal reason, please contact us.
+        <div class="card card-body" data-tag="faq10">
         </div>
       </div>
     </div>
@@ -108,12 +122,13 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq61" role="button" aria-expanded="false"
           aria-controls="faq61" id="faqButton61">
           <img src="./imgs/plus.svg" />
-          Can I increase the time my backups are saved?
+          <span data-tag="faq11">
+            
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq61">
-        <div class="card card-body">
-          Yes, please contact us with your needs.
+        <div class="card card-body" data-tag="faq12">
         </div>
       </div>
     </div>
@@ -124,12 +139,14 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq6" role="button" aria-expanded="false"
           aria-controls="faq6" id="faqButton6">
           <img src="./imgs/plus.svg" />
-          Can I increase the size of my backups?
+          <span data-tag="faq13">
+            
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq6">
-        <div class="card card-body">
-          Yes, at any time.
+        <div class="card card-body" data-tag="faq14">
+          
         </div>
       </div>
     </div>
@@ -140,12 +157,12 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq7" role="button" aria-expanded="false"
           aria-controls="faq7" id="faqButton7">
           <img src="./imgs/plus.svg" />
-          Can I put a GB limit so I do not spend extra?
+          <span data-tag="faq15">
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq7">
-        <div class="card card-body">
-          Yes, you can limit the amount of GB by the predefined amounts (100-200-300-400-500..)
+        <div class="card card-body" data-tag="faq16">
         </div>
       </div>
     </div>
@@ -154,12 +171,12 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq8" role="button" aria-expanded="false"
           aria-controls="faq8" id="faqButton8">
           <img src="./imgs/plus.svg" />
-          Is the software available in english or other languages?
+          <span data-tag="faq17">
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq8">
-        <div class="card card-body">
-          You can change the language after downloading our Datasafe backup manager.
+        <div class="card card-body" data-tag="faq18">
         </div>
       </div>
     </div>
@@ -168,12 +185,13 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq9" role="button" aria-expanded="false"
           aria-controls="faq9" id="faqButton9">
           <img src="./imgs/plus.svg" />
-          How often will I pay?
+          <span data-tag="faq19">
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq9">
-        <div class="card card-body">
-          Monthly basis.
+        <div class="card card-body" data-tag="faq20">
+          
         </div>
       </div>
     </div>
@@ -182,13 +200,14 @@
         <a class="btn btn-primary collapseii" data-toggle="collapse" href="#faq10" role="button" aria-expanded="false"
           aria-controls="faq10" id="faqButton10">
           <img src="./imgs/plus.svg" />
-          Can I get an invoice?
+          <span data-tag="faq21">
+            
+          </span>
         </a>
       </p>
       <div class="collapse" id="faq10">
-        <div class="card card-body">
-          Yes, simply add the company details through your personal dashboard and an invoice will be generated at the
-          end of each billing cycle.
+        <div class="card card-body" data-tag="faq22">
+
         </div>
       </div>
     </div>
@@ -198,44 +217,43 @@
 
 
 
-  <!--Footer-->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
-          <a href="https://master--glittering-semolina-308b40.netlify.app/">
-            <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
-          </a>
-        </div>
-        <div class="col-6 col-md-4">
-          <ul class="nolist">
-            <li>
-              <p class="listItem bold">Pages</p>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem">Contact Us</a>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4">
-          <ul class="nolist">
-            <li>
-              <p class="listItem bold">Resources</p>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
-                class="listItem">Terms and Conditions</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem">Cookie policy</a>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem">Privacy
-                Policy</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem">Disclaimer</a>
-            </li>
-          </ul>
-        </div>
+ <!--Footer-->
+ <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+        <a href="https://master--glittering-semolina-308b40.netlify.app/">
+          <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <ul class="nolist">
+          <li>
+            <p class="listItem bold" data-tag="pages"></p>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem" data-tag="faq"></a></li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem" data-tag="contact"></a>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem" data-tag="price"></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <ul class="nolist">
+          <li>
+            <p class="listItem bold" data-tag="resouces"></p>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
+              class="listItem" data-tag="terms"></a></li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem" data-tag="cookie"></a>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem" data-tag="privacy"></a></li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem" data-tag="disclaimer"></a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
 
   <div class="container-fluid copywright">
     © Copyrights 2023 DataSafe All rights reserved.

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+</head>
+
+<script src="translate.js"></script>
+<script>
+    function load() {
+        var translate = new Translate();
+        var currentLng = 'en';//'fr'
+        var attributeName = 'data-tag';
+        translate.init(attributeName, currentLng);
+        translate.process();
+    }
+</script>
+
+<style>
+    form {
+        width: 320px;
+        border-style: solid;
+        border-size: 1px;
+        border-color: lightgrey;
+        padding: 5px;
+    }
+
+    .hSpace {
+        display: inline-block;
+        width: 150px !important;
+    }
+</style>
+
+<body onload="load()">
+
+    <form>
+        <center>
+            <h2><label data-tag="contact">
+                </label></h2>
+        </center>
+        <div>
+            <label class="hSpace" data-tag="email">
+            </label>:<input type="text" />
+        </div>
+        <div>
+            <label class="hSpace" data-tag="password">
+            </label>:<input type="text" />
+        </div>
+        <div>
+            <label class="hSpace" data-tag="subject">
+            </label>:<input type="text" />
+        </div>
+        <div>
+            <label class="hSpace" data-tag="message">
+            </label>:<input type="text" />
+        </div>
+    </form>
+
+</body>
+
+</html>

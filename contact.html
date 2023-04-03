@@ -12,7 +12,18 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<script src="translate.js"></script>
+<script>
+    function load() {
+        var translate = new Translate();
+        var currentLng = 'en';//'fr'
+        var attributeName = 'data-tag';
+        translate.init(attributeName, currentLng);
+        translate.process();
+    }
+</script>
+
+<body onload="load()">
   <!-- Your HTML code goes here -->
   <!--Header-->
   <div class="header priceheader">
@@ -25,28 +36,23 @@
   <div class="row contactrow">
     <div class="col-md-6 colled">
       <form>
-        <h3 class="contacthead">We'd love to hear from you</h3>
-        <label class="label contactlabeltitle">Name and surName</label>
+        <h3 class="contacthead" data-tag="contacthead">We'd love to hear from you</h3>
+        <label class="label contactlabeltitle" data-tag="contactname"></label>
         <input type="text" class="contactlabel" placeholder="Enter Your Name" />
-        <label class="label contactlabeltitle">Company</label>
+        <label class="label contactlabeltitle" data-tag="companyname"></label>
         <input type="text" class="contactlabel" placeholder="Enter Your Company" />
-        <label class="label contactlabeltitle">Email</label>
+        <label class="label contactlabeltitle" data-tag="email"></label>
         <input type="text" class="contactlabel" placeholder="Enter Your Email" />
-        <label class="label contactlabeltitle">Phone</label>
+        <label class="label contactlabeltitle" data-tag="phone"></label>
         <input type="text" class="contactlabel" placeholder="Enter Your Phone" />
-        <label class="label contactlabeltitle">Message</label>
+        <label class="label contactlabeltitle" data-tag="message"></label>
         <textarea row="10" cols="50" placeholder="Enter Your Message" class="contactlabel">
         </textarea>
         <div class="flexwrap">
           <input type="checkbox" />
-          <p>I authorize the processing of my data in order to respond to the queries raised.</p>
+          <p data-tag="authorizemessage"></p>
         </div>
-        <p>
-          Responsible for the file: Data-Safe . Purpose: sending information about products and services to the
-          subscriber. Legitimation: consent. Recipients: The data will not be communicated to third parties. Rights:
-          access, rectify and delete data, as well as other rights, as explained in the additional information. You can
-          consult additional and detailed information in our Policy
-        </p>
+        <p data-tag="detailedmessage"></p>
         <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">
           Send Message
           <img src="./imgs/Group2.svg" />
@@ -71,32 +77,32 @@
         <div class="col-6 col-md-4">
           <ul class="nolist">
             <li>
-              <p class="listItem bold">Pages</p>
+              <p class="listItem bold" data-tag="pages"></p>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem">Contact Us</a>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem" data-tag="faq"></a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem" data-tag="contact"></a>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem">Pricing</a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem" data-tag="price"></a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4">
           <ul class="nolist">
             <li>
-              <p class="listItem bold">Resources</p>
+              <p class="listItem bold" data-tag="resouces"></p>
             </li>
             <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
-                class="listItem">Terms and Conditions</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem">Cookie policy</a>
+                class="listItem" data-tag="terms"></a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem" data-tag="cookie"></a>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem">Privacy
-                Policy</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem">Disclaimer</a>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem" data-tag="privacy"></a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem" data-tag="disclaimer"></a>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  
 
   <div class="container-fluid copywright">
     © Copyrights 2023 DataSafe All rights reserved.

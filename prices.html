@@ -18,7 +18,39 @@
 
 </head>
 
-<body>
+
+<script src="translate.js"></script>
+<script>
+  var currentLng 
+  if(localStorage.getItem('lang')){
+    currentLng = localStorage.getItem('lang')
+  }else{
+    currentLng = 'en'
+  }
+  function changeLanguage() {
+    var select = document.getElementById("language-select");
+    var selectedValue = select.options[select.selectedIndex].value;
+    currentLng = selectedValue;
+    localStorage.setItem('lang', currentLng)
+    var translate = new Translate();
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+
+  }
+  
+  
+  function load() {
+    console.log('chal rha hy')
+    var translate = new Translate();
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+  }
+</script>
+
+<body onload="load()">
+
   <!-- Your HTML code goes here -->
 
   <!-- Modal Goes Here -->
@@ -31,54 +63,49 @@
         </div>
         <div class="modal-body">
           <div class="step-1 step">
-            <p class="heading">Product Explanation</p>
-            <p>
-              The amount of data stored differs from person to person.
-              We all create, use, and store different amounts of data depending on our needs.
-              By answering the following questions, we will get a personalized estimate of the cost to safely and
-              <b>securely store your data in the cloud.</b>
-            </p>
+            <p class="heading" data-tag="price1"></p>
+            <p  data-tag="price2"></p>
           </div>
           <div class="step-2 step">
-            <p class="heading">Where is your data stored?</p>
+            <p class="heading" data-tag="price3"></p>
             <div class="flex">
               <div class="laptop">
                 <img src="imgs/laptop1.svg" />
-                <p>Laptop</p>
+                <p data-tag="price4"></p>
               </div>
               <div class="laptop">
                 <img src="imgs/laptop2.svg" />
-                <p>PC</p>
+                <p data-tag="price5"></p>
               </div>
               <div class="laptop">
                 <img src="imgs/laptop3.svg" />
-                <p>External Devices</p>
+                <p data-tag="price6"></p>
               </div>
             </div>
           </div>
           <div class="step-3 step">
-            <p class="heading">What are these devices for?</p>
+            <p class="heading" data-tag="price7"></p>
             <div class="flex">
               <div class="laptop2">
                 <img src="imgs/person1.svg" />
-                <p>Personal</p>
+                <p data-tag="price8"></p>
               </div>
               <div class="laptop2">
                 <img src="imgs/person2.svg" />
-                <p>Work Purpose</p>
+                <p data-tag="price9"></p>
               </div>
             </div>
           </div>
 
 
           <div class="step-4 step">
-            <p class="heading">How many gigabytes can you store on this device?</p>
+            <p class="heading" data-tag="price10"></p>
             <div class="flex">
               <div class="innerGroup">
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                   <p class="text-white subtract">-</p>
                 </button>
-                <p class="innerText innerNumber">100 </p>
+                <p class="innerText innerNumber" data-tag="price11"> </p>
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                   <p class="text-white add">+</p>
                 </button>
@@ -91,8 +118,7 @@
 
 
           <div class="step-5 step">
-            <p class="heading">We’re preparing your personalized quote. Let us know your email address, and we’ll send
-              it shortly.</p>
+            <p class="heading" data-tag="price12"></p>
             <div class="flexs">
               <div class="counters">
                 <div class="item">
@@ -102,29 +128,22 @@
                 </div>
               </div>
               <div class="emailContainer">
-                <p class='myheading'>Email</p>
+                <p class='myheading' data-tag="price13"></p>
                 <input type="email" name="email" placeholder="Enter your email address" class="email" />
               </div>
               <div class="emailContainer">
-                <p class='myheading'>Terms </p>
-                <p class="termtext">
-                  For the purposes of this contract, the following words shall have the meaning specified below: ANNEX
-                  TO THE CONTRACT, refers to the documentation attached to this contract, and which specifies certain
-                  aspects of it, having for all purposes the same force to bind the parties as this document. STORAGE,
-                  OR BACKUP SERVICE: Custody of the information sent by the client, in remote equipment available to
-                  Traffix Marketing online SCP -in order to ensure the maximum preservation of such information-. It
-                  includes not only the reception of the information and its custody but also the means to facilitate
-                  access by the client, to retrieve the information by computer
+                <p class='myheading' data-tag="price14"> </p>
+                <p class="termtext" data-tag="price15">
                 </p>
               </div>
               <div class="step-5links">
-                <a href="#">Terms and Conditions,</a>
-                <a href="#">Privacy Policy,</a>
-                <a href="#">Cookie Policy.</a>
+                <a href="#" data-tag="price16"></a>
+                <a href="#" data-tag="price17"></a>
+                <a href="#" data-tag="price18"></a>
               </div>
               <div class="step-5terms">
                 <input type="checkbox" class="checkboxitem" />
-                <p>I read and agree to terms and conditions</p>
+                <p data-tag="price19"></p>
               </div>
             </div>
           </div>
@@ -139,23 +158,21 @@
                 <span>3</span>
               </div>
             </div>
-            <p class="heading step6heading">Storage capacity: <span class="mycounter"></span> GB</p>
+            <p class="heading step6heading"><span data-tag="price20"></span> <span class="mycounter"></span> GB</p>
             <div class="input-group">
               <p class="bigInnerText">127,8</p>
               <div class="input-group-append">
                 <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
-                  <p class="monthlyText">/ Monthly</p>
+                  <p class="monthlyText" data-tag="price21"></p>
                 </span>
               </div>
             </div>
-            <p>*With our service, you <i>only pay for the data you use.</i> We don’t charge you for the maximum capacity
-              of your device, which includes any unused space.</p>
+            <p data-tag="price22"></p>
           </div>
 
 
           <div class="step-7 step">
-            <p class="heading">Are you ready to get started? Just enter your payment details below, and we’ll take care
-              of the rest.</p>
+            <p class="heading" data-tag="price23"></p>
             <div class="flexs">
               <div class="counters">
                 <div class="item">
@@ -165,7 +182,7 @@
                 </div>
               </div>
               <div class="emailContainer">
-                <p class='myheading pt-2 mt-4'>Credit card information </p>
+                <p class='myheading pt-2 mt-4' data-tag="price24"></p>
 
                 <div class="input-group">
                   <div class="inputcc">
@@ -179,11 +196,11 @@
                   </div>
                 </div>
 
-                <p class='myheading mt-4'>Card Holder Name</p>
+                <p class='myheading mt-4' data-tag="price25"></p>
                 <div class="input-group">
                   <input type="text" class="inputCard" placeholder="Jhon Doe" />
                 </div>
-                <p class='myheading mt-4'>Country</p>
+                <p class='myheading mt-4' data-tag="price26"></p>
                 <div class="input-group">
                   <select class="form-select" aria-label="Default select example">
                     <option selected>Select Countries</option>
@@ -223,30 +240,29 @@
                     <option value="">Zimbabwe</option>
                   </select>
                 </div>
-                <small class="form-text text-smaller-gb">*With our service, you only pay for the data you use. We don’t
-                  charge you for the maximum capacity of your device, which includes any unused space.</small>
+                <small class="form-text text-smaller-gb" data-tag="price27"></small>
               </div>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary step-2-prev back">Back</button>
-          <button type="button" class="btn btn-primary step-3-prev back">Back</button>
-          <button type="button" class="btn btn-primary step-4-prev back">Back</button>
-          <button type="button" class="btn btn-primary step-5-prev back">Back</button>
-          <button type="button" class="btn btn-primary step-6-prev back">Back</button>
-          <button type="button" class="btn btn-primary step-7-prev back">Back</button>
+          <button type="button" class="btn btn-primary step-2-prev back" data-tag="price28"></button>
+          <button type="button" class="btn btn-primary step-3-prev back" data-tag="price28"></button>
+          <button type="button" class="btn btn-primary step-4-prev back" data-tag="price28"></button>
+          <button type="button" class="btn btn-primary step-5-prev back" data-tag="price28"></button>
+          <button type="button" class="btn btn-primary step-6-prev back" data-tag="price28"></button>
+          <button type="button" class="btn btn-primary step-7-prev back" data-tag="price28"></button>
 
 
-          <button type="button" class="btn btn-primary step-1-next next">Next</button>
-          <button type="button" class="btn btn-primary step-2-next next">Next</button>
-          <button type="button" class="btn btn-primary step-3-next next">Next</button>
-          <button type="button" class="btn btn-primary step-4-next next">Next</button>
-          <button type="button" class="btn btn-primary step-5-next next">Next</button>
-          <button type="button" class="btn btn-primary step-6-next next">Next</button>
-          <button type="button" class="btn btn-primary step-7-next next" data-dismiss="modal">Subscribe</button>
+          <button type="button" class="btn btn-primary step-1-next next" data-tag="price29"></button>
+          <button type="button" class="btn btn-primary step-2-next next" data-tag="price29"></button>
+          <button type="button" class="btn btn-primary step-3-next next" data-tag="price29"></button>
+          <button type="button" class="btn btn-primary step-4-next next" data-tag="price29"></button>
+          <button type="button" class="btn btn-primary step-5-next next" data-tag="price29"></button>
+          <button type="button" class="btn btn-primary step-6-next next" data-tag="price29"></button>
+          <button type="button" class="btn btn-primary step-7-next next" data-dismiss="modal" data-tag="price30"></button>
 
-          <button type="button" class="btn btn-primary step-2-submit">Submit</button>
+          <button type="button" class="btn btn-primary step-2-submit" data-tag="price31"></button>
         </div>
       </div>
     </div>
@@ -255,6 +271,30 @@
 
   <!--First Section-->
   <div class="header priceheader">
+    <div class="navrow">
+      <ul class="nav">
+        <li>
+          <a href="https://glittering-semolina-308b40.netlify.app/prices.html">Prices</a>
+        </li>
+        <li>
+          <a href="https://glittering-semolina-308b40.netlify.app/faq.html">FAQs</a>
+        </li>
+        <li>
+          <a href="https://glittering-semolina-308b40.netlify.app/contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <div>
+        <button class="btn btn-primary yellow-btn">Login</button>
+      </div>
+      <div>
+        <select id="language-select" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="sp">Spanish</option>
+          <option value="pr">Portoguese</option>
+        </select>
+      </div>
+    </div>
     <a href="https://master--glittering-semolina-308b40.netlify.app/">
       <img class="logo" src="./imgs/Group.svg" />
     </a>
@@ -264,21 +304,21 @@
   <!--Second Section-->
   <div class="container price">
     <div class="row">
-      <p class="para">
-        Calculate the estimated prices for the data you are going to secure using Data-Safe:
+      <p class="para" data-tag="price32">
+        
       </p>
 
       <div class="fifth">
         <div class="row fullcolsmeda">
           <div class="col-md-6 innerbg flex colsm12">
-            <div class="d-flex justify-content-center align-items-center innerhead">
-              Get your estimated price
+            <div class="d-flex justify-content-center align-items-center innerhead" data-tag="price33">
+              
             </div>
           </div>
           <div class="col-md-6 secondInner colsm12">
             <div class="row">
               <div class="col-md-12 mb-3">
-                <p class="text-white storage">Storage capacity:</p>
+                <p class="text-white storage" data-tag="price34"></p>
                 <div class="input-group">
                   <div class="innerGroup">
                     <button class="btn btn-outline-secondary yellow-btn sign" type="button">
@@ -296,11 +336,10 @@
                 <div class="input-group customflex">
                   <p class="bigInnerText bottomprice">16</p>
                   <p><img src="./imgs/euro.svg" /></p>
-                  <p class="monthlyText">/ Monthly</p>
+                  <p class="monthlyText" data-tag="price35"></p>
 
                 </div>
-                <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to
-                  0.16€</small>
+                <small class="form-text text-smaller-gb" data-tag="price36"></small>
               </div>
               <div class="col-md-12 mb-3 flex-center">
                 <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal"
@@ -312,7 +351,7 @@
             </div>
           </div>
         </div>
-        <p class="fifth-para">Data-safe will only charge for the capacity used and not for the maximum capacity
+        <p class="fifth-para" data-tag="price37">
         </p>
       </div>
 
@@ -326,10 +365,8 @@
   <div class="container third">
     <div class="row">
       <div class="col-12 col-md-6 centerr">
-        <h2 class="thirdheading">Pricing</h2>
-        <p>Whether you’re a small company, freelancer or end user, DataSafe has got you covered. We have a wide
-          range of pricing plans to make sure you get the best value for money. Here's a breakdown of our
-          plans:</p>
+        <h2 class="thirdheading" data-tag="price38"></h2>
+        <p data-tag="price39"></p>
       </div>
       <div class="col-12 col-md-6 leftt">
         <img src="./imgs/tag.svg" alt="Image">
@@ -344,7 +381,7 @@
         <div class="card">
           <img src="./imgs/first.svg" class="card-img-top iii" alt="Image 1">
           <div class="card-body">
-            <p class="card-text">We start at 100GB for just 15€ and every extra GB is only 0.16€. </p>
+            <p class="card-text" data-tag="price40"> </p>
           </div>
         </div>
       </div>
@@ -352,8 +389,7 @@
         <div class="card">
           <img src="./imgs/second.svg" class="card-img-top iii" alt="Image 2">
           <div class="card-body">
-            <p class="card-text">Our prices include the servers so you won’t need to worry about overly complex
-              integrations.</p>
+            <p class="card-text" data-tag="price41"></p>
           </div>
         </div>
       </div>
@@ -361,8 +397,7 @@
         <div class="card">
           <img src="./imgs/third.svg" class="card-img-top iii" alt="Image 3">
           <div class="card-body">
-            <p class="card-text">And the best part? It’s one of the easiest and most user friendly services in the
-              market.</p>
+            <p class="card-text" data-tag="price42"></p>
           </div>
         </div>
       </div>
@@ -372,8 +407,7 @@
         <div class="card">
           <img src="./imgs/fourth.svg" class="card-img-top iii" alt="Image 1">
           <div class="card-body">
-            <p class="card-text">We have different GB limits – 100GB, 250GB, 500GB, 750GB, 1000GB and unlimited – so you
-              won’t have to worry about overspending. </p>
+            <p class="card-text" data-tag="price43"> </p>
           </div>
         </div>
       </div>
@@ -381,8 +415,7 @@
         <div class="card">
           <img src="./imgs/fifth.svg" class="card-img-top iii" alt="Image 2">
           <div class="card-body">
-            <p class="card-text">For extra peace of mind, we also offer a fully integrated service to <b> protect your
-                Microsoft 365 account,</b> for just €3.49.</p>
+            <p class="card-text" data-tag="price43"></p>
           </div>
         </div>
       </div>
@@ -398,11 +431,8 @@
           <img src="./imgs/rect.png" alt="Image" class="customimage">
         </div>
         <div class="col-12 col-md-6 eww">
-          <h2 class="heading2">DataSafe Cloud backup</h2>
-          <p class="paragra">We know how important it is to keep your data secure. That’s why DataSafe comes
-            with
-            top-of-the-line security measures. Here are some of the features that make us the best cloud
-            backup solution:</p>
+          <h2 class="heading2" data-tag="price44"></h2>
+          <p class="paragra" data-tag="price45"></p>
         </div>
       </div>
     </div>
@@ -422,8 +452,7 @@
           <div class="card p-4">
             <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
             <div class="card-body">
-              <p class="card-text">Our ISO-certified data centers are worldwide, with additional
-                certifications specific to each area.</p>
+              <p class="card-text" data-tag="price46"></p>
             </div>
           </div>
         </div>
@@ -439,8 +468,7 @@
             <div class="card p-4">
               <img src="./imgs/ii.svg" class="card-img-top iii" alt="Image 2">
               <div class="card-body">
-                <p class="card-text">You can generate <b> your own private key </b>or have one
-                  generated during deployment.</p>
+                <p class="card-text" data-tag="price57"></p>
               </div>
             </div>
           </div>
@@ -455,8 +483,7 @@
           <div class="card p-4">
             <img src="./imgs/iii.svg" class="card-img-top iii" alt="Image 3">
             <div class="card-body">
-              <p class="card-text">Our ISO-certified data centers are worldwide, with additional
-                certifications specific to each area.</p>
+              <p class="card-text" data-tag="price58"></p>
             </div>
           </div>
         </div>
@@ -479,10 +506,8 @@
   <div class="container my-5">
     <div class="row">
       <div class="col-12 col-md-6 sev">
-        <h2>Microsoft 365 data protection</h2>
-        <p>If you’re a Microsoft 365 user, you know how difficult it can be to keep track of all your data.
-          That’s why DataSafe has got you covered with our Microsoft 365 data protection service. Here’s what
-          you'll get: </p>
+        <h2 data-tag="price59"></h2>
+        <p data-tag="price60"></p>
       </div>
       <div class="col-12 col-md-6 leftt">
         <img src="./imgs/hl.svg" alt="Image">
@@ -498,8 +523,7 @@
         <div class="card">
           <img src="./imgs/pp.svg" class="card-img-top iii" alt="Image 1">
           <div class="card-body">
-            <p class="card-text">We offer recovery of deleted items to help you keep control of your
-              customers’ data in Microsoft 365.</p>
+            <p class="card-text" data-tag="price61"></p>
           </div>
         </div>
       </div>
@@ -507,8 +531,7 @@
         <div class="card">
           <img src="./imgs/ppp.svg" class="card-img-top iii" alt="Image 2">
           <div class="card-body">
-            <p class="card-text">You’ll be able to manage your Microsoft 365 backups from the same dashboard
-              as server and workstation backups.</p>
+            <p class="card-text" data-tag="price62"></p>
           </div>
         </div>
       </div>
@@ -516,8 +539,7 @@
         <div class="card">
           <img src="./imgs/pppp.svg" class="card-img-top iii" alt="Image 3">
           <div class="card-body">
-            <p class="card-text">Enjoy up to seven years of data retention, so you can meet your regulatory
-              requirements.</p>
+            <p class="card-text" data-tag="price63"></p>
           </div>
         </div>
       </div>
@@ -525,8 +547,7 @@
         <div class="card">
           <img src="./imgs/ppppp.svg" class="card-img-top iii" alt="Image 3">
           <div class="card-body">
-            <p class="card-text">All your storage needs are taken care of – we provide global private cloud
-              storage.</p>
+            <p class="card-text" data-tag="price64"></p>
           </div>
         </div>
       </div>
@@ -539,45 +560,44 @@
 
 
 
-  <!--Footer-->
-  <div class="footer mt-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-4 colsm12 footerLogoContainer">
-          <a href="https://master--glittering-semolina-308b40.netlify.app/">
-            <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
-          </a>
-        </div>
-        <div class="col-6 col-md-4">
-          <ul class="nolist">
-            <li>
-              <p class="listItem bold">Pages</p>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem">Contact Us</a>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem">Pricing</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4">
-          <ul class="nolist">
-            <li>
-              <p class="listItem bold">Resources</p>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
-                class="listItem">Terms and Conditions</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem">Cookie policy</a>
-            </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem">Privacy
-                Policy</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem">Disclaimer</a>
-            </li>
-          </ul>
-        </div>
+<!--Footer-->
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 colsm12 footerLogoContainer">
+        <a href="https://master--glittering-semolina-308b40.netlify.app/">
+          <img src="imgs/Group.svg" alt="Logo" class="footerLogo">
+        </a>
+      </div>
+      <div class="col-6 col-md-4">
+        <ul class="nolist">
+          <li>
+            <p class="listItem bold" data-tag="pages"></p>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem" data-tag="faq"></a></li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem" data-tag="contact"></a>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem" data-tag="price"></a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <ul class="nolist">
+          <li>
+            <p class="listItem bold" data-tag="resouces"></p>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
+              class="listItem" data-tag="terms"></a></li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem" data-tag="cookie"></a>
+          </li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem" data-tag="privacy"></a></li>
+          <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem" data-tag="disclaimer"></a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>
+
 
   <div class="container-fluid copywright">
     © Copyrights 2023 DataSafe All rights reserved.

@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>My Webpage</title>
-
   <!-- Link to Bootstrap CSS from CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,10 +11,34 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
-  <!-- Your HTML code goes here -->
+<script src="translate.js"></script>
+<script>
+  var currentLng
+  if (localStorage.getItem('lang')) {
+    currentLng = localStorage.getItem('lang')
+  } else {
+    currentLng = 'en'
+  }
+  function changeLanguage() {
+    var select = document.getElementById("language-select");
+    var selectedValue = select.options[select.selectedIndex].value;
+    currentLng = selectedValue;
+    localStorage.setItem('lang', currentLng)
+    var translate = new Translate();
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+  }
 
+  function load() {
+    var translate = new Translate();
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+  }
+</script>
 
+<body onload="load()">
   <!-- Modal Goes Here -->
   <div class="modal fade" id="multistep-modal" tabindex="-1" role="dialog" aria-labelledby="multistep-modal-label">
     <div class="modal-dialog" role="document">
@@ -375,18 +398,25 @@
       <div>
         <button class="btn btn-primary yellow-btn">Login</button>
       </div>
+      <div>
+        <select id="language-select" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="sp">Spanish</option>
+          <option value="pr">Portoguese</option>
+        </select>
+      </div>
     </div>
     <div class="row">
       <div class="colsm12 col-md-6 firstCol">
         <div>
           <!-- Logo, heading text, and button -->
           <img src="imgs/Group.svg" alt="Logo" class="firstLogo">
-          <h1 class="hero-heading">Data-Safe™ offers a safe refuge from complex backup operations.</h1>
-          <p class="hero-para">Data-Safe™ is a solution for all your protection needs. It offers uncomplicated features
-            and services, making it simple to protect your data and resources.</p>
+          <h1 class="hero-heading" data-tag="topherohead"></h1>
+          <p class="hero-para" data-tag="topheropara"></p>
           <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">
-            <p>
-              ACQUIRE
+            <p data-tag="topherobutton">
+
             </p>
             <img src="./imgs/Group2.svg" />
           </button>
@@ -406,9 +436,8 @@
       <div class="colsm12 col-md-6">
         <!-- Heading text and button -->
         <div>
-          <h1 class="second-heading">Why should you opt for Cloud Backup for your valuable data</h1>
-          <p class="second-paragrph">Cloud services are Internet-based computing services that provide users with access
-            to applications and data stored on remote servers. </p>
+          <h1 class="second-heading" data-tag="secondheading"></h1>
+          <p class="second-paragrph" data-tag="secondparagrapgh"></p>
           <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">SUITABILITY TEST
             <img src="./imgs/Group2.svg" /></button>
         </div>
@@ -433,10 +462,8 @@
       </div>
       <div class="colsm12 col-md-6 inner">
         <!-- heading text, and button -->
-        <h1 class="hero-heading">Reliable and Errorless Data backup with the Data-Safe™ protection</h1>
-        <p class="hero-para">Data-Safe's appliance-free direct-to-cloud backup for servers, workstations, and Microsoft
-          365 data gives you recovery flexibility with the long-term retention that comes with the subscription plan.
-        </p>
+        <h1 class="hero-heading" data-tag="thirdhead"></h1>
+        <p class="hero-para" data-tag="thirdpara"></p>
         <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">Order Now <img
             src="./imgs/Group2.svg" /></button>
       </div>
@@ -450,9 +477,8 @@
         <div class="card bg-transparent">
           <img src="imgs/item1.png" class="card-img-top item" alt="Image 1">
           <div class="card-body">
-            <h2 class="card-title">Disaster Recovery</h2>
-            <p class="card-text">Ensure there are no service interruptions or data losses for your clients or personnel.
-            </p>
+            <h2 class="card-title" data-tag="firstcardhead"></h2>
+            <p class="card-text" data-tag="firstpara"></p>
           </div>
         </div>
       </div>
@@ -460,9 +486,8 @@
         <div class="card bg-transparent">
           <img src="imgs/item2.png" class="card-img-top item" alt="Image 2">
           <div class="card-body">
-            <h2 class="card-title">Ransomware Safeguard</h2>
-            <p class="card-text">DataSafe backups protect against ransomware attacks by allowing data to be restored
-              without paying ransoms.</p>
+            <h2 class="card-title" data-tag="secondcardhead"></h2>
+            <p class="card-text" data-tag="secondcardpara"></p>
           </div>
         </div>
       </div>
@@ -472,9 +497,8 @@
         <div class="card bg-transparent">
           <img src="imgs/item3.png" class="card-img-top item" alt="Image 3">
           <div class="card-body">
-            <h2 class="card-title">Microsoft 365 protection</h2>
-            <p class="card-text">Cloud backup solution for Microsoft 365 data, such as email, OneDrive, and SharePoint.
-            </p>
+            <h2 class="card-title" data-tag="thirdcardhead"></h2>
+            <p class="card-text" data-tag="thirdcardpara"></p>
           </div>
         </div>
       </div>
@@ -482,9 +506,8 @@
         <div class="card bg-transparent">
           <img src="imgs/item4.png" class="card-img-top item" alt="Image 4">
           <div class="card-body">
-            <h2 class="card-title">Cloud Software</h2>
-            <p class="card-text">SaaS (software as a service) is a highly cost-effective and almost maintenance-free
-              service model.</p>
+            <h2 class="card-title" data-tag="fourthcardhead"></h2>
+            <p class="card-text" data-tag="fourthcardpara"></p>
           </div>
         </div>
       </div>
@@ -495,14 +518,14 @@
   <div class="fifth">
     <div class="row">
       <div class="col-md-6 innerbg flex colsm12">
-        <div class="d-flex justify-content-center align-items-center innerhead">
-          Get your estimated price
+        <div class="d-flex justify-content-center align-items-center innerhead" data-tag="fifthhead">
+
         </div>
       </div>
       <div class="col-md-6 secondInner colsm12">
         <div class="row">
           <div class="col-md-12 mb-3">
-            <p class="text-white storage">Storage capacity:</p>
+            <p class="text-white storage" data-tag="storagecapacity"></p>
             <div class="input-group">
               <div class="innerGroup">
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
@@ -521,16 +544,16 @@
             </div>
           </div>
           <div class="col-md-12 mb-3">
-            <p>Subsection 2</p>
+            <p data-tag="subsection"></p>
             <div class="input-group">
               <p class="bigInnerText bottomprice">16</p>
               <div class="input-group-append">
                 <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
-                  <p class="monthlyText">/ Monthly</p>
+                  <p class="monthlyText" data-tag="monthly"></p>
                 </span>
               </div>
             </div>
-            <small class="form-text text-smaller-gb">* Each GB increase above 100gb equals to 0.16€</small>
+            <small class="form-text text-smaller-gb" data-tag="rate"></small>
           </div>
           <div class="col-md-12 mb-3 flex-center">
             <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">
@@ -541,7 +564,7 @@
         </div>
       </div>
     </div>
-    <p class="fifth-para">Data-safe will only charge for the capacity used and not for the maximum capacity</p>
+    <p class="fifth-para" data-tag="fifthpara"></p>
   </div>
 
   <!--Footer-->
@@ -556,26 +579,31 @@
         <div class="col-6 col-md-4">
           <ul class="nolist">
             <li>
-              <p class="listItem bold">Pages</p>
+              <p class="listItem bold" data-tag="pages"></p>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem">FAQs</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem">Contact Us</a>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/faq.html" class="listItem" data-tag="faq"></a>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem">Pricing</a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/contact.html" class="listItem"
+                data-tag="contact"></a>
+            </li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/prices.html" class="listItem"
+                data-tag="price"></a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4">
           <ul class="nolist">
             <li>
-              <p class="listItem bold">Resources</p>
+              <p class="listItem bold" data-tag="resouces"></p>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html"
-                class="listItem">Terms and Conditions</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem">Cookie policy</a>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/terms-and-conditions.html" class="listItem"
+                data-tag="terms"></a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/cookies.html" class="listItem"
+                data-tag="cookie"></a>
             </li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem">Privacy
-                Policy</a></li>
-            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem">Disclaimer</a>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/privacy-policy.html" class="listItem"
+                data-tag="privacy"></a></li>
+            <li><a href="https://glittering-semolina-308b40.netlify.app/disclaimer.html" class="listItem"
+                data-tag="disclaimer"></a>
             </li>
           </ul>
         </div>
@@ -583,11 +611,11 @@
     </div>
   </div>
 
-  <div class="container-fluid copywright">
-    © Copyrights 2023 DataSafe All rights reserved.
+  <div id='div1'></div>
+  <div class="container-fluid copywright" data-tag="copyright">
+
   </div>
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 
@@ -655,564 +683,485 @@
     // Infinite loop
     setInterval(() => {
       nextItem();
-    },
-
-  </script>
-
-
-
-  <script>
-  $(document).ready(function () {
-    // Hide the Previous button by default
-    $(".step-2-prev").hide();
-    $(".step-3-prev").hide();
-    $(".step-4-prev").hide();
-    $(".step-5-prev").hide();
-    $(".step-6-prev").hide();
-    $(".step-7-prev").hide();
-
-    $(".step-1").show();
-    $(".step-2").hide();
-    $(".step-3").hide();
-    $(".step-4").hide();
-    $(".step-5").hide();
-    $(".step-6").hide();
-    $(".step-7").hide();
-
-    $(".step-1-next").show();
-    $(".step-2-next").hide();
-    $(".step-3-next").hide();
-    $(".step-4-next").hide();
-    $(".step-5-next").hide();
-    $(".step-6-next").hide();
-    $(".step-7-next").hide();
-
-
-    $(".step-2-submit").hide()
-
-    // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
-    $(".step-1-next").click(function () {
-      $(".step-2-prev").show();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").show();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-1-next").hide();
-      $(".step-2-next").show();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-    });
-
-    $(".step-2-next").click(function () {
-
-      let temp = false
-      const items = document.querySelectorAll('.laptop');
-      items.forEach(item => {
-        if (item.classList.contains('active')) {
-          temp = true
-        }
-      });
-      if (temp == false) {
-        alert('Please Select an Option')
-        return
-      }
-
-      $(".step-2-prev").hide();
-      $(".step-3-prev").show();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").show();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").show();
-      $(".step-2-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-    });
-
-    $(".step-3-next").click(function () {
-
-
-
-      let temp = false
-      const items = document.querySelectorAll('.laptop2');
-      items.forEach(item => {
-        if (item.classList.contains('active2')) {
-          temp = true
-        }
-      });
-      if (temp == false) {
-        alert('Please Select an Option')
-        return
-      }
-
-
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").show();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").show();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").show();
-      $(".step-5-next").hide();
-    });
-
-    $(".step-4-next").click(function () {
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").show();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").show();
-      $(".step-6").hide();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").show();
-    });
-
-    $(".step-5-next").click(function () {
-
-      var em = document.querySelector('.emaill')
-      if (em.value == '') {
-        alert('Please Enter email')
-        return
-      }
-
-      var check = document.querySelector('.checkboxitem')
-      if (!check.checked) {
-        alert('Please accept terms and coditions')
-        return
-      }
-
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").show();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").show();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-      $(".step-6-next").show();
-
-    });
-
-    $(".step-6-next").click(function () {
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-      $(".step-7-prev").show();
-
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-      $(".step-7").show();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-      $(".step-6-next").hide();
-      $(".step-7-next").show();
-
-    });
-
-    // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
-    $(".step-2-prev").click(function () {
-      //first data
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").show();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-1-next").show();
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-
-      $(".step-2-submit").hide()
-    });
-
-    $(".step-3-prev").click(function () {
-      //second data
-      $(".step-2-prev").show();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").show();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-1-next").hide();
-      $(".step-2-next").show();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-    });
-
-    $(".step-4-prev").click(function () {
-      //third data
-      $(".step-2-prev").hide();
-      $(".step-3-prev").show();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").show();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").show();
-      $(".step-2-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-    });
-
-    $(".step-5-prev").click(function () {
-      //fourth data
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").show();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").show();
-      $(".step-5").hide();
-      $(".step-6").hide();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").show();
-      $(".step-5-next").hide();
-    });
-
-    $(".step-6-prev").click(function () {
-      //fifth data
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").show();
-      $(".step-6-prev").hide();
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").show();
-      $(".step-6").hide();
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").show();
-      $(".step-6-next").hide();
-
-    });
-
-    $(".step-7-prev").click(function () {
-      //fifth data
-      $(".step-2-prev").hide();
-      $(".step-3-prev").hide();
-      $(".step-4-prev").hide();
-      $(".step-5-prev").hide();
-      $(".step-6-prev").show();
-      $(".step-7-prev").hide();
-
-
-      $(".step-1").hide();
-      $(".step-2").hide();
-      $(".step-3").hide();
-      $(".step-4").hide();
-      $(".step-5").hide();
-      $(".step-6").show();
-      $(".step-7").hide();
-
-
-      $(".step-2-next").hide();
-      $(".step-3-next").hide();
-      $(".step-4-next").hide();
-      $(".step-5-next").hide();
-      $(".step-6-next").show();
-      $(".step-7-next").hide();
-
-    });
-
-    // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
-    $(".step-2-submit").click(function () {
-      // Do something here, like submit the form via AJAX
-      // Then close the modal
-      $("#multistep-modal").modal("hide");
-    });
-  });
-
-
-
-    const items = document.querySelectorAll('.laptop');
-    items.forEach(item => {
-      item.addEventListener('click', () => {
-        // Remove "active" class from all items
-        items.forEach(item => {
-          item.classList.remove('active');
+    }),
+
+
+
+      $(document).ready(function () {
+        // Hide the Previous button by default
+        $(".step-2-prev").hide();
+        $(".step-3-prev").hide();
+        $(".step-4-prev").hide();
+        $(".step-5-prev").hide();
+        $(".step-6-prev").hide();
+        $(".step-7-prev").hide();
+
+        $(".step-1").show();
+        $(".step-2").hide();
+        $(".step-3").hide();
+        $(".step-4").hide();
+        $(".step-5").hide();
+        $(".step-6").hide();
+        $(".step-7").hide();
+
+        $(".step-1-next").show();
+        $(".step-2-next").hide();
+        $(".step-3-next").hide();
+        $(".step-4-next").hide();
+        $(".step-5-next").hide();
+        $(".step-6-next").hide();
+        $(".step-7-next").hide();
+
+
+        $(".step-2-submit").hide()
+
+        // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+        $(".step-1-next").click(function () {
+          $(".step-2-prev").show();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").show();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-1-next").hide();
+          $(".step-2-next").show();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
         });
 
-        // Add "active" class to the clicked item
-        item.classList.add('active');
-      });
-    });
+        $(".step-2-next").click(function () {
 
-
-
-    const items2 = document.querySelectorAll('.laptop2');
-    items2.forEach(item => {
-      item.addEventListener('click', () => {
-        // Remove "active" class from all items
-        items2.forEach(item => {
-          item.classList.remove('active2');
-        });
-
-        // Add "active" class to the clicked item
-        item.classList.add('active2');
-      });
-    });
-
-
-
-    const number2 = document.querySelector('.countwalaspan2');
-    const addBtn2 = document.querySelector('.add2');
-    const subtractBtn2 = document.querySelector('.subtract2');
-    const bottomPrice = document.querySelector('.bottomprice')
-    // Set the initial number value
-    let count2 = 100;
-    let count3 = 100;
-
-    number2.value = count2
-
-
-
-    number2.addEventListener('keyup', () => {
-      let val = number2.value
-      if (val > 100) {
-        let temp = val - 100
-        temp = 0.17 * temp
-        temp = temp + 16
-        console.log('innerhtml', val)
-        bottomPrice.innerHTML = temp
-      } else {
-        bottomPrice.innerHTML = 16
-      }
-      // Update the number text in the div
-
-    })
-
-
-    // Add event listener to the "Add" button
-    addBtn2.addEventListener('click', () => {
-      // Increase the count by 1
-      count2 += 10;
-      if (count2 > 100) {
-        let temp = count2 - 100
-        temp = 0.17 * temp
-        temp = temp + 16
-        bottomPrice.innerHTML = temp
-      } else {
-        bottomPrice.innerHTML = 16
-      }
-      // Update the number text in the div
-      number2.value = count2
-    });
-
-    // Add event listener to the "Subtract" button
-    subtractBtn2.addEventListener('click', () => {
-      // Decrease the count by 1
-      count2 -= 10;
-      if (count2 > 100) {
-        let temp = count2 - 100
-        temp = 0.17 * temp
-        temp = temp + 16
-        bottomPrice.innerHTML = temp
-      } else {
-        bottomPrice.innerHTML = 16
-      }
-      // Update the number text in the div
-      number2.value = count2
-    });
-
-    const number3 = document.querySelector('.countwalaspan3');
-    const addBtn3 = document.querySelector('.add3');
-    const subtractBtn3 = document.querySelector('.subtract3');
-    const bottomPrice2 = document.querySelector('.bottomprice2')
-
-    number3.value = 100
-
-    number3.addEventListener('keyup', () => {
-      let val = number3.value
-      if (val > 100) {
-        let temp = val - 100
-        temp = 0.17 * temp
-        temp = temp + 16
-        console.log('innerhtml', val)
-        bottomPrice2.innerHTML = temp
-      } else {
-        bottomPrice2.innerHTML = 16
-      }
-    })
-
-    addBtn3.addEventListener('click', () => {
-      console.log('added')
-      count3 += 10;
-      if (count3 > 100) {
-        let temp = count3 - 100
-        temp = 0.17 * temp
-        temp = temp + 16
-        bottomPrice.innerHTML = temp
-      }
-      number3.value = count3
-    });
-
-    // Add event listener to the "Subtract" button
-    subtractBtn3.addEventListener('click', () => {
-      // Decrease the count by 1
-      console.log('subtract')
-      count3 -= 10;
-
-      // Update the number text in the div
-      number3.value = count3
-    });
-
-
-
-
-
-    // Set your publishable key
-    var stripe = Stripe('pk_live_51Mnf2GFgBZKMbNrcBpudayCEGrS7pjEryIoLfwOwJ3vDc2L0HiSVPRA1EJR04ZxoACZi5MwxkIbH9caR1qU8qcFD00RQ3jbikA');
-
-    // Create a card element and mount it to the DOM
-    var elements = stripe.elements();
-    var cardElement = elements.create('card');
-    cardElement.mount('#card-element');
-
-    // Handle real-time validation errors from the card element
-    cardElement.addEventListener('change', function (event) {
-      var displayError = document.getElementById('card-errors');
-      if (event.error) {
-        displayError.textContent = event.error.message;
-      } else {
-        displayError.textContent = '';
-      }
-    });
-
-    // Handle form submission
-    var form = document.getElementById('payment-form');
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-
-      // Disable the submit button to prevent multiple submissions
-      document.getElementById('submit-payment').disabled = true;
-
-      // Collect the customer's name and email
-      var name = document.getElementById('name').value;
-      var email = document.getElementById('email').value;
-
-      // Create a token with the customer's card information and name/email
-      stripe.createToken(cardElement, { name: name, email: email }).then(function (result) {
-        if (result.error) {
-          // Inform the user if there was an error creating the token
-          //  var errorElement = document.getElementById('card-errors');
-          //errorElement.textContent = result.error.message;
-
-          // Re-enable the submit button to allow for retry
-          document.getElementById('submit-payment').disabled = false;
-        } else {
-          // Send the token to your server to process the payment
-          var token = result.token.id;
-          var xhr = new XMLHttpRequest();
-          xhr.open('POST', 'YOUR_PAYMENT_PROCESSOR_ENDPOINT');
-          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-          xhr.onload = function () {
-            if (xhr.status === 200) {
-              // Payment successful
-              alert('Payment successful!');
-            } else {
-              // Payment failed
-              alert('Payment failed.');
+          let temp = false
+          const items = document.querySelectorAll('.laptop');
+          items.forEach(item => {
+            if (item.classList.contains('active')) {
+              temp = true
             }
+          });
+          if (temp == false) {
+            alert('Please Select an Option')
+            return
+          }
 
-            // Re-enable the submit button
-            document.getElementById('submit-payment').disabled = false;
-          };
-          xhr.send('token=' + token);
-        }
-      });
-    });
+          $(".step-2-prev").hide();
+          $(".step-3-prev").show();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").show();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").show();
+          $(".step-2-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-3-next").click(function () {
+
+
+
+          let temp = false
+          const items = document.querySelectorAll('.laptop2');
+          items.forEach(item => {
+            if (item.classList.contains('active2')) {
+              temp = true
+            }
+          });
+          if (temp == false) {
+            alert('Please Select an Option')
+            return
+          }
+
+
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").show();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").show();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").show();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-4-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").show();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").show();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").show();
+        });
+
+        $(".step-5-next").click(function () {
+
+          var em = document.querySelector('.emaill')
+          if (em.value == '') {
+            alert('Please Enter email')
+            return
+          }
+
+          var check = document.querySelector('.checkboxitem')
+          if (!check.checked) {
+            alert('Please accept terms and coditions')
+            return
+          }
+
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").show();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").show();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+          $(".step-6-next").show();
+
+        });
+
+        $(".step-6-next").click(function () {
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+          $(".step-7-prev").show();
+
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+          $(".step-7").show();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+          $(".step-6-next").hide();
+          $(".step-7-next").show();
+
+        });
+
+        // When the Next button is clicked in Step 1, hide Step 1 and show Step 2
+        $(".step-2-prev").click(function () {
+          //first data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").show();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-1-next").show();
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+
+          $(".step-2-submit").hide()
+        });
+
+        $(".step-3-prev").click(function () {
+          //second data
+          $(".step-2-prev").show();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").show();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-1-next").hide();
+          $(".step-2-next").show();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-4-prev").click(function () {
+          //third data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").show();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").show();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").show();
+          $(".step-2-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-5-prev").click(function () {
+          //fourth data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").show();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").show();
+          $(".step-5").hide();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").show();
+          $(".step-5-next").hide();
+        });
+
+        $(".step-6-prev").click(function () {
+          //fifth data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").show();
+          $(".step-6-prev").hide();
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").show();
+          $(".step-6").hide();
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").show();
+          $(".step-6-next").hide();
+
+        });
+
+        $(".step-7-prev").click(function () {
+          //fifth data
+          $(".step-2-prev").hide();
+          $(".step-3-prev").hide();
+          $(".step-4-prev").hide();
+          $(".step-5-prev").hide();
+          $(".step-6-prev").show();
+          $(".step-7-prev").hide();
+
+
+          $(".step-1").hide();
+          $(".step-2").hide();
+          $(".step-3").hide();
+          $(".step-4").hide();
+          $(".step-5").hide();
+          $(".step-6").show();
+          $(".step-7").hide();
+
+
+          $(".step-2-next").hide();
+          $(".step-3-next").hide();
+          $(".step-4-next").hide();
+          $(".step-5-next").hide();
+          $(".step-6-next").show();
+          $(".step-7-next").hide();
+
+        });
+
+        // When the Submit button is clicked in Step 2, submit the form (or perform any other action)
+        $(".step-2-submit").click(function () {
+          // Do something here, like submit the form via AJAX
+          // Then close the modal
+          $("#multistep-modal").modal("hide");
+        });
+
+
+
+
+        const items = document.querySelectorAll('.laptop');
+        items.forEach(item => {
+          item.addEventListener('click', () => {
+            // Remove "active" class from all items
+            items.forEach(item => {
+              item.classList.remove('active');
+            });
+
+            // Add "active" class to the clicked item
+            item.classList.add('active');
+          });
+        });
+
+
+
+        const items2 = document.querySelectorAll('.laptop2');
+        items2.forEach(item => {
+          item.addEventListener('click', () => {
+            // Remove "active" class from all items
+            items2.forEach(item => {
+              item.classList.remove('active2');
+            });
+
+            // Add "active" class to the clicked item
+            item.classList.add('active2');
+          });
+        });
+        const number2 = document.querySelector('.countwalaspan2');
+        const addBtn2 = document.querySelector('.add2');
+        const subtractBtn2 = document.querySelector('.subtract2');
+        const bottomPrice = document.querySelector('.bottomprice')
+        // Set the initial number value
+        let count2 = 100;
+        let count3 = 100;
+        number2.value = count2
+        number2.addEventListener('keyup', () => {
+          let val = number2.value
+          if (val > 100) {
+            let temp = val - 100
+            temp = 0.17 * temp
+            temp = temp + 16
+            bottomPrice.innerHTML = temp
+          } else {
+            bottomPrice.innerHTML = 16
+          }
+          // Update the number text in the div
+
+        })
+        // Add event listener to the "Add" button
+        addBtn2.addEventListener('click', () => {
+          // Increase the count by 1
+          count2 += 10;
+          if (count2 > 100) {
+            let temp = count2 - 100
+            temp = 0.17 * temp
+            temp = temp + 16
+            bottomPrice.innerHTML = temp
+          } else {
+            bottomPrice.innerHTML = 16
+          }
+          // Update the number text in the div
+          number2.value = count2
+        });
+        // Add event listener to the "Subtract" button
+        subtractBtn2.addEventListener('click', () => {
+          // Decrease the count by 1
+          count2 -= 10;
+          if (count2 > 100) {
+            let temp = count2 - 100
+            temp = 0.17 * temp
+            temp = temp + 16
+            bottomPrice.innerHTML = temp
+          } else {
+            bottomPrice.innerHTML = 16
+          }
+          // Update the number text in the div
+          number2.value = count2
+        });
+        const number3 = document.querySelector('.countwalaspan3');
+        const addBtn3 = document.querySelector('.add3');
+        const subtractBtn3 = document.querySelector('.subtract3');
+        const bottomPrice2 = document.querySelector('.bottomprice2')
+        number3.value = 100
+        number3.addEventListener('keyup', () => {
+          let val = number3.value
+          if (val > 100) {
+            let temp = val - 100
+            temp = 0.17 * temp
+            temp = temp + 16
+            bottomPrice2.innerHTML = temp
+          } else {
+            bottomPrice2.innerHTML = 16
+          }
+        })
+        addBtn3.addEventListener('click', () => {
+          count3 += 10;
+          if (count3 > 100) {
+            let temp = count3 - 100
+            temp = 0.17 * temp
+            temp = temp + 16
+            bottomPrice.innerHTML = temp
+          }
+          number3.value = count3
+        });
+        // Add event listener to the "Subtract" button
+        subtractBtn3.addEventListener('click', () => {
+          // Decrease the count by 1
+          count3 -= 10;
+
+          // Update the number text in the div
+          number3.value = count3
+        });
+
+      }
+
+
+      )
 
   </script>
+
+
+
+
 </body>
 
 </html>
