@@ -856,6 +856,11 @@ li {
 }
 
 @media screen and (max-width: 450px) {
+
+    .nav{
+      width: 100%;
+    }
+
   .firstLogo {
     width: 100%;
   }
@@ -1683,3 +1688,9 @@ background: rgba(0, 0, 0, 0.8);
 #language-select{
   margin-top: 1.5rem;
 }
+
+
+.navrow{
+  flex-wrap: wrap;
+}
+
