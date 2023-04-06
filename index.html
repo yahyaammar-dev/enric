@@ -103,7 +103,7 @@
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                   <p class="text-white subtract3">-</p>
                 </button>
-                <p class="innerText innerNumber3"><input class="countwalaspan3" type="text" /><span
+                <p class="innerText innerNumber3"><input class="countwalaspan3 bottomprice3" type="text" /><span
                     class="yellowspangb"> GB</span></p>
                 <button class="btn btn-outline-secondary yellow-btn sign" type="button">
                   <p class="text-white add3">+</p>
@@ -555,7 +555,7 @@
           <div class="col-md-12 mb-3">
             <p data-tag="subsection"></p>
             <div class="input-group">
-              <p class="bigInnerText bottomprice">16</p>
+              <p class="bigInnerText bottomprice bottomprice2">16</p>
               <div class="input-group-append">
                 <span class="input-group-text flex-col"><img src="./imgs/euro.svg" />
                   <p class="monthlyText" data-tag="monthly"></p>
@@ -1081,23 +1081,130 @@
         const addBtn2 = document.querySelector('.add2');
         const subtractBtn2 = document.querySelector('.subtract2');
         const bottomPrice = document.querySelector('.bottomprice')
+        const bottomPrice2 = document.querySelector('.bottomprice2')
+        const bottomPrice3 = document.querySelector('.bottomprice3')
+
+        const number3 = document.querySelector('.countwalaspan3');
+        const addBtn3 = document.querySelector('.add3');
+        const subtractBtn3 = document.querySelector('.subtract3');
+        number3.value = 100
+
         // Set the initial number value
         let count2 = 100;
         let count3 = 100;
         number2.value = count2
+        number3.value = count3
         number2.addEventListener('keyup', () => {
           let val = number2.value
           if (val > 100) {
             let temp = val - 100
             temp = 0.17 * temp
             temp = temp + 16
+            temp = temp.toFixed(2)
+
             bottomPrice.innerHTML = temp
+            bottomPrice2.innerHTML = temp
+
           } else {
             bottomPrice.innerHTML = 16
+            bottomPrice2.innerHTML = 16
+
           }
           // Update the number text in the div
 
         })
+
+        number2.addEventListener('keyup', () => {
+          let val = number2.value
+          if (val > 100) {
+            let temp = val - 100
+            temp = 0.17 * temp
+            temp = temp + 16
+            temp = temp.toFixed(2)
+
+            bottomPrice.innerHTML = temp
+            bottomPrice2.innerHTML = temp
+            bottomPrice3.innerHTML = temp
+          } else {
+            bottomPrice.innerHTML = 16
+            bottomPrice2.innerHTML = 16
+            bottomPrice3.innerHTML = 16
+          }
+          // Update the number text in the div
+
+        })
+
+
+
+
+
+          // Add event listener to the "Add" button
+          addBtn3.addEventListener('click', () => {
+            // Increase the count by 1
+            console.log('clicked')
+            count2 += 10;
+            if (count2 > 100) {
+              let temp = count2 - 100
+              temp = 0.17 * temp
+              temp = temp + 16
+              temp = temp.toFixed(2)
+  
+  
+              bottomPrice.innerHTML = temp
+              bottomPrice2.innerHTML = temp
+              bottomPrice3.innerHTML = temp
+            //  bottomPrice2.innerHTML = temp
+              console.log('temp', bottomPrice)
+            } else {
+              bottomPrice.innerHTML = 16
+              bottomPrice2.innerHTML = 16
+              bottomPrice3.innerHTML = 16
+  
+            }
+            // Update the number text in the div
+            number2.value = count2
+          });
+          // Add event listener to the "Subtract" button
+          subtractBtn3.addEventListener('click', () => {
+            // Decrease the count by 1
+            count2 -= 10;
+            if (count2 > 100) {
+              let temp = count2 - 100
+              temp = 0.17 * temp
+              temp = temp + 16
+              temp = temp.toFixed(2)
+  
+              bottomPrice.innerHTML = temp
+              bottomPrice2.innerHTML = temp
+             
+            } else {
+              bottomPrice.innerHTML = 16
+              bottomPrice2.innerHTML = 16
+  
+            }
+            // Update the number text in the div
+            number2.value = count2
+          });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Add event listener to the "Add" button
         addBtn2.addEventListener('click', () => {
           // Increase the count by 1
@@ -1106,9 +1213,18 @@
             let temp = count2 - 100
             temp = 0.17 * temp
             temp = temp + 16
+            temp = temp.toFixed(2)
+
+
             bottomPrice.innerHTML = temp
+            bottomPrice2.innerHTML = temp
+
+          //  bottomPrice2.innerHTML = temp
+            console.log('temp', bottomPrice)
           } else {
             bottomPrice.innerHTML = 16
+            bottomPrice2.innerHTML = 16
+
           }
           // Update the number text in the div
           number2.value = count2
@@ -1121,36 +1237,46 @@
             let temp = count2 - 100
             temp = 0.17 * temp
             temp = temp + 16
+            temp = temp.toFixed(2)
+
             bottomPrice.innerHTML = temp
+            bottomPrice2.innerHTML = temp
+           
           } else {
             bottomPrice.innerHTML = 16
+            bottomPrice2.innerHTML = 16
+
           }
           // Update the number text in the div
           number2.value = count2
         });
-        const number3 = document.querySelector('.countwalaspan3');
-        const addBtn3 = document.querySelector('.add3');
-        const subtractBtn3 = document.querySelector('.subtract3');
-        const bottomPrice2 = document.querySelector('.bottomprice2')
-        number3.value = 100
+       
         number3.addEventListener('keyup', () => {
           let val = number3.value
           if (val > 100) {
             let temp = val - 100
             temp = 0.17 * temp
             temp = temp + 16
+            temp = temp.toFixed(2)
             bottomPrice2.innerHTML = temp
+            // bottomPrice.innerHTML = temp
           } else {
+            // bottomPrice2.innerHTML = 16
+            bottomPrice.innerHTML = 16
             bottomPrice2.innerHTML = 16
           }
         })
         addBtn3.addEventListener('click', () => {
+          console.log('hello  ')
           count3 += 10;
           if (count3 > 100) {
             let temp = count3 - 100
             temp = 0.17 * temp
             temp = temp + 16
+            temp = temp.toFixed(2)
+
             bottomPrice.innerHTML = temp
+            bottomPrice3.innerHTML = temp
           }
           number3.value = count3
         });
@@ -1161,6 +1287,8 @@
 
           // Update the number text in the div
           number3.value = count3
+          bottomPrice3.value = count3
+
         });
 
       }
