@@ -15,7 +15,9 @@
 <script>
   var currentLng
   if (localStorage.getItem('lang')) {
-    currentLng = localStorage.getItem('lang')
+    currentLng = localStorage.getItem('lang');
+    var select = document.getElementById("language-select");
+    select.value = currentLng; 
   } else {
     currentLng = 'en'
   }
@@ -31,6 +33,12 @@
   }
 
   function load() {
+
+    let abc = document.getElementById('language-select')
+    if(localStorage.getItem('lang')){
+      abc.value = localStorage.getItem('lang');  
+    }
+
     var translate = new Translate();
     var attributeName = 'data-tag';
     translate.init(attributeName, currentLng);
@@ -438,7 +446,8 @@
         <div>
           <h1 class="second-heading" data-tag="secondheading"></h1>
           <p class="second-paragrph" data-tag="secondparagrapgh"></p>
-          <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">SUITABILITY TEST
+          <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">
+            <span data-tag="suitabilitytest">SUITABILITY TEST</span>
             <img src="./imgs/Group2.svg" /></button>
         </div>
       </div>
@@ -464,7 +473,7 @@
         <!-- heading text, and button -->
         <h1 class="hero-heading" data-tag="thirdhead"></h1>
         <p class="hero-para" data-tag="thirdpara"></p>
-        <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">Order Now <img
+        <button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal" data-tag="ordernow">Order Now <img
             src="./imgs/Group2.svg" /></button>
       </div>
     </div>
@@ -557,7 +566,9 @@
           </div>
           <div class="col-md-12 mb-3 flex-center">
             <button type="button" class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">
-              Purchase Now
+              <span data-tag="purchase">
+                Purchase Now
+              </span>
               <img src="./imgs/Group2.svg" />
             </button>
           </div>
@@ -646,12 +657,12 @@
       sliderDots.forEach((dot) => {
         dot.classList.remove('active');
       });
-      sliderDots[index].classList.add('active');
+     // sliderDots[index].classList.add('active');
     }
 
     // Go to item
     function goToItem(index) {
-      sliderTrack.style.transform = `translateX(-${index * (100 / 3)}%)`;
+     // sliderTrack.style.transform = `translateX(-${index * (100 / 3)}%)`;
       setActiveDot(index);
       itemIndex = index;
     }
@@ -1156,4 +1167,5 @@
       )
   </script>
 </body>
+
 </html>

@@ -12,15 +12,45 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 
+
 <script src="translate.js"></script>
 <script>
-    function load() {
-        var translate = new Translate();
-        var currentLng = 'en';//'fr'
-        var attributeName = 'data-tag';
-        translate.init(attributeName, currentLng);
-        translate.process();
+  var currentLng
+  if (localStorage.getItem('lang')) {
+    currentLng = localStorage.getItem('lang');
+    var select = document.getElementById("language-select");
+    select.value = currentLng; 
+    console.warn('yahan to aya tha')
+  } else {
+    currentLng = 'en'
+  }
+  function changeLanguage() {
+    var select = document.getElementById("language-select");
+    var selectedValue = select.options[select.selectedIndex].value;
+    currentLng = selectedValue;
+    localStorage.setItem('lang', currentLng)
+    var translate = new Translate();
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+
+  }
+
+
+  function load() {
+    console.log('chal rha hy')
+
+    let abc = document.getElementById('language-select')
+    if(localStorage.getItem('lang')){
+      abc.value = localStorage.getItem('lang');  
     }
+
+
+    var translate = new Translate();
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+  }
 </script>
 
 <body onload="load()">
@@ -54,7 +84,7 @@
     <a href="https://master--glittering-semolina-308b40.netlify.app/">
       <img class="logo" src="./imgs/Group.svg" />
     </a>
-    <h2>Contact</h2>
+    <h2 data-tag="Contact"></h2>
   </div>
 
   <div class="row contactrow">
@@ -78,7 +108,7 @@
         </div>
         <p data-tag="detailedmessage"></p>
         <button class="btn btn-primary blue-btn" data-toggle="modal" data-target="#multistep-modal">
-          Send Message
+          <span data-tag="SendMessage"></span>
           <img src="./imgs/Group2.svg" />
         </button>
       </form>

@@ -11,11 +11,42 @@
     <!-- Link to local stylesheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
+
+
 <script src="translate.js"></script>
 <script>
-  function load() {
+  var currentLng
+  if (localStorage.getItem('lang')) {
+    currentLng = localStorage.getItem('lang');
+    var select = document.getElementById("language-select");
+    select.value = currentLng; 
+    console.warn('yahan to aya tha')
+  } else {
+    currentLng = 'en'
+  }
+  function changeLanguage() {
+    var select = document.getElementById("language-select");
+    var selectedValue = select.options[select.selectedIndex].value;
+    currentLng = selectedValue;
+    localStorage.setItem('lang', currentLng)
     var translate = new Translate();
-    var currentLng = 'en';//'fr'
+    var attributeName = 'data-tag';
+    translate.init(attributeName, currentLng);
+    translate.process();
+
+  }
+
+
+  function load() {
+    console.log('chal rha hy')
+
+    let abc = document.getElementById('language-select')
+    if(localStorage.getItem('lang')){
+      abc.value = localStorage.getItem('lang');  
+    }
+
+
+    var translate = new Translate();
     var attributeName = 'data-tag';
     translate.init(attributeName, currentLng);
     translate.process();
@@ -272,8 +303,7 @@
         </div>
     </div>
 
-    <div class="container-fluid copywright">
-        © Copyrights 2023 DataSafe All rights reserved.
+    <div class="container-fluid copywright" data-tag="copyright">
     </div>
     <!-- Include Bootstrap JS and jQuery from CDN, if needed -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
