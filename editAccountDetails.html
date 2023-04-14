@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Admin</title>
+		<!-- Link to Bootstrap CSS from CDN -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Link to local stylesheet -->
+		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
+	</head>
+
+	<body class="baigebg">
+		<div class="row">
+			<div class="col-md-12 backgroundnavy adminheader">
+				<img src="./imgs/Group.svg"/>
+				<div><input type="text" class="adminserach" placeholder="search"/></div>
+				<div>
+					<button class="adminbtn">Download DataSafe</button>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-md-3">
+				<nav class="sidebar card py-2 mb-4">
+					<ul class="nav flex-column" id="nav_accordion">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a1.svg"/>
+								<p class="activee">
+									Dashboard
+								</p>
+							</a>
+						</li>
+						<li class="nav-item has-submenu">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a2.svg"/>
+								<p>
+									User
+								</p>
+								<img src="./imgs/downIcon.svg" class="downIcon"/>
+							</a>
+							<ul class="submenu collapse">
+								<li>
+
+									<a class="nav-link" href="#">Account
+									</a>
+								</li>
+								<li>
+
+									<a class="nav-link" href="#">Login Details
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item has-submenu">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a3.svg"/>
+								Subscription
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a4.svg"/>
+								Support
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a5.svg"/>
+								Logout
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-8 m-5 qewewq">
+				<div class="whitebanner asdf">
+					<h1>Edit Account Details</h1>
+				</div>
+				<div class="row ewwop">
+					<div class="col-md-12">
+						<p>Account Type</p>
+                        <div class="flex flexer3 flexer3-edit">
+                            <div class="cardd">
+                                <img src="./imgs/accountt.svg" />
+                                <p>Personal</p>
+                            </div>
+                            <div class="cardd">
+                                <img src="./imgs/account1.svg" />
+                                <p>Work Progress</p>
+                            </div>
+                        </div>
+
+
+                        <div class="row  mt-3">
+                            <div class="col-md-6" >
+                                <p class="adminlabel">Company Name</p>
+                                <input type="text" placeholder="Enter Company Name" class="admininput" />
+                            </div>
+                            <div class="col-md-6">
+                                <p class="adminlabel">VAT ID</p>
+                                <input type="text" placeholder="Enter Vat ID"  class="admininput" />
+                            </div>
+                        </div>
+                        <div class="row  mt-3">
+                            <div class="col-md-6">
+                                <p class="adminlabel">First Name</p>
+                                <input type="text" placeholder="First Name"  class="admininput" />
+                            </div>
+                            <div class="col-md-6">
+                                <p class="adminlabel">Last Name</p>
+                                <input type="text" placeholder="Last Name"  class="admininput" />
+                            </div>
+                        </div>
+                        <div class="row  mt-3">
+                            <div class="col-md-6">
+                                <p class="adminlabel">Address</p>
+                                <input type="text" placeholder="Enter Address"  class="admininput" />
+                            </div>
+                            <div class="col-md-6">
+                                <p class="adminlabel">Postal Code</p>
+                                <input type="text" placeholder="Enter Postal Code"  class="admininput" />
+                            </div>
+                        </div>
+                        <div class="row  mt-3">
+                            <div class="col-md-6">
+                                <p class="adminlabel">City</p>
+                                <input type="text"  placeholder="Enter City Name"  class="admininput" />
+                            </div>
+                            <div class="col-md-6">
+                                <p class="adminlabel">Country</p>
+                                <input type="text" placeholder="Select Country"  class="admininput" />
+                            </div>
+                        </div>
+                        <div class="row  mt-3">
+                            <div class="col-md-6">
+                                <p class="adminlabel">Email</p>
+                                <input type="text" placeholder="Enter Email"  class="admininput" />
+                            </div>
+                            <div class="col-md-6">
+                                <p class="adminlabel">Website</p>
+                                <input type="text" placeholder="Enter Website"  class="admininput" />
+                            </div>
+                        </div>
+                        <div class="row  mt-3">
+                            <div class="col-md-6">
+                                <p class="adminlabel">Skype</p>
+                                <input type="text" placeholder="Enter Skype"  class="admininput" />
+                            </div>
+                            <div class="col-md-6">
+                                <p class="adminlabel">Telephone</p>
+                                <input type="text" placeholder="Enter Telephone"  class="admininput" />
+                            </div>
+                        </div>
+                        <button class="adminpurplebutton  mt-4 maxxx">Update Account Details</button>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script>
+
+		document.addEventListener("DOMContentLoaded", function () {
+document.querySelectorAll('.sidebar .nav-link').forEach(function (element) {
+
+element.addEventListener('click', function (e) {
+
+let nextEl = element.nextElementSibling;
+let parentEl = element.parentElement;
+
+if (nextEl) {
+e.preventDefault();
+let mycollapse = new bootstrap.Collapse(nextEl);
+
+if (nextEl.classList.contains('show')) {
+mycollapse.hide();
+} else {
+mycollapse.show();
+// find other submenus with class=show
+var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
+// if it exists, then close all of them
+if (opened_submenu) {
+new bootstrap.Collapse(opened_submenu);
+}
+}
+}
+}); // addEventListener
+}) // forEach
+});
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+</html></body></html>

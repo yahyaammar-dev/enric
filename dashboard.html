@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Admin</title>
+		<!-- Link to Bootstrap CSS from CDN -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Link to local stylesheet -->
+		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
+	</head>
+
+	<body class="baigebg">
+		<div class="row">
+			<div class="col-md-12 backgroundnavy adminheader">
+				<img src="./imgs/Group.svg"/>
+				<div><input type="text" class="adminserach" placeholder="search"/></div>
+				<div>
+					<button class="adminbtn">Download DataSafe</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<nav class="sidebar card py-2 mb-4">
+					<ul class="nav flex-column" id="nav_accordion">
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a1.svg"/>
+								<p class="activee">
+									Dashboard
+								</p>
+							</a>
+						</li>
+						<li class="nav-item has-submenu">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a2.svg"/>
+								<p>
+									User
+								</p>
+								<img src="./imgs/downIcon.svg" class="downIcon"/>
+							</a>
+							<ul class="submenu collapse">
+								<li>
+
+									<a class="nav-link" href="#">Account
+									</a>
+								</li>
+								<li>
+
+									<a class="nav-link" href="#">Login Details
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item has-submenu">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a3.svg"/>
+								Subscription
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a4.svg"/>
+								Support
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<img src="./imgs/a5.svg"/>
+								Logout
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-md-8 m-5 admindashinner">
+				<div class="bannerInner">
+					<div>
+						<h1>Data-Safe™ offers a safe refuge from complex backup operations.</h1>
+					</div>
+					<div>
+						<button class="btn btn-primary yellow-btn" data-toggle="modal" data-target="#multistep-modal">
+							<p>
+								DOWNLOAD DATASAFE
+							</p>
+							<img src="./imgs/Group2.svg"/>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+
+		document.addEventListener("DOMContentLoaded", function () {
+document.querySelectorAll('.sidebar .nav-link').forEach(function (element) {
+
+element.addEventListener('click', function (e) {
+
+let nextEl = element.nextElementSibling;
+let parentEl = element.parentElement;
+
+if (nextEl) {
+e.preventDefault();
+let mycollapse = new bootstrap.Collapse(nextEl);
+
+if (nextEl.classList.contains('show')) {
+mycollapse.hide();
+} else {
+mycollapse.show();
+// find other submenus with class=show
+var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
+// if it exists, then close all of them
+if (opened_submenu) {
+new bootstrap.Collapse(opened_submenu);
+}
+}
+}
+}); // addEventListener
+}) // forEach
+});
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+</html></body></html>
