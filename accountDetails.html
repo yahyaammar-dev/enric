@@ -24,7 +24,6 @@
 			</div>
 		</div>
 
-
 		<div class="row">
 			<div class="col-md-3">
 				<nav class="sidebar card py-2 mb-4">
@@ -32,7 +31,7 @@
 						<li class="nav-item">
 							<a class="nav-link" href="#">
 								<img src="./imgs/a1.svg"/>
-								<p class="activee">
+								<p>
 									Dashboard
 								</p>
 							</a>
@@ -40,7 +39,7 @@
 						<li class="nav-item has-submenu">
 							<a class="nav-link" href="#">
 								<img src="./imgs/a2.svg"/>
-								<p>
+								<p class="activee">
 									User
 								</p>
 								<img src="./imgs/downIcon.svg" class="downIcon"/>
@@ -48,18 +47,21 @@
 							<ul class="submenu collapse">
 								<li>
 
-									<a class="nav-link" href="#">Account
+									<a class="nav-link" href="/accountDetails.html" >
+										<p class="activee" >
+											Account
+										</p>
 									</a>
 								</li>
 								<li>
 
-									<a class="nav-link" href="#">Login Details
+									<a class="nav-link" href="/loginDetails.html">Login Details
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li class="nav-item has-submenu">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="/subscription.html">
 								<img src="./imgs/a3.svg"/>
 								Subscription
 							</a>
@@ -71,7 +73,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="/admin.html">
 								<img src="./imgs/a5.svg"/>
 								Logout
 							</a>
@@ -84,17 +86,7 @@
 					<h1>Account</h1>
 				</div>
 
-				<div class="innerrr">
-					<div class="row">
-						<div class="col-md-6 flexer">
-							<p class="bolder">Company:</p>
-							<p class="nonbolder">Homespun Co</p>
-						</div>
-						<div class="col-md-6 flexer">
-							<p class="bolder">VAT ID:</p>
-							<p class="nonbolder">12345678</p>
-						</div>
-					</div>
+				<div class="innerrr p-4">
 					<div class="row">
 						<div class="col-md-6 flexer">
 							<p class="bolder">Company:</p>
@@ -134,9 +126,11 @@
 					
 						</div>
 					</div>
-					<button class="adminpurplebutton" style="max-width: 300px">
-						EDIT ACCOUNT DETAILS
-					</button>
+					<a href="/editAccountDetails.html">
+						<button class="adminpurplebutton" style="max-width: 300px">
+							EDIT ACCOUNT DETAILS
+						</button>
+					</a>
 				</div>
 
 				

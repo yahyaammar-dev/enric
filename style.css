@@ -1982,7 +1982,7 @@
 
   .subsc {
     background-color: #F7F7F7;
-    padding: 5rem;
+    padding: 3rem 5rem;
   }
 
   .subsc .ii {
@@ -2145,7 +2145,7 @@
     width: 100%;
     background-color: transparent;
     border: 1px solid grey;
-    border-radius: 0.3rem;
+    border-radius: 0 0 0.3rem 0.3rem;
   }
 
 
@@ -2155,15 +2155,12 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 160%;
-    /* or 22px */
-
-
     color: #05164D;
     border: none;
     width: 100%;
     background-color: transparent;
     border: 1px solid grey;
-    border-radius: 0.3rem;
+    border-radius: 0.3rem 0.3rem 0 0;
     padding: 0.75rem 1rem;
   }
 
@@ -2284,7 +2281,56 @@
 
 
   .flexs{
-    width:  40%;
+    /* width:  40%; */
     margin: auto;
   }
+
+
+  .termtext{
+    max-height: 150px;
+    overflow-y: auto;
+  }
  
+
+  .asdfjklasdf{
+    background-color: white;
+    padding: 1rem 1rem 0.5rem 1rem;
+  }
+
+
+.llll{
+  padding: 0 !important;
+}
+
+
+.popop{
+  margin-top: 1rem !important;
+}
+
+
+.sdf{
+  display: flex;
+  justify-content: center;
+}
+
+.sdf img{
+  width: 50%;
+  padding-bottom: 1rem;
+}
+
+
+
+.asdfssgxcz{
+  margin: 0 !important;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.ewwop{
+  justify-content: center;
+}
+
+
+.active0999{
+  background-color: rgba(255, 199, 0, .3) !important ;
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<meta charset="UTF-8">
 		<title>Admin</title>
@@ -12,7 +11,6 @@
 		<link rel="stylesheet" href="./style.css">
 		<link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css"/>
 	</head>
-
 	<body class="baigebg">
 		<div class="row">
 			<div class="col-md-12 backgroundnavy adminheader">
@@ -25,15 +23,14 @@
 		</div>
 
 
-
 		<div class="row">
 			<div class="col-md-3">
 				<nav class="sidebar card py-2 mb-4">
 					<ul class="nav flex-column" id="nav_accordion">
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="/dashboard.html">
 								<img src="./imgs/a1.svg"/>
-								<p class="activee">
+								<p>
 									Dashboard
 								</p>
 							</a>
@@ -49,18 +46,19 @@
 							<ul class="submenu collapse">
 								<li>
 
-									<a class="nav-link" href="#">Account
+									<a class="nav-link" href="/accountDetails.html">
+										<p class="mb-2 activee">Account</p>
 									</a>
 								</li>
 								<li>
 
-									<a class="nav-link" href="#">Login Details
+									<a class="nav-link" href="/loginDetails.html">Login Details
 									</a>
 								</li>
 							</ul>
 						</li>
 						<li class="nav-item has-submenu">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="/subscription.html">
 								<img src="./imgs/a3.svg"/>
 								Subscription
 							</a>
@@ -72,7 +70,7 @@
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<a class="nav-link" href="/admin.html">
 								<img src="./imgs/a5.svg"/>
 								Logout
 							</a>
@@ -87,79 +85,79 @@
 				<div class="row ewwop">
 					<div class="col-md-12">
 						<p>Account Type</p>
-                        <div class="flex flexer3 flexer3-edit">
-                            <div class="cardd">
-                                <img src="./imgs/accountt.svg" />
-                                <p>Personal</p>
-                            </div>
-                            <div class="cardd">
-                                <img src="./imgs/account1.svg" />
-                                <p>Work Progress</p>
-                            </div>
-                        </div>
+						<div class="flex flexer3 flexer3-edit">
+							<div class="cardd">
+								<img src="./imgs/accountt.svg"/>
+								<p>Personal</p>
+							</div>
+							<div class="cardd">
+								<img src="./imgs/account1.svg"/>
+								<p>Work Progress</p>
+							</div>
+						</div>
 
 
-                        <div class="row  mt-3">
-                            <div class="col-md-6" >
-                                <p class="adminlabel">Company Name</p>
-                                <input type="text" placeholder="Enter Company Name" class="admininput" />
-                            </div>
-                            <div class="col-md-6">
-                                <p class="adminlabel">VAT ID</p>
-                                <input type="text" placeholder="Enter Vat ID"  class="admininput" />
-                            </div>
-                        </div>
-                        <div class="row  mt-3">
-                            <div class="col-md-6">
-                                <p class="adminlabel">First Name</p>
-                                <input type="text" placeholder="First Name"  class="admininput" />
-                            </div>
-                            <div class="col-md-6">
-                                <p class="adminlabel">Last Name</p>
-                                <input type="text" placeholder="Last Name"  class="admininput" />
-                            </div>
-                        </div>
-                        <div class="row  mt-3">
-                            <div class="col-md-6">
-                                <p class="adminlabel">Address</p>
-                                <input type="text" placeholder="Enter Address"  class="admininput" />
-                            </div>
-                            <div class="col-md-6">
-                                <p class="adminlabel">Postal Code</p>
-                                <input type="text" placeholder="Enter Postal Code"  class="admininput" />
-                            </div>
-                        </div>
-                        <div class="row  mt-3">
-                            <div class="col-md-6">
-                                <p class="adminlabel">City</p>
-                                <input type="text"  placeholder="Enter City Name"  class="admininput" />
-                            </div>
-                            <div class="col-md-6">
-                                <p class="adminlabel">Country</p>
-                                <input type="text" placeholder="Select Country"  class="admininput" />
-                            </div>
-                        </div>
-                        <div class="row  mt-3">
-                            <div class="col-md-6">
-                                <p class="adminlabel">Email</p>
-                                <input type="text" placeholder="Enter Email"  class="admininput" />
-                            </div>
-                            <div class="col-md-6">
-                                <p class="adminlabel">Website</p>
-                                <input type="text" placeholder="Enter Website"  class="admininput" />
-                            </div>
-                        </div>
-                        <div class="row  mt-3">
-                            <div class="col-md-6">
-                                <p class="adminlabel">Skype</p>
-                                <input type="text" placeholder="Enter Skype"  class="admininput" />
-                            </div>
-                            <div class="col-md-6">
-                                <p class="adminlabel">Telephone</p>
-                                <input type="text" placeholder="Enter Telephone"  class="admininput" />
-                            </div>
-                        </div>
-                        <button class="adminpurplebutton  mt-4 maxxx">Update Account Details</button>
+						<div class="row  mt-3">
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Company Name</p>
+								<input type="text" placeholder="Enter Company Name" class="admininput"/>
+							</div>
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">VAT ID</p>
+								<input type="text" placeholder="Enter Vat ID" class="admininput"/>
+							</div>
+						</div>
+						<div class="row  mt-3">
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">First Name</p>
+								<input type="text" placeholder="First Name" class="admininput"/>
+							</div>
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Last Name</p>
+								<input type="text" placeholder="Last Name" class="admininput"/>
+							</div>
+						</div>
+						<div class="row  mt-3">
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Address</p>
+								<input type="text" placeholder="Enter Address" class="admininput"/>
+							</div>
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Postal Code</p>
+								<input type="text" placeholder="Enter Postal Code" class="admininput"/>
+							</div>
+						</div>
+						<div class="row  mt-3">
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">City</p>
+								<input type="text" placeholder="Enter City Name" class="admininput"/>
+							</div>
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Country</p>
+								<input type="text" placeholder="Select Country" class="admininput"/>
+							</div>
+						</div>
+						<div class="row  mt-3">
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Email</p>
+								<input type="text" placeholder="Enter Email" class="admininput"/>
+							</div>
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Website</p>
+								<input type="text" placeholder="Enter Website" class="admininput"/>
+							</div>
+						</div>
+						<div class="row  mt-3">
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Skype</p>
+								<input type="text" placeholder="Enter Skype" class="admininput"/>
+							</div>
+							<div class="col-md-6">
+								<p class="mb-2 adminlabel">Telephone</p>
+								<input type="text" placeholder="Enter Telephone" class="admininput"/>
+							</div>
+						</div>
+						<button class="adminpurplebutton  mt-4 maxxx">Update Account Details</button>
 
 
 					</div>
@@ -167,6 +165,26 @@
 			</div>
 		</div>
 	</body>
+
+	<script>
+		const elements = document.getElementsByClassName("cardd");
+// Add a click event listener to each element
+for (let i = 0; i < elements.length; i++) {
+elements[i].addEventListener("click", function () { // Remove the "active" class from all elements
+for (let j = 0; j < elements.length; j++) {
+elements[j].classList.remove("active0999");
+}
+
+// Add the "active" class to the clicked element
+this.classList.add("active0999");
+
+// Create and append the overlay to the clicked element
+
+this.appendChild(overlay);
+});
+}
+	</script>
+
 
 	<script>
 
@@ -199,9 +217,10 @@ new bootstrap.Collapse(opened_submenu);
 });
 	</script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://js.stripe.com/v3/"></script>
-</html></body></html>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" defer></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" defer></script>
+
+
+</html>
