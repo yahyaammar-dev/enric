@@ -2334,3 +2334,8 @@
 .active0999{
   background-color: rgba(255, 199, 0, .3) !important ;
 }
+
+
+.innerrr .row .col-md-6 p{
+  min-width: 150px;
+}
