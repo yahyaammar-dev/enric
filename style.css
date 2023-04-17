@@ -2222,7 +2222,10 @@
 
 
   .sadfsaf{
-    margin-top: -1rem;
+    margin-top: 1rem;
+    padding: 0 1rem 1rem;
+    border: 1px solid grey;
+    border-radius: 0.3rem 0.3rem 0 0;
   }
 
 
@@ -2300,6 +2303,9 @@
 
 .llll{
   padding: 0 !important;
+  border: 1px solid grey;
+  padding: 0 1rem !important;
+  border-radius: 0 0 0.3rem 0.3rem;
 }
 
 
@@ -2338,4 +2344,18 @@
 
 .innerrr .row .col-md-6 p{
   min-width: 150px;
+}
+
+
+.lllllppoiiioj{
+
+}
+
+
+.gery{
+  color: grey;
+}
+
+.nnnn{
+  display: none;
 }
