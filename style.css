@@ -2359,3 +2359,43 @@
 .nnnn{
   display: none;
 }
+
+
+.pt-3-half {
+  padding-top: 1.4rem;
+}
+
+
+.table-content {
+  width: 450px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+td {
+  width: 100px;
+}
+
+
+.asdasdasdasd{
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

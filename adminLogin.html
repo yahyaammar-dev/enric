@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Admin</title>
+		<!-- Link to Bootstrap CSS from CDN -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Link to local stylesheet -->
+		<link rel="stylesheet" href="./style.css">
+	</head>
+
+	<body>
+		<div class="row adminhero">
+			<div class="col-md-6 firstcoladmin">
+				<img src="imgs/bluelogo.svg" alt="Logo" class="firstLogo">
+				<hr/>
+				<h1 class="signin my-4">Admin Login</h1>
+				<p class="adminlabel my-3">Email Address</p>
+				<input type="text" placeholder="Enter Email Adress" class="admininput" id="username"/>
+				<p class="adminlabel my-3">Password</p>
+				<input type="password" placeholder="Enter Password" class="admininput" id="password"/>
+				<div class="flex adminflexer gap11">
+					<input type="checkbox"/>
+					<p class="my-3">Remember Me</p>
+				</div>
+				<button class="adminpurplebutton py-3" id="login-btn" data-toggle="modal" data-target="#multistep-modal">
+					LOGIN
+				</button>
+				<div class="twolinks mt-3">
+					<a>Forgot Password</a>
+					<a>Register</a>
+				</div>
+			</div>
+			<div class="col-md-6 bg-image flexcol">
+				<img src="imgs/browser.png" alt="Image" class="img-fluid"/>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://js.stripe.com/v3/"></script>
+
+
+		<script>
+			const username = document.getElementById('username');
+			const password = document.getElementById('password');
+			const loginBtn = document.getElementById('login-btn');
+
+			loginBtn.addEventListener('click', function () {
+			if (username.value === 'admin' && password.value === 'admin123') {
+			window.location.href = '/adminDash.html';
+			} else {
+			alert('Incorrect username or password');
+			}
+			});
+		</script>
+	</body>
+</html>
