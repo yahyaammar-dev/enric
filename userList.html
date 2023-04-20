@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,52 +15,108 @@
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h2 class="mt-5 mb-4">Bootstrap Table with Edit and Pause Icons</h2>
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Edit</th>
-          <th>Pause Account</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="/UserDetail.html">John Doe</a></td>
-          <td>johndoe@example.com</td>
-          <td><i class="fas fa-edit"></i></td>
-          <td><i class="fas fa-pause"></i></td>
-        </tr>
-        <tr>
-          <td><a href="/UserDetail.html">Angash</a></td>
-          <td>janesmith@example.com</td>
-          <td><i class="fas fa-edit"></i></td>
-          <td><i class="fas fa-pause"></i></td>
-        </tr>
-        <tr>
-          <td><a href="/UserDetail.html">Sugar</a></td>
-          <td>bjohnson@example.com</td>
-          <td><i class="fas fa-edit"></i></td>
-          <td><i class="fas fa-pause"></i></td>
-        </tr>
-        <tr>
-          <td><a href="/UserDetail.html">Ray Robbinson</a></td>
-          <td>bjohnson@example.com</td>
-          <td><i class="fas fa-edit"></i></td>
-          <td><i class="fas fa-pause"></i></td>
-        </tr>
-        <tr>
-          <td><a href="/UserDetail.html">Houston</a></td>
-          <td>bjohnson@example.com</td>
-          <td><i class="fas fa-edit"></i></td>
-          <td><i class="fas fa-pause"></i></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<body class="m-5 bg-light">
+  
+
+<h3>Manage Users</h3>  
+
+<div class="table-responsive scrollbar">
+  <table class="table table-hover table-striped overflow-hidden">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Address</th>
+        <th scope="col">Status</th>
+        <th class="text-end" scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="align-middle">
+        <td class="text-nowrap">
+          <div class="d-flex align-items-center">
+            <div class="avatar avatar-xl">
+              <img class="rounded-circle" src="../../assets/img/team/4.jpg" alt="" />
+            </div>
+            <div class="ms-2"><a href="/UserDetail.html">Ricky Antony</a></div>
+          </div>
+        </td>
+        <td class="text-nowrap">ricky@example.com</td>
+        <td class="text-nowrap">(201) 200-1851</td>
+        <td class="text-nowrap">2392 Main Avenue, Penasauka</td>
+        <td><span class="badge badge rounded-pill d-block p-2 badge-subtle-success">Completed<span class="ms-1 fas fa-check" data-fa-transform="shrink-2"></span></span>
+        </td>
+        <td class="text-end">$99</td>
+      </tr>
+      <tr class="align-middle">
+        <td class="text-nowrap">
+          <div class="d-flex align-items-center">
+            <div class="avatar avatar-xl">
+              <img class="rounded-circle" src="../../assets/img/team/13.jpg" alt="" />
+            </div>
+            <div class="ms-2"><a href="/UserDetail.html">Ricky Antony</a></div>
+          </div>
+        </td>
+        <td class="text-nowrap">emma@example.com</td>
+        <td class="text-nowrap">(212) 228-8403</td>
+        <td class="text-nowrap">2289 5th Avenue, New York</td>
+        <td><span class="badge badge rounded-pill d-block p-2 badge-subtle-success">Completed<span class="ms-1 fas fa-check" data-fa-transform="shrink-2"></span></span>
+        </td>
+        <td class="text-end">$199</td>
+      </tr>
+      <tr class="align-middle">
+        <td class="text-nowrap">
+          <div class="d-flex align-items-center">
+           
+            <div class="ms-2"><a href="/UserDetail.html">Ricky Antony</a></div>
+          </div>
+        </td>
+        <td class="text-nowrap">rown@example.com</td>
+        <td class="text-nowrap">(201) 200-1851</td>
+        <td class="text-nowrap">112 Bostwick Avenue, Jersey City</td>
+        <td><span class="badge badge rounded-pill d-block p-2 badge-subtle-primary">Processing<span class="ms-1 fas fa-redo" data-fa-transform="shrink-2"></span></span>
+        </td>
+        <td class="text-end">$755</td>
+      </tr>
+      <tr class="align-middle">
+        <td class="text-nowrap">
+          <div class="d-flex align-items-center">
+            <div class="avatar avatar-xl">
+              <img class="rounded-circle" src="../../assets/img/team/2.jpg" alt="" />
+            </div>
+            <div class="ms-2"><a href="/UserDetail.html">Ricky Antony</a></div>
+          </div>
+        </td>
+        <td class="text-nowrap">antony@example.com</td>
+        <td class="text-nowrap">(901) 324-3127</td>
+        <td class="text-nowrap">3448 Ile De France St #242</td>
+        <td><span class="badge badge rounded-pill d-block p-2 badge-subtle-secondary">On Hold<span class="ms-1 fas fa-ban" data-fa-transform="shrink-2"></span></span>
+        </td>
+        <td class="text-end">$50</td>
+      </tr>
+      <tr class="align-middle">
+        <td class="text-nowrap">
+          <div class="d-flex align-items-center">
+            <div class="avatar avatar-xl">
+              <img class="rounded-circle" src="../../assets/img/team/3.jpg" alt="" />
+            </div>
+            <div class="ms-2"><a href="/UserDetail.html">Ricky Antony</a></div>
+          </div>
+        </td>
+        <td class="text-nowrap">jennifer@example.com</td>
+        <td class="text-nowrap">(828) 382-9631</td>
+        <td class="text-nowrap">659 Hannah Street, Charlotte</td>
+        <td><span class="badge badge rounded-pill d-block p-2 badge-subtle-warning">Pending<span class="ms-1 fas fa-stream" data-fa-transform="shrink-2"></span></span>
+        </td>
+        <td class="text-end">$150</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 </html>
